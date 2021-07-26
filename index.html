@@ -15,11 +15,11 @@
 
   function showUnEmploymentTrend() {
 
-    var csv_root = "https://github.com/svijis/cs416-narrative-viz";
+    var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
     async function doThings() {
-        const data = await d3.csv(csv_root + "/data/unemployment_by_industry.csv");
+        const data = await d3.csv(csv_root + "/unemployment_by_industry.csv");
           // do whatever with data here
-    } 
+    }
     doThings();
   }
 </script>
