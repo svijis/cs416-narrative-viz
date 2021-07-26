@@ -1,0 +1,505 @@
+Series ID,Series Name,Year,Period,Label,Value
+LNU04032231,Construction,2018,M01,2018 Jan,7.3
+LNU04032231,Construction,2018,M02,2018 Feb,7.8
+LNU04032231,Construction,2018,M03,2018 Mar,7.4
+LNU04032231,Construction,2018,M04,2018 Apr,6.5
+LNU04032231,Construction,2018,M05,2018 May,4.4
+LNU04032231,Construction,2018,M06,2018 Jun,4.7
+LNU04032231,Construction,2018,M07,2018 Jul,3.4
+LNU04032231,Construction,2018,M08,2018 Aug,3.4
+LNU04032231,Construction,2018,M09,2018 Sep,4.1
+LNU04032231,Construction,2018,M10,2018 Oct,3.6
+LNU04032231,Construction,2018,M11,2018 Nov,3.9
+LNU04032231,Construction,2018,M12,2018 Dec,5.1
+LNU04032231,Construction,2019,M01,2019 Jan,6.4
+LNU04032231,Construction,2019,M02,2019 Feb,6.2
+LNU04032231,Construction,2019,M03,2019 Mar,5.2
+LNU04032231,Construction,2019,M04,2019 Apr,4.7
+LNU04032231,Construction,2019,M05,2019 May,3.2
+LNU04032231,Construction,2019,M06,2019 Jun,4
+LNU04032231,Construction,2019,M07,2019 Jul,3.8
+LNU04032231,Construction,2019,M08,2019 Aug,3.6
+LNU04032231,Construction,2019,M09,2019 Sep,3.2
+LNU04032231,Construction,2019,M10,2019 Oct,4
+LNU04032231,Construction,2019,M11,2019 Nov,4.4
+LNU04032231,Construction,2019,M12,2019 Dec,5
+LNU04032231,Construction,2020,M01,2020 Jan,5.4
+LNU04032231,Construction,2020,M02,2020 Feb,5.5
+LNU04032231,Construction,2020,M03,2020 Mar,6.9
+LNU04032231,Construction,2020,M04,2020 Apr,16.6
+LNU04032231,Construction,2020,M05,2020 May,12.7
+LNU04032231,Construction,2020,M06,2020 Jun,10.1
+LNU04032231,Construction,2020,M07,2020 Jul,8.9
+LNU04032231,Construction,2020,M08,2020 Aug,7.6
+LNU04032231,Construction,2020,M09,2020 Sep,7.1
+LNU04032231,Construction,2020,M10,2020 Oct,6.8
+LNU04032231,Construction,2020,M11,2020 Nov,7.3
+LNU04032231,Construction,2020,M12,2020 Dec,9.6
+LNU04032231,Construction,2021,M01,2021 Jan,9.4
+LNU04032231,Construction,2021,M02,2021 Feb,9.6
+LNU04032231,Construction,2021,M03,2021 Mar,8.6
+LNU04032231,Construction,2021,M04,2021 Apr,7.7
+LNU04032231,Construction,2021,M05,2021 May,6.7
+LNU04032231,Construction,2021,M06,2021 Jun,7.5
+LNU04032240,Education and Health Services,2018,M01,2018 Jan,2.7
+LNU04032240,Education and Health Services,2018,M02,2018 Feb,2.5
+LNU04032240,Education and Health Services,2018,M03,2018 Mar,2.6
+LNU04032240,Education and Health Services,2018,M04,2018 Apr,2.3
+LNU04032240,Education and Health Services,2018,M05,2018 May,2.3
+LNU04032240,Education and Health Services,2018,M06,2018 Jun,3.2
+LNU04032240,Education and Health Services,2018,M07,2018 Jul,3.2
+LNU04032240,Education and Health Services,2018,M08,2018 Aug,3.1
+LNU04032240,Education and Health Services,2018,M09,2018 Sep,2.8
+LNU04032240,Education and Health Services,2018,M10,2018 Oct,2.7
+LNU04032240,Education and Health Services,2018,M11,2018 Nov,2.3
+LNU04032240,Education and Health Services,2018,M12,2018 Dec,2.1
+LNU04032240,Education and Health Services,2019,M01,2019 Jan,2.6
+LNU04032240,Education and Health Services,2019,M02,2019 Feb,2.5
+LNU04032240,Education and Health Services,2019,M03,2019 Mar,2.3
+LNU04032240,Education and Health Services,2019,M04,2019 Apr,2.1
+LNU04032240,Education and Health Services,2019,M05,2019 May,2.4
+LNU04032240,Education and Health Services,2019,M06,2019 Jun,3
+LNU04032240,Education and Health Services,2019,M07,2019 Jul,3.1
+LNU04032240,Education and Health Services,2019,M08,2019 Aug,2.7
+LNU04032240,Education and Health Services,2019,M09,2019 Sep,2.2
+LNU04032240,Education and Health Services,2019,M10,2019 Oct,2.2
+LNU04032240,Education and Health Services,2019,M11,2019 Nov,2.3
+LNU04032240,Education and Health Services,2019,M12,2019 Dec,2.4
+LNU04032240,Education and Health Services,2020,M01,2020 Jan,2.4
+LNU04032240,Education and Health Services,2020,M02,2020 Feb,2.4
+LNU04032240,Education and Health Services,2020,M03,2020 Mar,3.1
+LNU04032240,Education and Health Services,2020,M04,2020 Apr,10.9
+LNU04032240,Education and Health Services,2020,M05,2020 May,10.1
+LNU04032240,Education and Health Services,2020,M06,2020 Jun,8.6
+LNU04032240,Education and Health Services,2020,M07,2020 Jul,8
+LNU04032240,Education and Health Services,2020,M08,2020 Aug,6.3
+LNU04032240,Education and Health Services,2020,M09,2020 Sep,5.1
+LNU04032240,Education and Health Services,2020,M10,2020 Oct,4.2
+LNU04032240,Education and Health Services,2020,M11,2020 Nov,3.7
+LNU04032240,Education and Health Services,2020,M12,2020 Dec,4.1
+LNU04032240,Education and Health Services,2021,M01,2021 Jan,4.3
+LNU04032240,Education and Health Services,2021,M02,2021 Feb,3.7
+LNU04032240,Education and Health Services,2021,M03,2021 Mar,3.8
+LNU04032240,Education and Health Services,2021,M04,2021 Apr,3.4
+LNU04032240,Education and Health Services,2021,M05,2021 May,3.4
+LNU04032240,Education and Health Services,2021,M06,2021 Jun,4.4
+LNU04032237,Information Industry,2018,M01,2018 Jan,5.3
+LNU04032237,Information Industry,2018,M02,2018 Feb,3.2
+LNU04032237,Information Industry,2018,M03,2018 Mar,4.1
+LNU04032237,Information Industry,2018,M04,2018 Apr,2.3
+LNU04032237,Information Industry,2018,M05,2018 May,3.5
+LNU04032237,Information Industry,2018,M06,2018 Jun,4.6
+LNU04032237,Information Industry,2018,M07,2018 Jul,4.2
+LNU04032237,Information Industry,2018,M08,2018 Aug,3.5
+LNU04032237,Information Industry,2018,M09,2018 Sep,2.3
+LNU04032237,Information Industry,2018,M10,2018 Oct,3.2
+LNU04032237,Information Industry,2018,M11,2018 Nov,3.8
+LNU04032237,Information Industry,2018,M12,2018 Dec,3.9
+LNU04032237,Information Industry,2019,M01,2019 Jan,4.7
+LNU04032237,Information Industry,2019,M02,2019 Feb,4.1
+LNU04032237,Information Industry,2019,M03,2019 Mar,4
+LNU04032237,Information Industry,2019,M04,2019 Apr,3.5
+LNU04032237,Information Industry,2019,M05,2019 May,3
+LNU04032237,Information Industry,2019,M06,2019 Jun,2.7
+LNU04032237,Information Industry,2019,M07,2019 Jul,3.9
+LNU04032237,Information Industry,2019,M08,2019 Aug,4.7
+LNU04032237,Information Industry,2019,M09,2019 Sep,4.4
+LNU04032237,Information Industry,2019,M10,2019 Oct,3.3
+LNU04032237,Information Industry,2019,M11,2019 Nov,1.6
+LNU04032237,Information Industry,2019,M12,2019 Dec,1.9
+LNU04032237,Information Industry,2020,M01,2020 Jan,2.3
+LNU04032237,Information Industry,2020,M02,2020 Feb,2.6
+LNU04032237,Information Industry,2020,M03,2020 Mar,1.8
+LNU04032237,Information Industry,2020,M04,2020 Apr,11
+LNU04032237,Information Industry,2020,M05,2020 May,10.9
+LNU04032237,Information Industry,2020,M06,2020 Jun,12
+LNU04032237,Information Industry,2020,M07,2020 Jul,12.3
+LNU04032237,Information Industry,2020,M08,2020 Aug,8.6
+LNU04032237,Information Industry,2020,M09,2020 Sep,8.6
+LNU04032237,Information Industry,2020,M10,2020 Oct,5.8
+LNU04032237,Information Industry,2020,M11,2020 Nov,8.2
+LNU04032237,Information Industry,2020,M12,2020 Dec,6.4
+LNU04032237,Information Industry,2021,M01,2021 Jan,7.4
+LNU04032237,Information Industry,2021,M02,2021 Feb,6.2
+LNU04032237,Information Industry,2021,M03,2021 Mar,6.6
+LNU04032237,Information Industry,2021,M04,2021 Apr,5.9
+LNU04032237,Information Industry,2021,M05,2021 May,5.8
+LNU04032237,Information Industry,2021,M06,2021 Jun,6.1
+LNU04032241,Leisure and Hospitality,2018,M01,2018 Jan,6.8
+LNU04032241,Leisure and Hospitality,2018,M02,2018 Feb,6.8
+LNU04032241,Leisure and Hospitality,2018,M03,2018 Mar,5.8
+LNU04032241,Leisure and Hospitality,2018,M04,2018 Apr,5.2
+LNU04032241,Leisure and Hospitality,2018,M05,2018 May,4.9
+LNU04032241,Leisure and Hospitality,2018,M06,2018 Jun,5.7
+LNU04032241,Leisure and Hospitality,2018,M07,2018 Jul,5.2
+LNU04032241,Leisure and Hospitality,2018,M08,2018 Aug,5.8
+LNU04032241,Leisure and Hospitality,2018,M09,2018 Sep,5.4
+LNU04032241,Leisure and Hospitality,2018,M10,2018 Oct,5.4
+LNU04032241,Leisure and Hospitality,2018,M11,2018 Nov,5.3
+LNU04032241,Leisure and Hospitality,2018,M12,2018 Dec,6
+LNU04032241,Leisure and Hospitality,2019,M01,2019 Jan,6.4
+LNU04032241,Leisure and Hospitality,2019,M02,2019 Feb,5.8
+LNU04032241,Leisure and Hospitality,2019,M03,2019 Mar,5.8
+LNU04032241,Leisure and Hospitality,2019,M04,2019 Apr,4.5
+LNU04032241,Leisure and Hospitality,2019,M05,2019 May,5
+LNU04032241,Leisure and Hospitality,2019,M06,2019 Jun,4.9
+LNU04032241,Leisure and Hospitality,2019,M07,2019 Jul,5.3
+LNU04032241,Leisure and Hospitality,2019,M08,2019 Aug,5
+LNU04032241,Leisure and Hospitality,2019,M09,2019 Sep,4.8
+LNU04032241,Leisure and Hospitality,2019,M10,2019 Oct,5.3
+LNU04032241,Leisure and Hospitality,2019,M11,2019 Nov,4.9
+LNU04032241,Leisure and Hospitality,2019,M12,2019 Dec,5
+LNU04032241,Leisure and Hospitality,2020,M01,2020 Jan,5.9
+LNU04032241,Leisure and Hospitality,2020,M02,2020 Feb,5.7
+LNU04032241,Leisure and Hospitality,2020,M03,2020 Mar,8.1
+LNU04032241,Leisure and Hospitality,2020,M04,2020 Apr,39.3
+LNU04032241,Leisure and Hospitality,2020,M05,2020 May,35.9
+LNU04032241,Leisure and Hospitality,2020,M06,2020 Jun,28.9
+LNU04032241,Leisure and Hospitality,2020,M07,2020 Jul,25
+LNU04032241,Leisure and Hospitality,2020,M08,2020 Aug,21.3
+LNU04032241,Leisure and Hospitality,2020,M09,2020 Sep,19
+LNU04032241,Leisure and Hospitality,2020,M10,2020 Oct,16.3
+LNU04032241,Leisure and Hospitality,2020,M11,2020 Nov,15
+LNU04032241,Leisure and Hospitality,2020,M12,2020 Dec,16.7
+LNU04032241,Leisure and Hospitality,2021,M01,2021 Jan,15.9
+LNU04032241,Leisure and Hospitality,2021,M02,2021 Feb,13.5
+LNU04032241,Leisure and Hospitality,2021,M03,2021 Mar,13
+LNU04032241,Leisure and Hospitality,2021,M04,2021 Apr,10.8
+LNU04032241,Leisure and Hospitality,2021,M05,2021 May,10.1
+LNU04032241,Leisure and Hospitality,2021,M06,2021 Jun,10.9
+LNU04032232,Manufacturing,2018,M01,2018 Jan,3.4
+LNU04032232,Manufacturing,2018,M02,2018 Feb,3.6
+LNU04032232,Manufacturing,2018,M03,2018 Mar,3.3
+LNU04032232,Manufacturing,2018,M04,2018 Apr,3.3
+LNU04032232,Manufacturing,2018,M05,2018 May,3.4
+LNU04032232,Manufacturing,2018,M06,2018 Jun,3.1
+LNU04032232,Manufacturing,2018,M07,2018 Jul,3.8
+LNU04032232,Manufacturing,2018,M08,2018 Aug,3.2
+LNU04032232,Manufacturing,2018,M09,2018 Sep,3.5
+LNU04032232,Manufacturing,2018,M10,2018 Oct,3.2
+LNU04032232,Manufacturing,2018,M11,2018 Nov,2.9
+LNU04032232,Manufacturing,2018,M12,2018 Dec,2.8
+LNU04032232,Manufacturing,2019,M01,2019 Jan,3.3
+LNU04032232,Manufacturing,2019,M02,2019 Feb,2.9
+LNU04032232,Manufacturing,2019,M03,2019 Mar,2.9
+LNU04032232,Manufacturing,2019,M04,2019 Apr,3
+LNU04032232,Manufacturing,2019,M05,2019 May,2.3
+LNU04032232,Manufacturing,2019,M06,2019 Jun,2.8
+LNU04032232,Manufacturing,2019,M07,2019 Jul,3
+LNU04032232,Manufacturing,2019,M08,2019 Aug,3.2
+LNU04032232,Manufacturing,2019,M09,2019 Sep,3.4
+LNU04032232,Manufacturing,2019,M10,2019 Oct,3.1
+LNU04032232,Manufacturing,2019,M11,2019 Nov,2.7
+LNU04032232,Manufacturing,2019,M12,2019 Dec,2.7
+LNU04032232,Manufacturing,2020,M01,2020 Jan,3.4
+LNU04032232,Manufacturing,2020,M02,2020 Feb,3.9
+LNU04032232,Manufacturing,2020,M03,2020 Mar,4.1
+LNU04032232,Manufacturing,2020,M04,2020 Apr,13.2
+LNU04032232,Manufacturing,2020,M05,2020 May,11.6
+LNU04032232,Manufacturing,2020,M06,2020 Jun,9.1
+LNU04032232,Manufacturing,2020,M07,2020 Jul,8.6
+LNU04032232,Manufacturing,2020,M08,2020 Aug,6.7
+LNU04032232,Manufacturing,2020,M09,2020 Sep,6.2
+LNU04032232,Manufacturing,2020,M10,2020 Oct,5.2
+LNU04032232,Manufacturing,2020,M11,2020 Nov,4.7
+LNU04032232,Manufacturing,2020,M12,2020 Dec,4.3
+LNU04032232,Manufacturing,2021,M01,2021 Jan,4.7
+LNU04032232,Manufacturing,2021,M02,2021 Feb,4.8
+LNU04032232,Manufacturing,2021,M03,2021 Mar,5.2
+LNU04032232,Manufacturing,2021,M04,2021 Apr,5.8
+LNU04032232,Manufacturing,2021,M05,2021 May,4.8
+LNU04032232,Manufacturing,2021,M06,2021 Jun,5.4
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M01,2018 Jan,4.1
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M02,2018 Feb,6.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M03,2018 Mar,6.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M04,2018 Apr,4.7
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M05,2018 May,3
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M06,2018 Jun,2.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M07,2018 Jul,3.4
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M08,2018 Aug,1.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M09,2018 Sep,1.7
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M10,2018 Oct,1.7
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M11,2018 Nov,1.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M12,2018 Dec,2.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M01,2019 Jan,5.3
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M02,2019 Feb,3.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M03,2019 Mar,3.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M04,2019 Apr,2.4
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M05,2019 May,5
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M06,2019 Jun,3.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M07,2019 Jul,2.3
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M08,2019 Aug,1.1
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M09,2019 Sep,1.7
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M10,2019 Oct,2.8
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M11,2019 Nov,3.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M12,2019 Dec,3.8
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M01,2020 Jan,1.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M02,2020 Feb,5
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M03,2020 Mar,6.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M04,2020 Apr,10.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M05,2020 May,8.4
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M06,2020 Jun,17.8
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M07,2020 Jul,15.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M08,2020 Aug,12.4
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M09,2020 Sep,14.9
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M10,2020 Oct,13.8
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M11,2020 Nov,19.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M12,2020 Dec,13.1
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M01,2021 Jan,14.2
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M02,2021 Feb,19.3
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M03,2021 Mar,15
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M04,2021 Apr,14.3
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M05,2021 May,9.6
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M06,2021 Jun,10.3
+LNU04034236,Educational Services,2018,M01,2018 Jan,3.4
+LNU04034236,Educational Services,2018,M02,2018 Feb,2.6
+LNU04034236,Educational Services,2018,M03,2018 Mar,2.4
+LNU04034236,Educational Services,2018,M04,2018 Apr,2.6
+LNU04034236,Educational Services,2018,M05,2018 May,2.5
+LNU04034236,Educational Services,2018,M06,2018 Jun,5.8
+LNU04034236,Educational Services,2018,M07,2018 Jul,5.9
+LNU04034236,Educational Services,2018,M08,2018 Aug,5.9
+LNU04034236,Educational Services,2018,M09,2018 Sep,3.4
+LNU04034236,Educational Services,2018,M10,2018 Oct,3
+LNU04034236,Educational Services,2018,M11,2018 Nov,2.4
+LNU04034236,Educational Services,2018,M12,2018 Dec,1.9
+LNU04034236,Educational Services,2019,M01,2019 Jan,3.6
+LNU04034236,Educational Services,2019,M02,2019 Feb,3.4
+LNU04034236,Educational Services,2019,M03,2019 Mar,2.8
+LNU04034236,Educational Services,2019,M04,2019 Apr,1.9
+LNU04034236,Educational Services,2019,M05,2019 May,3
+LNU04034236,Educational Services,2019,M06,2019 Jun,4.9
+LNU04034236,Educational Services,2019,M07,2019 Jul,6.5
+LNU04034236,Educational Services,2019,M08,2019 Aug,4.5
+LNU04034236,Educational Services,2019,M09,2019 Sep,2.6
+LNU04034236,Educational Services,2019,M10,2019 Oct,2.5
+LNU04034236,Educational Services,2019,M11,2019 Nov,3
+LNU04034236,Educational Services,2019,M12,2019 Dec,3.4
+LNU04034236,Educational Services,2020,M01,2020 Jan,3.9
+LNU04034236,Educational Services,2020,M02,2020 Feb,3.2
+LNU04034236,Educational Services,2020,M03,2020 Mar,4.4
+LNU04034236,Educational Services,2020,M04,2020 Apr,12.8
+LNU04034236,Educational Services,2020,M05,2020 May,12.5
+LNU04034236,Educational Services,2020,M06,2020 Jun,14.2
+LNU04034236,Educational Services,2020,M07,2020 Jul,13.6
+LNU04034236,Educational Services,2020,M08,2020 Aug,10
+LNU04034236,Educational Services,2020,M09,2020 Sep,7.6
+LNU04034236,Educational Services,2020,M10,2020 Oct,4.4
+LNU04034236,Educational Services,2020,M11,2020 Nov,5
+LNU04034236,Educational Services,2020,M12,2020 Dec,5.8
+LNU04034236,Educational Services,2021,M01,2021 Jan,5.2
+LNU04034236,Educational Services,2021,M02,2021 Feb,4.3
+LNU04034236,Educational Services,2021,M03,2021 Mar,4.1
+LNU04034236,Educational Services,2021,M04,2021 Apr,3.5
+LNU04034236,Educational Services,2021,M05,2021 May,4.6
+LNU04034236,Educational Services,2021,M06,2021 Jun,6.4
+LNU04034211,Real Estate,2018,M01,2018 Jan,2.2
+LNU04034211,Real Estate,2018,M02,2018 Feb,2.1
+LNU04034211,Real Estate,2018,M03,2018 Mar,2.3
+LNU04034211,Real Estate,2018,M04,2018 Apr,2.3
+LNU04034211,Real Estate,2018,M05,2018 May,2.1
+LNU04034211,Real Estate,2018,M06,2018 Jun,2.4
+LNU04034211,Real Estate,2018,M07,2018 Jul,2.8
+LNU04034211,Real Estate,2018,M08,2018 Aug,3
+LNU04034211,Real Estate,2018,M09,2018 Sep,2.9
+LNU04034211,Real Estate,2018,M10,2018 Oct,2.2
+LNU04034211,Real Estate,2018,M11,2018 Nov,2.4
+LNU04034211,Real Estate,2018,M12,2018 Dec,3.5
+LNU04034211,Real Estate,2019,M01,2019 Jan,2.9
+LNU04034211,Real Estate,2019,M02,2019 Feb,2.8
+LNU04034211,Real Estate,2019,M03,2019 Mar,2.7
+LNU04034211,Real Estate,2019,M04,2019 Apr,1.4
+LNU04034211,Real Estate,2019,M05,2019 May,1.6
+LNU04034211,Real Estate,2019,M06,2019 Jun,2.1
+LNU04034211,Real Estate,2019,M07,2019 Jul,2.3
+LNU04034211,Real Estate,2019,M08,2019 Aug,2.3
+LNU04034211,Real Estate,2019,M09,2019 Sep,2.4
+LNU04034211,Real Estate,2019,M10,2019 Oct,3
+LNU04034211,Real Estate,2019,M11,2019 Nov,2
+LNU04034211,Real Estate,2019,M12,2019 Dec,3.4
+LNU04034211,Real Estate,2020,M01,2020 Jan,3.7
+LNU04034211,Real Estate,2020,M02,2020 Feb,2.4
+LNU04034211,Real Estate,2020,M03,2020 Mar,3.3
+LNU04034211,Real Estate,2020,M04,2020 Apr,7.7
+LNU04034211,Real Estate,2020,M05,2020 May,8.9
+LNU04034211,Real Estate,2020,M06,2020 Jun,7.4
+LNU04034211,Real Estate,2020,M07,2020 Jul,6.6
+LNU04034211,Real Estate,2020,M08,2020 Aug,5.7
+LNU04034211,Real Estate,2020,M09,2020 Sep,6.3
+LNU04034211,Real Estate,2020,M10,2020 Oct,5.8
+LNU04034211,Real Estate,2020,M11,2020 Nov,6.1
+LNU04034211,Real Estate,2020,M12,2020 Dec,4
+LNU04034211,Real Estate,2021,M01,2021 Jan,4.7
+LNU04034211,Real Estate,2021,M02,2021 Feb,5.1
+LNU04034211,Real Estate,2021,M03,2021 Mar,4.4
+LNU04034211,Real Estate,2021,M04,2021 Apr,4.6
+LNU04034211,Real Estate,2021,M05,2021 May,4.1
+LNU04034211,Real Estate,2021,M06,2021 Jun,4.7
+LNU04032242,Other Services Industry,2018,M01,2018 Jan,4.4
+LNU04032242,Other Services Industry,2018,M02,2018 Feb,3.4
+LNU04032242,Other Services Industry,2018,M03,2018 Mar,3.6
+LNU04032242,Other Services Industry,2018,M04,2018 Apr,3.1
+LNU04032242,Other Services Industry,2018,M05,2018 May,2.5
+LNU04032242,Other Services Industry,2018,M06,2018 Jun,3.9
+LNU04032242,Other Services Industry,2018,M07,2018 Jul,3.5
+LNU04032242,Other Services Industry,2018,M08,2018 Aug,3.2
+LNU04032242,Other Services Industry,2018,M09,2018 Sep,3.3
+LNU04032242,Other Services Industry,2018,M10,2018 Oct,3
+LNU04032242,Other Services Industry,2018,M11,2018 Nov,3.3
+LNU04032242,Other Services Industry,2018,M12,2018 Dec,3
+LNU04032242,Other Services Industry,2019,M01,2019 Jan,3.9
+LNU04032242,Other Services Industry,2019,M02,2019 Feb,3.2
+LNU04032242,Other Services Industry,2019,M03,2019 Mar,3.4
+LNU04032242,Other Services Industry,2019,M04,2019 Apr,2.5
+LNU04032242,Other Services Industry,2019,M05,2019 May,2.9
+LNU04032242,Other Services Industry,2019,M06,2019 Jun,3
+LNU04032242,Other Services Industry,2019,M07,2019 Jul,3.4
+LNU04032242,Other Services Industry,2019,M08,2019 Aug,3.8
+LNU04032242,Other Services Industry,2019,M09,2019 Sep,3.2
+LNU04032242,Other Services Industry,2019,M10,2019 Oct,2.9
+LNU04032242,Other Services Industry,2019,M11,2019 Nov,3.1
+LNU04032242,Other Services Industry,2019,M12,2019 Dec,3.2
+LNU04032242,Other Services Industry,2020,M01,2020 Jan,3.7
+LNU04032242,Other Services Industry,2020,M02,2020 Feb,2.8
+LNU04032242,Other Services Industry,2020,M03,2020 Mar,3.9
+LNU04032242,Other Services Industry,2020,M04,2020 Apr,23
+LNU04032242,Other Services Industry,2020,M05,2020 May,18.4
+LNU04032242,Other Services Industry,2020,M06,2020 Jun,14.5
+LNU04032242,Other Services Industry,2020,M07,2020 Jul,10.6
+LNU04032242,Other Services Industry,2020,M08,2020 Aug,9.1
+LNU04032242,Other Services Industry,2020,M09,2020 Sep,9.2
+LNU04032242,Other Services Industry,2020,M10,2020 Oct,8.3
+LNU04032242,Other Services Industry,2020,M11,2020 Nov,8.1
+LNU04032242,Other Services Industry,2020,M12,2020 Dec,7.4
+LNU04032242,Other Services Industry,2021,M01,2021 Jan,8.8
+LNU04032242,Other Services Industry,2021,M02,2021 Feb,7.7
+LNU04032242,Other Services Industry,2021,M03,2021 Mar,6.7
+LNU04032242,Other Services Industry,2021,M04,2021 Apr,6.2
+LNU04032242,Other Services Industry,2021,M05,2021 May,5.3
+LNU04032242,Other Services Industry,2021,M06,2021 Jun,5.4
+LNU04032239,Professional and Business Services,2018,M01,2018 Jan,5
+LNU04032239,Professional and Business Services,2018,M02,2018 Feb,4.8
+LNU04032239,Professional and Business Services,2018,M03,2018 Mar,4.2
+LNU04032239,Professional and Business Services,2018,M04,2018 Apr,3.5
+LNU04032239,Professional and Business Services,2018,M05,2018 May,4
+LNU04032239,Professional and Business Services,2018,M06,2018 Jun,3.3
+LNU04032239,Professional and Business Services,2018,M07,2018 Jul,3.6
+LNU04032239,Professional and Business Services,2018,M08,2018 Aug,3.5
+LNU04032239,Professional and Business Services,2018,M09,2018 Sep,3.2
+LNU04032239,Professional and Business Services,2018,M10,2018 Oct,4
+LNU04032239,Professional and Business Services,2018,M11,2018 Nov,3.6
+LNU04032239,Professional and Business Services,2018,M12,2018 Dec,4.3
+LNU04032239,Professional and Business Services,2019,M01,2019 Jan,4.9
+LNU04032239,Professional and Business Services,2019,M02,2019 Feb,4.3
+LNU04032239,Professional and Business Services,2019,M03,2019 Mar,3.9
+LNU04032239,Professional and Business Services,2019,M04,2019 Apr,3.5
+LNU04032239,Professional and Business Services,2019,M05,2019 May,3.4
+LNU04032239,Professional and Business Services,2019,M06,2019 Jun,3.6
+LNU04032239,Professional and Business Services,2019,M07,2019 Jul,3.4
+LNU04032239,Professional and Business Services,2019,M08,2019 Aug,3.2
+LNU04032239,Professional and Business Services,2019,M09,2019 Sep,3.2
+LNU04032239,Professional and Business Services,2019,M10,2019 Oct,3.5
+LNU04032239,Professional and Business Services,2019,M11,2019 Nov,3.6
+LNU04032239,Professional and Business Services,2019,M12,2019 Dec,3.1
+LNU04032239,Professional and Business Services,2020,M01,2020 Jan,4.1
+LNU04032239,Professional and Business Services,2020,M02,2020 Feb,4.4
+LNU04032239,Professional and Business Services,2020,M03,2020 Mar,4.7
+LNU04032239,Professional and Business Services,2020,M04,2020 Apr,9.8
+LNU04032239,Professional and Business Services,2020,M05,2020 May,9
+LNU04032239,Professional and Business Services,2020,M06,2020 Jun,8.6
+LNU04032239,Professional and Business Services,2020,M07,2020 Jul,7.6
+LNU04032239,Professional and Business Services,2020,M08,2020 Aug,7.2
+LNU04032239,Professional and Business Services,2020,M09,2020 Sep,6.7
+LNU04032239,Professional and Business Services,2020,M10,2020 Oct,6.1
+LNU04032239,Professional and Business Services,2020,M11,2020 Nov,5.9
+LNU04032239,Professional and Business Services,2020,M12,2020 Dec,6.1
+LNU04032239,Professional and Business Services,2021,M01,2021 Jan,6.8
+LNU04032239,Professional and Business Services,2021,M02,2021 Feb,6.8
+LNU04032239,Professional and Business Services,2021,M03,2021 Mar,6.7
+LNU04032239,Professional and Business Services,2021,M04,2021 Apr,5.9
+LNU04032239,Professional and Business Services,2021,M05,2021 May,5.4
+LNU04032239,Professional and Business Services,2021,M06,2021 Jun,5.2
+LNU04032236,Transportation and Utilities Industry,2018,M01,2018 Jan,3.5
+LNU04032236,Transportation and Utilities Industry,2018,M02,2018 Feb,3.7
+LNU04032236,Transportation and Utilities Industry,2018,M03,2018 Mar,3.6
+LNU04032236,Transportation and Utilities Industry,2018,M04,2018 Apr,3
+LNU04032236,Transportation and Utilities Industry,2018,M05,2018 May,3.2
+LNU04032236,Transportation and Utilities Industry,2018,M06,2018 Jun,3.2
+LNU04032236,Transportation and Utilities Industry,2018,M07,2018 Jul,3.6
+LNU04032236,Transportation and Utilities Industry,2018,M08,2018 Aug,3.4
+LNU04032236,Transportation and Utilities Industry,2018,M09,2018 Sep,2.6
+LNU04032236,Transportation and Utilities Industry,2018,M10,2018 Oct,3.1
+LNU04032236,Transportation and Utilities Industry,2018,M11,2018 Nov,3.7
+LNU04032236,Transportation and Utilities Industry,2018,M12,2018 Dec,3.9
+LNU04032236,Transportation and Utilities Industry,2019,M01,2019 Jan,3.6
+LNU04032236,Transportation and Utilities Industry,2019,M02,2019 Feb,4.1
+LNU04032236,Transportation and Utilities Industry,2019,M03,2019 Mar,3.6
+LNU04032236,Transportation and Utilities Industry,2019,M04,2019 Apr,3.4
+LNU04032236,Transportation and Utilities Industry,2019,M05,2019 May,4.1
+LNU04032236,Transportation and Utilities Industry,2019,M06,2019 Jun,3.7
+LNU04032236,Transportation and Utilities Industry,2019,M07,2019 Jul,3.7
+LNU04032236,Transportation and Utilities Industry,2019,M08,2019 Aug,4.2
+LNU04032236,Transportation and Utilities Industry,2019,M09,2019 Sep,3.2
+LNU04032236,Transportation and Utilities Industry,2019,M10,2019 Oct,2.6
+LNU04032236,Transportation and Utilities Industry,2019,M11,2019 Nov,3
+LNU04032236,Transportation and Utilities Industry,2019,M12,2019 Dec,2.6
+LNU04032236,Transportation and Utilities Industry,2020,M01,2020 Jan,3
+LNU04032236,Transportation and Utilities Industry,2020,M02,2020 Feb,3.5
+LNU04032236,Transportation and Utilities Industry,2020,M03,2020 Mar,5.1
+LNU04032236,Transportation and Utilities Industry,2020,M04,2020 Apr,13.6
+LNU04032236,Transportation and Utilities Industry,2020,M05,2020 May,14.2
+LNU04032236,Transportation and Utilities Industry,2020,M06,2020 Jun,12.9
+LNU04032236,Transportation and Utilities Industry,2020,M07,2020 Jul,13.8
+LNU04032236,Transportation and Utilities Industry,2020,M08,2020 Aug,11.3
+LNU04032236,Transportation and Utilities Industry,2020,M09,2020 Sep,9.8
+LNU04032236,Transportation and Utilities Industry,2020,M10,2020 Oct,7.9
+LNU04032236,Transportation and Utilities Industry,2020,M11,2020 Nov,8
+LNU04032236,Transportation and Utilities Industry,2020,M12,2020 Dec,8.4
+LNU04032236,Transportation and Utilities Industry,2021,M01,2021 Jan,8.2
+LNU04032236,Transportation and Utilities Industry,2021,M02,2021 Feb,8.4
+LNU04032236,Transportation and Utilities Industry,2021,M03,2021 Mar,8.3
+LNU04032236,Transportation and Utilities Industry,2021,M04,2021 Apr,6.8
+LNU04032236,Transportation and Utilities Industry,2021,M05,2021 May,7.2
+LNU04032236,Transportation and Utilities Industry,2021,M06,2021 Jun,6
+LNU04032235,Wholesale and Retail Trade,2018,M01,2018 Jan,5.3
+LNU04032235,Wholesale and Retail Trade,2018,M02,2018 Feb,5.3
+LNU04032235,Wholesale and Retail Trade,2018,M03,2018 Mar,4.8
+LNU04032235,Wholesale and Retail Trade,2018,M04,2018 Apr,4.2
+LNU04032235,Wholesale and Retail Trade,2018,M05,2018 May,4.5
+LNU04032235,Wholesale and Retail Trade,2018,M06,2018 Jun,4.2
+LNU04032235,Wholesale and Retail Trade,2018,M07,2018 Jul,4.1
+LNU04032235,Wholesale and Retail Trade,2018,M08,2018 Aug,4.3
+LNU04032235,Wholesale and Retail Trade,2018,M09,2018 Sep,4
+LNU04032235,Wholesale and Retail Trade,2018,M10,2018 Oct,3.9
+LNU04032235,Wholesale and Retail Trade,2018,M11,2018 Nov,3.9
+LNU04032235,Wholesale and Retail Trade,2018,M12,2018 Dec,3.7
+LNU04032235,Wholesale and Retail Trade,2019,M01,2019 Jan,4.8
+LNU04032235,Wholesale and Retail Trade,2019,M02,2019 Feb,5
+LNU04032235,Wholesale and Retail Trade,2019,M03,2019 Mar,4.7
+LNU04032235,Wholesale and Retail Trade,2019,M04,2019 Apr,4.3
+LNU04032235,Wholesale and Retail Trade,2019,M05,2019 May,4.2
+LNU04032235,Wholesale and Retail Trade,2019,M06,2019 Jun,3.9
+LNU04032235,Wholesale and Retail Trade,2019,M07,2019 Jul,3.9
+LNU04032235,Wholesale and Retail Trade,2019,M08,2019 Aug,4.1
+LNU04032235,Wholesale and Retail Trade,2019,M09,2019 Sep,3.4
+LNU04032235,Wholesale and Retail Trade,2019,M10,2019 Oct,3.6
+LNU04032235,Wholesale and Retail Trade,2019,M11,2019 Nov,3.4
+LNU04032235,Wholesale and Retail Trade,2019,M12,2019 Dec,3.6
+LNU04032235,Wholesale and Retail Trade,2020,M01,2020 Jan,4.7
+LNU04032235,Wholesale and Retail Trade,2020,M02,2020 Feb,4.2
+LNU04032235,Wholesale and Retail Trade,2020,M03,2020 Mar,5
+LNU04032235,Wholesale and Retail Trade,2020,M04,2020 Apr,17.1
+LNU04032235,Wholesale and Retail Trade,2020,M05,2020 May,15.1
+LNU04032235,Wholesale and Retail Trade,2020,M06,2020 Jun,11.2
+LNU04032235,Wholesale and Retail Trade,2020,M07,2020 Jul,9.7
+LNU04032235,Wholesale and Retail Trade,2020,M08,2020 Aug,8.3
+LNU04032235,Wholesale and Retail Trade,2020,M09,2020 Sep,7.8
+LNU04032235,Wholesale and Retail Trade,2020,M10,2020 Oct,6.5
+LNU04032235,Wholesale and Retail Trade,2020,M11,2020 Nov,6
+LNU04032235,Wholesale and Retail Trade,2020,M12,2020 Dec,5.5
+LNU04032235,Wholesale and Retail Trade,2021,M01,2021 Jan,6.9
+LNU04032235,Wholesale and Retail Trade,2021,M02,2021 Feb,6.8
+LNU04032235,Wholesale and Retail Trade,2021,M03,2021 Mar,6.7
+LNU04032235,Wholesale and Retail Trade,2021,M04,2021 Apr,6.2
+LNU04032235,Wholesale and Retail Trade,2021,M05,2021 May,6.6
+LNU04032235,Wholesale and Retail Trade,2021,M06,2021 Jun,6.2
