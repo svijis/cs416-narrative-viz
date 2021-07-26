@@ -1,1 +1,26 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+<body onload="showUnEmploymentTrend()">
+
+<div>
+<h1>Unemployment Rate Trends before and after Covid-19 (2018-2021)</h1>
+</body>
+
+<script>
+
+  function showUnEmploymentTrend() {
+
+    var csv_root = "https://github.com/svijis/cs416-narrative-viz";
+    async function doThings() {
+        const data = await d3.csv(csv_root + "/data/unemployment_by_industry.csv");
+          // do whatever with data here
+    } 
+    doThings();
+  }
+</script>
+</html>
