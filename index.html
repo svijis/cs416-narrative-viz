@@ -33,8 +33,8 @@ var svg = d3.select("#dataviz")
   var x = d3.scaleLinear().range([0, width]);
   var y = d3.scaleLinear().range([height, 0]);
 
-  var yaxis = d3.axisLeft().scale(yScale);
-  var xaxis = d3.axisBottom().scale(xScale).tickFormat(d3.format("d"));
+  var yaxis = d3.axisLeft().scale(y);
+  var xaxis = d3.axisBottom().scale(x).tickFormat(d3.format("d"));
 
   // // gridlines in x axis function
   // function make_x_gridlines() {
