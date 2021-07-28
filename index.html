@@ -89,16 +89,15 @@
                 .entries(data);
 
               // Add X axis
-              var x = d3.scaleLinear()
+              var x = d3.scaleTime()()
                 .domain(d3.extent(data, function(d) {
-                  console.log(d);
-                  return d.Label;
+                  return d.Date;
                 }))
                 .range([ 0, width ]);
 
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).ticks(5))
+                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
                 .call(g => g.append("text")
                   .attr("x", width / 2)
                   .attr("y", margin.bottom)
