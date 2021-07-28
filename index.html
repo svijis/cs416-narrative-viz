@@ -74,13 +74,74 @@
           .text("Wins"));
 
     var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
-    var unemployment_by_industry;
+    var industry_data;
     async function fetchData() {
-        unemployment_by_industry = await d3.csv(csv_root + "/unemployment_by_industry.csv");
+        var unemployment_by_industry = await d3.csv(csv_root + "/unemployment_by_industry.csv");
 
+        industry_data = d3.nest() // nest function allows to group the calculation per level of a factor
+          .key(function(d) { return d.Series_Name;})
+          .entries(unemployment_by_industry);
+
+        plotByIndustry(industry_data);
+    }
+
+    function plotByIndustry(data) {
+
+        // Add X axis
+        var x = d3.scaleLinear()
+          .domain(d3.extent(data, function(d) { return d.Label; }))
+          .range([ 0, width ]);
+
+        svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x).ticks(5))
+          .call(g => g.append("text")
+            .attr("x", width / 2)
+            .attr("y", margin.bottom)
+            .attr("fill", "currentColor")
+            .attr("text-anchor", "end")
+            .text("Month and Year"));
+
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+          .domain([0, d3.max(data, function(d) { return +d.Value; })])
+          .range([ height, 0 ]);
+
+        svg.append("g")
+          .call(d3.axisLeft(y))
+          .call(g => g.append("text")
+            .attr("x", -40)
+            .attr("y", height / 2)
+            .attr("fill", "currentColor")
+            .attr("text-anchor", "end")
+            .text("Percent or Rate"));
+
+
+          // color palette
+          var res = data.map(function(d){ return d.key }) // list of group names
+          var color = d3.scaleOrdinal()
+            .domain(res)
+            .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' '#999922'])
+
+          // Draw the line
+          svg.selectAll(".line")
+              .data(data)
+              .enter()
+              .append("path")
+                .attr("fill", "none")
+                .attr("stroke", function(d){ return color(d.key) })
+                .attr("stroke-width", 1.5)
+                .attr("d", function(d){
+                  return d3.line()
+                    .x(function(d) { return x(d.Label); })
+                    .y(function(d) { return y(+d.Value); })
+                    (d.values)
+                })
 
     }
-    fetchData();
+
+    fetchData(); 
   }
 </script>
 </html>
