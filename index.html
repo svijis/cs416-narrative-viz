@@ -123,7 +123,7 @@
 
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+                .call(d3.axisBottom(x))
                 .call(g => g.append("text")
                   .attr("x", width / 2)
                   .attr("y", margin.bottom)
