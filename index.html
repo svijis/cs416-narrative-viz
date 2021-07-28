@@ -153,7 +153,7 @@
               //     .text("Percent or Rate"));
 
               data.forEach(function(d) {
-                  d.date = parseTime(d.Date);
+                  d.Date = parseTime(d.Date);
                   d.close = +d.Value;
               });
 
