@@ -84,7 +84,7 @@
 
           // append the svg obgect to the body of the page
           // appends a 'group' element to 'svg'
-          // moves the 'group' element to the top left margin 
+          // moves the 'group' element to the top left margin
           svg.append("g")
               .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
@@ -153,12 +153,12 @@
               //     .text("Percent or Rate"));
 
               data.forEach(function(d) {
-                  d.date = parseTime(d.date);
+                  d.date = parseTime(d.Date);
                   d.close = +d.Value;
               });
 
               // Scale the range of the data
-              x.domain(d3.extent(data, function(d) { return d.date; }));
+              x.domain(d3.extent(data, function(d) { return d.Date; }));
               y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
               // add the X gridlines
