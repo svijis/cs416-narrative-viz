@@ -150,12 +150,7 @@
               //     .attr("y", height / 2)
               //     .attr("fill", "currentColor")
               //     .attr("text-anchor", "end")
-              //     .text("Percent or Rate"));
-
-              data.forEach(function(d) {
-                  d.Date = parseTime(d.Date);
-                  d.close = +d.Value;
-              });
+              //     .text("Percent or Rate")); 
 
               // Scale the range of the data
               x.domain(d3.extent(data, function(d) { return d.Date; }));
