@@ -34,11 +34,11 @@
                     "translate(" + margin.left + "," + margin.top + ")");
 
             // set the ranges
-            var x = d3.scaleLinear().range([0, width]);
-            var y = d3.scaleLinear().range([height, 0]);
-
-            var yaxis = d3.axisLeft().scale(y);
-            var xaxis = d3.axisBottom().scale(x).tickFormat(d3.format("d"));
+            // var x = d3.scaleLinear().range([0, width]);
+            // var y = d3.scaleLinear().range([height, 0]);
+            //
+            // var yaxis = d3.axisLeft().scale(y);
+            // var xaxis = d3.axisBottom().scale(x).tickFormat(d3.format("d"));
 
             // // gridlines in x axis function
             // function make_x_gridlines() {
@@ -52,28 +52,28 @@
             //       .ticks(5)
             // }
 
-
-            svg.append("g")
-              .attr("class", "axis")
-              .attr("transform", "translate(0," + height + ")")
-              .call(xaxis)
-              .call(g => g.append("text")
-                .attr("x", width / 2)
-                .attr("y", margin.bottom)
-                .attr("fill", "currentColor")
-                .attr("text-anchor", "end")
-                .text("Year"));
-
-            svg.append("g")
-              .attr("class", "axis")
-              .attr("class", "myYaxis")
-              .call(yaxis)
-              .call(g => g.append("text")
-                .attr("x", -40)
-                .attr("y", height / 2)
-                .attr("fill", "currentColor")
-                .attr("text-anchor", "end")
-                .text("Wins"));
+            //
+            // svg.append("g")
+            //   .attr("class", "axis")
+            //   .attr("transform", "translate(0," + height + ")")
+            //   .call(xaxis)
+            //   .call(g => g.append("text")
+            //     .attr("x", width / 2)
+            //     .attr("y", margin.bottom)
+            //     .attr("fill", "currentColor")
+            //     .attr("text-anchor", "end")
+            //     .text("Year"));
+            //
+            // svg.append("g")
+            //   .attr("class", "axis")
+            //   .attr("class", "myYaxis")
+            //   .call(yaxis)
+            //   .call(g => g.append("text")
+            //     .attr("x", -40)
+            //     .attr("y", height / 2)
+            //     .attr("fill", "currentColor")
+            //     .attr("text-anchor", "end")
+            //     .text("Wins"));
 
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
           var industry_data;
