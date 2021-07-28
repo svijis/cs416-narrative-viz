@@ -84,13 +84,20 @@
 
           function plotByIndustry(data) {
 
-            var data_by_industry = d3.nest()
-                .key(function(d) { return d.Series_Name;})
-                .entries(data);
+              var data_by_industry = d3.nest()
+                  .key(function(d) { return d.Series_Name;})
+                . entries(data);
+
+              var test = d3.extent(data, function(d) {
+                return d.Date;
+              })
+
+              console.log(test);
 
               // Add X axis
               var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
+                  console.log(d.Date)
                   return d.Date;
                 }))
                 .range([ 0, width ]);
@@ -109,7 +116,6 @@
               // Add Y axis
               var y = d3.scaleLinear()
                 .domain([0, d3.max(data, function(d) {
-                  console.log(+d.Value);
                   return +d.Value;
                 })])
                 .range([ height, 0 ]);
