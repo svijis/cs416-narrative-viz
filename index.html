@@ -76,18 +76,17 @@
             //     .text("Wins"));
 
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
-          var industry_data;
+          var unemployment_data;
           async function fetchData() {
-              var unemployment_by_industry = await d3.csv(csv_root + "/unemployment_by_industry.csv");
-
-              industry_data = d3.nest() // nest function allows to group the calculation per level of a factor
-                .key(function(d) { return d.Series_Name;})
-                .entries(unemployment_by_industry);
-
-              plotByIndustry(industry_data);
+              var unemployment_data = await d3.csv(csv_root + "/unemployment_by_industry.csv");
+              plotByIndustry(unemployment_data);
           }
 
           function plotByIndustry(data) {
+
+            var data_by_industry = d3.nest()
+                .key(function(d) { return d.Series_Name;})
+                .entries(data);
 
               // Add X axis
               var x = d3.scaleLinear()
@@ -128,7 +127,7 @@
 
                 // Draw the line
                 svg.selectAll(".line")
-                    .data(data)
+                    .data(data_by_industry)
                     .enter()
                     .append("path")
                       .attr("fill", "none")
