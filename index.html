@@ -89,7 +89,7 @@
                 .entries(data);
 
               // Add X axis
-              var x = d3.scaleTime()()
+              var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
                   return d.Date;
                 }))
