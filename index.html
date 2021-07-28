@@ -79,7 +79,7 @@ var svg = d3.select("#dataviz")
 
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).ticks(5));
+      .call(d3.axisBottom(x).ticks(5))
       .call(g => g.append("text")
         .attr("x", width / 2)
         .attr("y", margin.bottom)
@@ -125,7 +125,6 @@ var svg = d3.select("#dataviz")
             })
 
   }
-
 
   function showUnEmploymentTrend() {
 
