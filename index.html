@@ -75,6 +75,40 @@
             //     .attr("text-anchor", "end")
             //     .text("Wins"));
 
+            // parse the date / time
+          var parseTime = d3.timeParse("%d-%b-%y");
+
+          // set the ranges
+          var x = d3.scaleTime().range([0, width]);
+          var y = d3.scaleLinear().range([height, 0]);
+
+          // define the line
+          var valueline = d3.line()
+              .x(function(d) { return x(d.date); })
+              .y(function(d) { return y(d.close); });
+
+          // append the svg obgect to the body of the page
+          // appends a 'group' element to 'svg'
+          // moves the 'group' element to the top left margin
+          var svg = d3.select("body").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+              .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+          // gridlines in x axis function
+          function make_x_gridlines() {
+              return d3.axisBottom(x)
+                  .ticks(5)
+          }
+
+          // gridlines in y axis function
+          function make_y_gridlines() {
+              return d3.axisLeft(y)
+                  .ticks(5)
+          }
+
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
           var unemployment_data;
           async function fetchData() {
@@ -88,47 +122,78 @@
                   .key(function(d) { return d.Series_Name;})
                 . entries(data);
 
-              var test = d3.extent(data, function(d) {
-                return d.Date;
-              })
-
-              console.log(test);
-
               // Add X axis
-              var x = d3.scaleTime()
-                .domain(d3.extent(data, function(d) {
-                  console.log(d.Date)
-                  return d.Date;
-                }))
-                .range([ 0, width ]);
+              // var x = d3.scaleTime()
+              //   .domain(d3.extent(data, function(d) {
+              //       return d.Date;
+              //   }))
+              //   .range([ 0, width ]);
 
+              // set the ranges
+              // var x = d3.scaleTime().range([0, width]);
+              // var y = d3.scaleLinear().range([height, 0]);
+
+              // svg.append("g")
+              //   .attr("transform", "translate(0," + height + ")")
+              //   .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+              //   .call(g => g.append("text")
+              //     .attr("x", width / 2)
+              //     .attr("y", margin.bottom)
+              //     .attr("fill", "currentColor")
+              //     .attr("text-anchor", "end")
+              //     .text("Month and Year"));
+
+
+              // // Add Y axis
+              // var y = d3.scaleLinear()
+              //   .domain([0, d3.max(data, function(d) {
+              //     return +d.Value;
+              //   })])
+              //   .range([ height, 0 ]);
+              //
+              // svg.append("g")
+              //   .call(d3.axisLeft(y))
+              //   .call(g => g.append("text")
+              //     .attr("x", -40)
+              //     .attr("y", height / 2)
+              //     .attr("fill", "currentColor")
+              //     .attr("text-anchor", "end")
+              //     .text("Percent or Rate"));
+
+              data.forEach(function(d) {
+                  d.date = parseTime(d.date);
+                  d.close = +d.Value;
+              });
+
+              // Scale the range of the data
+              x.domain(d3.extent(data, function(d) { return d.date; }));
+              y.domain([0, d3.max(data, function(d) { return d.close; })]);
+
+              // add the X gridlines
               svg.append("g")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
-                .call(g => g.append("text")
-                  .attr("x", width / 2)
-                  .attr("y", margin.bottom)
-                  .attr("fill", "currentColor")
-                  .attr("text-anchor", "end")
-                  .text("Month and Year"));
+                  .attr("class", "grid")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(make_x_gridlines()
+                      .tickSize(-height)
+                      .tickFormat("")
+                  )
 
-
-              // Add Y axis
-              var y = d3.scaleLinear()
-                .domain([0, d3.max(data, function(d) {
-                  return +d.Value;
-                })])
-                .range([ height, 0 ]);
-
+              // add the Y gridlines
               svg.append("g")
-                .call(d3.axisLeft(y))
-                .call(g => g.append("text")
-                  .attr("x", -40)
-                  .attr("y", height / 2)
-                  .attr("fill", "currentColor")
-                  .attr("text-anchor", "end")
-                  .text("Percent or Rate"));
+                  .attr("class", "grid")
+                  .call(make_y_gridlines()
+                      .tickSize(-width)
+                      .tickFormat("")
+                  )
 
+              // add the X Axis
+              svg.append("g")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(x));
+
+              // add the Y Axis
+              svg.append("g")
+                  .call(d3.axisLeft(y));
 
                 // color palette
                 var res = data.map(function(d){ return d.key }) // list of group names
@@ -146,7 +211,7 @@
                       .attr("stroke-width", 1.5)
                       .attr("d", function(d){
                         return d3.line()
-                          .x(function(d) { return x(d.Label); })
+                          .x(function(d) { return x(d.Date); })
                           .y(function(d) { return y(+d.Value); })
                           (d.values)
                       })
