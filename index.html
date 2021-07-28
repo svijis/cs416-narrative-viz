@@ -82,18 +82,10 @@
           var x = d3.scaleTime().range([0, width]);
           var y = d3.scaleLinear().range([height, 0]);
 
-          // define the line
-          var valueline = d3.line()
-              .x(function(d) { return x(d.date); })
-              .y(function(d) { return y(d.close); });
-
           // append the svg obgect to the body of the page
           // appends a 'group' element to 'svg'
-          // moves the 'group' element to the top left margin
-          var svg = d3.select("body").append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
-            .append("g")
+          // moves the 'group' element to the top left margin 
+          svg.append("g")
               .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
