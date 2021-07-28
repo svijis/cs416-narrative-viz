@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<body onload="showUnEmploymentTrend()">
+<body onload="fetchData()">
 
 <div>
 <h1>Unemployment Rate Trends before and after Covid-19 (2018-2021)</h1>
@@ -85,7 +85,7 @@ var svg = d3.select("#dataviz")
       plotByIndustry(industry_data);
 
   }
-  fetchData();
+
 
   function plotByIndustry(data) {
 
@@ -142,7 +142,7 @@ var svg = d3.select("#dataviz")
               })
 
     }
-  
+
 
 </script>
 </html>
