@@ -90,7 +90,10 @@
 
               // Add X axis
               var x = d3.scaleLinear()
-                .domain(d3.extent(data, function(d) { return d.Label; }))
+                .domain(d3.extent(data, function(d) {
+                  console.log(d);
+                  return d.Label;
+                }))
                 .range([ 0, width ]);
 
               svg.append("g")
@@ -106,7 +109,10 @@
 
               // Add Y axis
               var y = d3.scaleLinear()
-                .domain([0, d3.max(data, function(d) { return +d.Value; })])
+                .domain([0, d3.max(data, function(d) {
+                  console.log(+d.Value);
+                  return +d.Value;
+                })])
                 .range([ height, 0 ]);
 
               svg.append("g")
