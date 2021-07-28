@@ -115,93 +115,58 @@
                 . entries(data);
 
               // Add X axis
-              // var x = d3.scaleTime()
-              //   .domain(d3.extent(data, function(d) {
-              //       return d.Date;
-              //   }))
-              //   .range([ 0, width ]);
+              var x = d3.scaleTime()
+                .domain(d3.extent(data, function(d) {
+                    return d.Date;
+                }))
+                .range([ 0, width ]);
 
-              // set the ranges
-              // var x = d3.scaleTime().range([0, width]);
-              // var y = d3.scaleLinear().range([height, 0]);
-
-              // svg.append("g")
-              //   .attr("transform", "translate(0," + height + ")")
-              //   .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
-              //   .call(g => g.append("text")
-              //     .attr("x", width / 2)
-              //     .attr("y", margin.bottom)
-              //     .attr("fill", "currentColor")
-              //     .attr("text-anchor", "end")
-              //     .text("Month and Year"));
-
-
-              // // Add Y axis
-              // var y = d3.scaleLinear()
-              //   .domain([0, d3.max(data, function(d) {
-              //     return +d.Value;
-              //   })])
-              //   .range([ height, 0 ]);
-              //
-              // svg.append("g")
-              //   .call(d3.axisLeft(y))
-              //   .call(g => g.append("text")
-              //     .attr("x", -40)
-              //     .attr("y", height / 2)
-              //     .attr("fill", "currentColor")
-              //     .attr("text-anchor", "end")
-              //     .text("Percent or Rate")); 
-
-              // Scale the range of the data
-              x.domain(d3.extent(data, function(d) { return d.Date; }));
-              y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-              // add the X gridlines
               svg.append("g")
-                  .attr("class", "grid")
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(make_x_gridlines()
-                      .tickSize(-height)
-                      .tickFormat("")
-                  )
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+                .call(g => g.append("text")
+                  .attr("x", width / 2)
+                  .attr("y", margin.bottom)
+                  .attr("fill", "currentColor")
+                  .attr("text-anchor", "end")
+                  .text("Month and Year"));
 
-              // add the Y gridlines
+              // Add Y axis
+              var y = d3.scaleLinear()
+                .domain([0, d3.max(data, function(d) {
+                  return +d.Value;
+                })])
+                .range([ height, 0 ]);
+
               svg.append("g")
-                  .attr("class", "grid")
-                  .call(make_y_gridlines()
-                      .tickSize(-width)
-                      .tickFormat("")
-                  )
+                .call(d3.axisLeft(y))
+                .call(g => g.append("text")
+                  .attr("x", -40)
+                  .attr("y", height / 2)
+                  .attr("fill", "currentColor")
+                  .attr("text-anchor", "end")
+                  .text("Percent or Rate"));
 
-              // add the X Axis
-              svg.append("g")
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(d3.axisBottom(x));
+              // color palette
+              var res = data.map(function(d){ return d.key }) // list of group names
+              var color = d3.scaleOrdinal()
+                .domain(res)
+                .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
 
-              // add the Y Axis
-              svg.append("g")
-                  .call(d3.axisLeft(y));
-
-                // color palette
-                var res = data.map(function(d){ return d.key }) // list of group names
-                var color = d3.scaleOrdinal()
-                  .domain(res)
-                  .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
-
-                // Draw the line
-                svg.selectAll(".line")
-                    .data(data_by_industry)
-                    .enter()
-                    .append("path")
-                      .attr("fill", "none")
-                      .attr("stroke", function(d){ return color(d.key) })
-                      .attr("stroke-width", 1.5)
-                      .attr("d", function(d){
-                        return d3.line()
-                          .x(function(d) { return x(d.Date); })
-                          .y(function(d) { return y(+d.Value); })
-                          (d.values)
-                      })
+              // Draw the line
+              svg.selectAll(".line")
+                  .data(data_by_industry)
+                  .enter()
+                  .append("path")
+                    .attr("fill", "none")
+                    .attr("stroke", function(d){ return color(d.key) })
+                    .attr("stroke-width", 1.5)
+                    .attr("d", function(d){
+                      return d3.line()
+                        .x(function(d) { return x(d.Date); })
+                        .y(function(d) { return y(+d.Value); })
+                        (d.values)
+                    })
 
           }
 
