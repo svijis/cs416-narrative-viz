@@ -15,65 +15,63 @@
 
 <script>
 
-// set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-var svg = d3.select("#dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
-
-  // set the ranges
-  var x = d3.scaleLinear().range([0, width]);
-  var y = d3.scaleLinear().range([height, 0]);
-
-  var yaxis = d3.axisLeft().scale(y);
-  var xaxis = d3.axisBottom().scale(x).tickFormat(d3.format("d"));
-
-  // // gridlines in x axis function
-  // function make_x_gridlines() {
-  //     return d3.axisBottom(x)
-  //         .ticks(5)
-  // }
-  //
-  // // gridlines in y axis function
-  // function make_y_gridlines() {
-  //     return d3.axisLeft(y)
-  //       .ticks(5)
-  // }
-
-
-  svg.append("g")
-    .attr("class", "axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xaxis)
-    .call(g => g.append("text")
-      .attr("x", width / 2)
-      .attr("y", margin.bottom)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "end")
-      .text("Year"));
-
-  svg.append("g")
-    .attr("class", "axis")
-    .attr("class", "myYaxis")
-    .call(yaxis)
-    .call(g => g.append("text")
-      .attr("x", -40)
-      .attr("y", height / 2)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "end")
-      .text("Wins"));
-
-
-
   function showUnEmploymentTrend() {
+
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 30, bottom: 30, left: 60},
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+
+      // set the ranges
+      var x = d3.scaleLinear().range([0, width]);
+      var y = d3.scaleLinear().range([height, 0]);
+
+      var yaxis = d3.axisLeft().scale(y);
+      var xaxis = d3.axisBottom().scale(x).tickFormat(d3.format("d"));
+
+      // // gridlines in x axis function
+      // function make_x_gridlines() {
+      //     return d3.axisBottom(x)
+      //         .ticks(5)
+      // }
+      //
+      // // gridlines in y axis function
+      // function make_y_gridlines() {
+      //     return d3.axisLeft(y)
+      //       .ticks(5)
+      // }
+
+
+      svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xaxis)
+        .call(g => g.append("text")
+          .attr("x", width / 2)
+          .attr("y", margin.bottom)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "end")
+          .text("Year"));
+
+      svg.append("g")
+        .attr("class", "axis")
+        .attr("class", "myYaxis")
+        .call(yaxis)
+        .call(g => g.append("text")
+          .attr("x", -40)
+          .attr("y", height / 2)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "end")
+          .text("Wins"));
 
     var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
     var unemployment_by_industry;
