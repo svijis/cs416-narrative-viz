@@ -108,7 +108,7 @@
               //   }))
               //   .range([ 0, width ]);
               //
-              var xAxis = d3.axisBottom(scale)
+              var xAxis = d3.axisBottom(x)
                 .tickFormat(function(date){
                   if (d3.timeYear(date) < date) {
                     return d3.timeFormat('%b')(date);
