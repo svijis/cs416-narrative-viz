@@ -133,9 +133,8 @@
                   .text("Percent or Rate"));
 
               // list of group names
-              var res = data.map(function(d){
-                console.log(d);
-                return d.key
+              var res = data.map(function(d){ 
+                return d.Series_Name
               })
               console.log(res)
               var color = d3.scaleOrdinal()
