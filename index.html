@@ -90,6 +90,7 @@
                 . entries(data);
 
               // Add X axis
+              var x = d3.scaleTime().range([0, width]);
               var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
                     return new Date(d.Date);
@@ -131,8 +132,11 @@
                   .attr("text-anchor", "end")
                   .text("Percent or Rate"));
 
-              // color palette
-              var res = data.map(function(d){ return d.key }) // list of group names
+              // list of group names
+              var res = data.map(function(d){
+                console.log(d);
+                return d.key
+              })
               console.log(res)
               var color = d3.scaleOrdinal()
                 .domain(res)
