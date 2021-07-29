@@ -133,6 +133,7 @@
 
               // color palette
               var res = data.map(function(d){ return d.key }) // list of group names
+              console.log(res)
               var color = d3.scaleOrdinal()
                 .domain(res)
                 .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
@@ -147,8 +148,14 @@
                     .attr("stroke-width", 1.5)
                     .attr("d", function(d){
                       return d3.line()
-                        .x(function(d) { return x(d.Date); })
-                        .y(function(d) { return y(+d.Value); })
+                        .x(function(d) {
+                            console.log(d)
+                            return x(d.Date);
+                        })
+                        .y(function(d) {
+                            console.log(d)
+                            return y(+d.Value);
+                        })
                         (d.values)
                     })
 
