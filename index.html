@@ -90,15 +90,15 @@
                 . entries(data);
 
               // Add X axis
-              var x = d3.scaleTime().range([0, width]);
+              //var x = d3.scaleTime().range([0, width]);
 
               // Scale the range of the data
-              x.domain(d3.extent(data, function(d) { return new Date(d.date); })); 
-              // var x = d3.scaleTime()
-              //   .domain(d3.extent(data, function(d) {
-              //       return new Date(d.Date);
-              //   }))
-              //   .range([ 0, width ]);
+              //x.domain(d3.extent(data, function(d) { return new Date(d.date); }));
+              var x = d3.scaleTime()
+                .domain(d3.extent(data, function(d) {
+                    return new Date(d.Date);
+                }))
+                .range([ 0, width ]);
 
               var xAxis = d3.axisBottom(x)
                 .tickFormat(function(date){
