@@ -158,7 +158,7 @@
                     .attr("d", function(d){
                       return d3.line()
                         .x(function(d) {
-                            var test1 = x(d.Date);
+                            var test1 = new Date(d.Date);
                             console.log(test1);
                             return new Date(d.Date);
                         })
