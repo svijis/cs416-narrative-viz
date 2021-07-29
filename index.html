@@ -96,9 +96,18 @@
                 }))
                 .range([ 0, width ]);
 
+              var xAxis = d3.axisBottom(xScale)
+                .tickFormat(function(date){
+                  if (d3.timeYear(date) < date) {
+                    return d3.timeFormat('%b')(date);
+                  } else {
+                    return d3.timeFormat('%Y')(date);
+                  }
+                });
+
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+                .call(xAxis)
                 .call(g => g.append("text")
                   .attr("x", width / 2)
                   .attr("y", margin.bottom)
