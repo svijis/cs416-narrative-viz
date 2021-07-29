@@ -160,7 +160,7 @@
                         .x(function(d) {
                             var test1 = x(d.Date);
                             console.log(test1);
-                            return x(d.Date);
+                            return new Date(d.Date);
                         })
                         .y(function(d) {
                             console.log(d)
