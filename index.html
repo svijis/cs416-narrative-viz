@@ -75,31 +75,6 @@
             //     .attr("text-anchor", "end")
             //     .text("Wins"));
 
-            // parse the date / time
-          var parseTime = d3.timeParse("%d-%b-%y");
-
-          // set the ranges
-          var x = d3.scaleTime().range([0, width]);
-          var y = d3.scaleLinear().range([height, 0]);
-
-          // append the svg obgect to the body of the page
-          // appends a 'group' element to 'svg'
-          // moves the 'group' element to the top left margin
-          svg.append("g")
-              .attr("transform",
-                    "translate(" + margin.left + "," + margin.top + ")");
-
-          // gridlines in x axis function
-          function make_x_gridlines() {
-              return d3.axisBottom(x)
-                  .ticks(5)
-          }
-
-          // gridlines in y axis function
-          function make_y_gridlines() {
-              return d3.axisLeft(y)
-                  .ticks(5)
-          }
 
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
           var unemployment_data;
@@ -123,13 +98,13 @@
 
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x))
-                .call(g => g.append("text")
-                  .attr("x", width / 2)
-                  .attr("y", margin.bottom)
-                  .attr("fill", "currentColor")
-                  .attr("text-anchor", "end")
-                  .text("Month and Year"));
+                .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+                // .call(g => g.append("text")
+                //   .attr("x", width / 2)
+                //   .attr("y", margin.bottom)
+                //   .attr("fill", "currentColor")
+                //   .attr("text-anchor", "end")
+                //   .text("Month and Year"));
 
               // Add Y axis
               var y = d3.scaleLinear()
