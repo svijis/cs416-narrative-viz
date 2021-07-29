@@ -90,17 +90,25 @@
                 . entries(data);
 
               // Add X axis
-              //var x = d3.scaleTime().range([0, width]);
+              var x = d3.scaleTime().range([0, width]);
 
-              // Scale the range of the data
-              //x.domain(d3.extent(data, function(d) { return new Date(d.date); }));
-              var x = d3.scaleTime()
+              // Create scale
+              var x_domain = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
                     return new Date(d.Date);
                 }))
                 .range([ 0, width ]);
 
-              var xAxis = d3.axisBottom(x)
+
+              // Scale the range of the data
+              //x.domain(d3.extent(data, function(d) { return new Date(d.date); }));
+              // var x = d3.scaleTime()
+              //   .domain(d3.extent(data, function(d) {
+              //       return new Date(d.Date);
+              //   }))
+              //   .range([ 0, width ]);
+              //
+              var xAxis = d3.axisBottom(x_domain)
                 .tickFormat(function(date){
                   if (d3.timeYear(date) < date) {
                     return d3.timeFormat('%b')(date);
@@ -157,10 +165,8 @@
                     .attr("stroke-width", 1.5)
                     .attr("d", function(d){
                       return d3.line()
-                        .x(function(d) {
-                            var test1 = new Date(d.Date);
-                            console.log(test1);
-                            return new Date(d.Date);
+                        .x(function(d) { 
+                            return x(d.Date);
                         })
                         .y(function(d) {
                             console.log(d)
