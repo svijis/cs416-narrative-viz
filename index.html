@@ -92,19 +92,19 @@
               // Add X axis
               var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
-                    return d.Date;
+                    return new Date(d.Date);
                 }))
                 .range([ 0, width ]);
 
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
                 .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
-                // .call(g => g.append("text")
-                //   .attr("x", width / 2)
-                //   .attr("y", margin.bottom)
-                //   .attr("fill", "currentColor")
-                //   .attr("text-anchor", "end")
-                //   .text("Month and Year"));
+                .call(g => g.append("text")
+                  .attr("x", width / 2)
+                  .attr("y", margin.bottom)
+                  .attr("fill", "currentColor")
+                  .attr("text-anchor", "end")
+                  .text("Month and Year"));
 
               // Add Y axis
               var y = d3.scaleLinear()
