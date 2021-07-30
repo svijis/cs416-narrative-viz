@@ -132,6 +132,12 @@
                             .style("top", (d3.event.pageY - 28) + "px");
                     })
 
+                // Markers on the line
+                svg.append("circle") accesskey=""
+                  .attr("r", 4.5)
+                  .attr("cx", function(d) { return x(d.Date); })
+                  .attr("cy", function(d) { return y(+d.Value); });
+
                 const annotations = [
                   {
                     note: {
