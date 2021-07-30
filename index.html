@@ -143,35 +143,23 @@
                     // })
 
                     var focus = svg.append("g")
-                                .attr("class", "focus")
-                                .style("display", "none");
+                          .attr("class", "focus")
+                          .style("display", "none");
 
                     focus.append("circle")
-                        .attr("r", 5);
+                          .attr("r", 5);
 
-                    focus.append("rect")
-                        .attr("class", "tooltip")
-                        .attr("width", 100)
-                        .attr("height", 50)
-                        .attr("x", 10)
-                        .attr("y", -22)
-                        .attr("rx", 4)
-                        .attr("ry", 4);
+                   var tooltipDate = tooltip.append("div")
+                          .attr("class", "tooltip-date");
 
-                    focus.append("text")
-                        .attr("class", "tooltip-date")
-                        .attr("x", 18)
-                        .attr("y", -2);
+                   var tooltipLikes = tooltip.append("div");
+                   tooltipLikes.append("span")
+                              .attr("class", "tooltip-title")
+                              .text("Likes: ");
 
-                    focus.append("text")
-                        .attr("x", 18)
-                        .attr("y", 18)
-                        .text("Likes:");
+                    var tooltipLikesValue = tooltipLikes.append("span")
+                        .attr("class", "tooltip-likes");
 
-                    focus.append("text")
-                        .attr("class", "tooltip-percent")
-                        .attr("x", 60)
-                        .attr("y", 18);
 
                     svg.append("rect")
                         .attr("class", "overlay")
@@ -181,7 +169,7 @@
                         .on("mouseout", function() { focus.style("display", "none"); })
                         .on("mousemove", mousemove);
 
-                    function mousemove(d) {
+                    function mousemove() { 
                         var x0 = x.invert(d3.mouse(this)[0]),
                             i = bisectDate(data, x0, 1),
                             d0 = data[i - 1],
