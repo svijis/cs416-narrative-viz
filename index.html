@@ -50,8 +50,9 @@
               plotByIndustry(data, onMouseClick);
           }
 
-          function onMouseClick() {
+          function onMouseClick(d,i) {
               console.log(d);
+              console.log(i);
           }
 
           function plotByIndustry(data) {
