@@ -80,14 +80,20 @@
           var unemployment_data;
           async function fetchData() {
               var unemployment_data = await d3.csv(csv_root + "/unemployment_by_industry.csv");
-              plotByIndustry(unemployment_data);
+              var data = [];
+              for (var i=0; i < unemployment_data.length; i++) {
+                  var d = unemployment_data[i];
+                  d.Date = new Date(d.date);
+                  data.push(d)
+              }
+              plotByIndustry(data);
           }
 
           function plotByIndustry(data) {
 
               var data_by_industry = d3.nest()
                   .key(function(d) { return d.Series_Name;})
-                . entries(data);
+                . entries(data); 
 
               // Add X axis
               // var x = d3.scaleTime().range([0, width]);
