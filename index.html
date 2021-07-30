@@ -60,12 +60,7 @@
 
               // Add X axis
               var xAxisScale = d3.scaleTime().range([0, width]);
-              // var x = d3.scaleTime()
-              //   .domain(d3.extent(data, function(d) {
-              //       return d.Date;
-              //   }))
-              //   .range([ 0, width ]);
-              x = xAxisScale.domain(d3.extent(data, function(d) {
+              var x = xAxisScale.domain(d3.extent(data, function(d) {
                     return d.Date;
               }))
 
@@ -187,7 +182,13 @@
 
               function drawTooltip() {
                  var xPosition = xAxisScale.invert(d3.mouse(this)[0]);
+
                  console.log("mousemove:", xPosition)
+                 data_by_industry.sort((a, b) => {
+                    console.log(a)
+                    console.log(b)
+                    return b.Values.find(h => h.Date == xPosition).Value - a.Values.find(h => h.Date == xPosition).Value;
+                 })
 
 
                 // states.sort((a, b) => {
