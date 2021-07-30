@@ -28,6 +28,8 @@
               .attr("class", "tooltip")
               .style("opacity", 0);
 
+          var formatTime = d3.timeFormat('%b %Y');
+
           // append the svg object to the body of the page
           var svg = d3.select("#dataviz")
             .append("svg")
@@ -142,7 +144,7 @@
                 // Markers on the line
                 g.append("circle")
                   .attr("r", 2.5)
-                  .style("stroke", "black")
+                  .style("stroke", "red")
                   .style("fill", "none")
                   .attr("cx", function(d) { return x(d.Date); })
                   .attr("cy", function(d) { return y(+d.Value); });
@@ -179,7 +181,7 @@
                     div.transition()
                        .duration(200)
                        .style("opacity", .9);
-                    div.html(d.Value + " %" + "<br/>" + d.Date)
+                    div.html(d.Series_Name + "<br/>" + formatTime(d.Date) + "<br>" + <d.Value + " %" + "<br/>")
                        .style("left", (d3.event.pageX - 20) + "px")
               		     .style("top", (d3.event.pageY + 6) + "px");
         			      d3.select(this.nextElementSibling).transition()
@@ -195,7 +197,7 @@
                            .style("opacity", 0);
             			      d3.select(this.nextElementSibling).transition()
                             .duration(500)
-                            .style("opacity", 0); 
+                            .style("opacity", 0);
             			      d3.select(this.nextElementSibling.nextElementSibling).transition()
                             .duration(500)
                             .style("opacity", 0);
