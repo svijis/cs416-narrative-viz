@@ -181,11 +181,11 @@
                         .on("mousemove", mousemove);
 
                     function mousemove(d) {
-                        // var x0 = x.invert(d3.mouse(this)[0]),
-                        //     i = bisectDate(data, x0, 1),
-                        //     d0 = data[i - 1],
-                        //     d1 = data[i],
-                        //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+                        var x0 = x.invert(d3.mouse(this)[0]),
+                            i = bisectDate(data, x0, 1),
+                            d0 = data[i - 1],
+                            d1 = data[i],
+                            d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
                         console.log(d)
                         focus.attr("transform", "translate(" + x(d.Date) + "," + y(+d.Value) + ")");
                         focus.select(".tooltip-date").text(formatTime(d.date));
