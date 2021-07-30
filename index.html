@@ -136,7 +136,7 @@
                         .data(data).enter().append("g");
 
                 // Markers on the line
-                svg.append("circle")
+                g.append("circle")
                   .attr("r", 4.5)
                   .attr("cx", function(d) {
                     console.log(d)
