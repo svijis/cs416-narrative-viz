@@ -24,9 +24,9 @@
               width = 960 - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom;
 
-          var div = d3.select("body").append("div")
+          var tooltip = d3.select("body").append("div")
               .attr("class", "tooltip")
-              .style("opacity", 0);
+              .style("display", "none");
 
           var formatTime = d3.timeFormat('%b %Y');
           var bisectDate = d3.bisector(function(d) { return d.Date; }).left;
@@ -169,7 +169,7 @@
                         .on("mouseout", function() { focus.style("display", "none"); })
                         .on("mousemove", mousemove);
 
-                    function mousemove() { 
+                    function mousemove() {
                         var x0 = x.invert(d3.mouse(this)[0]),
                             i = bisectDate(data, x0, 1),
                             d0 = data[i - 1],
