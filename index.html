@@ -129,13 +129,16 @@
                         (d.values)
                     })
                     .on("mouseover", function(d) {
-                        console.log(d)
-                        div.transition()
-                            .duration(200)
-                            .style("opacity", .9);
-                        div	.html(d.Series_name + "<br/>")
-                            .style("left", (d3.event.pageX) + "px")
-                            .style("top", (d3.event.pageY - 28) + "px");
+                        var key = d.key;
+                        var func = function(d.Values) {
+                            div.transition()
+                                .duration(200)
+                                .style("opacity", .9);
+                            div	.html(d.key + "<br/>" + x(d.Date) + "<br/>" + y(+d.Value))
+                                .style("left", (d3.event.pageX) + "px")
+                                .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        return func(d.Values)
                     })
 
                 // var g = svg.selectAll()
