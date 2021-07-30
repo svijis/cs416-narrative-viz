@@ -8,7 +8,7 @@
 <body>
 
 <div>
-<h1>Unemployment Rate Trends before and after Covid-19 (2018-2021)</h1>
+<h1>Unemployment Rate Trends before and after Covid-19</h1>
 <svg></svg>
 <div id='tooltip' style='position:absolute;background-color:#edeaea;padding:5px;margin-left:100px'></div>
 </div>
@@ -312,7 +312,7 @@
                 ];
 
                 const makeAnnotations = d3.annotation()
-                  .editMode(true)
+                  //.editMode(true)
                   .annotations(annotations);
                 svg.append("g")
                   .call(makeAnnotations)
