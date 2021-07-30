@@ -182,13 +182,12 @@
 
               function drawTooltip() {
                  var xPosition = xAxisScale.invert(d3.mouse(this)[0]);
-                 var monYear = formatTime(xPosition)
-                 console.log("mousemove:", monYear)
+                 var monYear = formatTime(xPosition);
                  data_by_industry.sort((a, b) => {
-                    console.log(a)
-                    console.log(b)
-                    const match =  b.values.find(h => h.Date == xPosition).Value - a.values.find(h => h.Date == xPosition).Value;
-                    console.log(match)
+                    console.log(a.values.find(h => formatTime(h.Date) == monYear))
+                    console.log(b.values.find(h => formatTime(h.Date) == monYear))
+                    //const match =  b.values.find(h => formatTime(h.Date) == monYear).Value - a.values.find(h => formatTime(h.Date) == monYear).Value;
+                    //console.log(match)
                  })
 
 
