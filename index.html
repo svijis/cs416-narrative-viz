@@ -182,8 +182,8 @@
 
               function drawTooltip() {
                  var xPosition = xAxisScale.invert(d3.mouse(this)[0]);
-
-                 console.log("mousemove:", xPosition)
+                 var monYear = formatTime(xPosition)
+                 console.log("mousemove:", monYear)
                  data_by_industry.sort((a, b) => {
                     console.log(a)
                     console.log(b)
