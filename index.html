@@ -189,8 +189,8 @@
                             d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
                         console.log(d)
                         focus.attr("transform", "translate(" + x(d.Date) + "," + y(+d.Value) + ")");
-                        focus.select(".tooltip-date").text(formatTime(d.date));
-                        //focus.select(".tooltip-likes").text(formatValue(d.likes));
+                        focus.select(".tooltip-date").text(formatTime(d.Date));
+                        focus.select(".tooltip-likes").text(d.Value));
                     }
                 // var g = svg.selectAll()
                 //         .data(data).enter().append("g");
