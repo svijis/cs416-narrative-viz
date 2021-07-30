@@ -103,7 +103,7 @@
                 .range(['#0000ff','#6600cc', '#660066', '#ff0000', '#663300', '#009933', '#ff0066', '#00bfff', '#003366', '#ff99cc', '#006666', '#99cc00', '#ff7f00', '#a65628', '#999911'])
 
               // Draw the line
-              const lines = svg.selectAll(".line")
+              svg.selectAll(".line")
                   .data(data_by_industry)
                   .enter()
                   .append("path")
@@ -162,9 +162,9 @@
                   .call(makeAnnotations)
 
 
-                lines.on("mouseover", handleMouseOver)
-                  .on("mouseout", handleMouseOut)
-                  .on("click", handleMouseClick);
+                // lines.on("mouseover", handleMouseOver)
+                //   .on("mouseout", handleMouseOut)
+                //   .on("click", handleMouseClick);
 
           }
 
