@@ -158,38 +158,38 @@
                 .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
 
                 // Add the line
-             svg.append("path")
-               .datum(data)
-               .attr("fill", "none")
-               .attr("stroke", "steelblue")
-               .attr("stroke-width", 1.5)
-               .attr("d", d3.line()
-                 .x(function(d) { return x(d.Date) })
-                 .y(function(d) { return y(d.Value) })
-               )
-              // // Draw the line
-              // svg.selectAll(".line")
-              //     .data(data_by_industry)
-              //     .enter()
-              //     .append("path")
-              //       .attr("fill", "none")
-              //       .attr("stroke", function(d){
-              //         var test = color(d.key)
-              //         console.log(test);
-              //         return test;
-              //       })
-              //       .attr("stroke-width", 1.5)
-              //       .attr("d", function(d){
-              //         return d3.line()
-              //           .x(function(d) {
-              //               console.log(x(d.Date));
-              //               return x(d.Date);
-              //           })
-              //           .y(function(d) {
-              //               return y(+d.Value);
-              //           })
-              //           (d.values)
-              //       })
+             // svg.append("path")
+             //   .datum(data)
+             //   .attr("fill", "none")
+             //   .attr("stroke", "steelblue")
+             //   .attr("stroke-width", 1.5)
+             //   .attr("d", d3.line()
+             //     .x(function(d) { return x(d.Date) })
+             //     .y(function(d) { return y(d.Value) })
+             //   )
+              // Draw the line
+              svg.selectAll(".line")
+                  .data(data_by_industry)
+                  .enter()
+                  .append("path")
+                    .attr("fill", "none")
+                    .attr("stroke", function(d){
+                      var test = color(d.key)
+                      console.log(test);
+                      return test;
+                    })
+                    .attr("stroke-width", 1.5)
+                    .attr("d", function(d){
+                      return d3.line()
+                        .x(function(d) {
+                            console.log(x(d.Date));
+                            return x(d.Date);
+                        })
+                        .y(function(d) {
+                            return y(+d.Value);
+                        })
+                        (d.values)
+                    })
 
           }
 
