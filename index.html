@@ -132,6 +132,9 @@
                             .style("top", (d3.event.pageY - 28) + "px");
                     })
 
+                var g = svg.selectAll()
+                        .data(data).enter().append("g");
+                        
                 // Markers on the line
                 svg.append("circle")
                   .attr("r", 4.5)
