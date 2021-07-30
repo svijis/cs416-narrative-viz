@@ -141,6 +141,7 @@
                     //     return func(d.values)
                     // })
 
+                    // Add legend
                     var legend = svg.selectAll()
                        .data(data_by_industry)
                        .enter()
@@ -166,6 +167,81 @@
                        .text(function (d) {
                           return d.key;
                        });
+
+
+                       var mouseG = svg.append("g")
+                          .attr("class", "mouse-over-effects");
+
+                       mouseG.append("path") // this is the black vertical line to follow mouse
+                         .attr("class", "mouse-line")
+                         .style("stroke", "black")
+                         .style("stroke-width", "1px")
+                         .style("opacity", "0");
+
+                      var lines = document.getElementsByClassName('line');
+
+                     var mousePerLine = mouseG.selectAll('.mouse-per-line')
+                                   .data(data_by_industry)
+                                   .enter()
+                                   .append("g")
+                                   .attr("class", "mouse-per-line");
+
+                     mousePerLine.append("circle")
+                       .attr("r", 7)
+                       .style("stroke", function (d) {
+                         return color(d.name);
+                       })
+                       .style("fill", "none")
+                       .style("stroke-width", "1px")
+                       .style("opacity", "0");
+
+                     mousePerLine.append("text")
+                       .attr("transform", "translate(10,3)");
+
+               mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+                 .attr('width', width) // can't catch mouse events on a g element
+                 .attr('height', height)
+                 .attr('fill', 'none')
+                 .attr('pointer-events', 'all')
+                 .on('mouseout', function () { // on mouse out hide line, circles and text
+                   d3.select(".mouse-line")
+                     .style("opacity", "0");
+                   d3.selectAll(".mouse-per-line circle")
+                     .style("opacity", "0");
+                   d3.selectAll(".mouse-per-line text")
+                     .style("opacity", "0");
+                 })
+                 .on('mouseover', function () { // on mouse in show line, circles and text
+                   d3.select(".mouse-line")
+                     .style("opacity", "1");
+                   d3.selectAll(".mouse-per-line circle")
+                     .style("opacity", "1");
+                   d3.selectAll(".mouse-per-line text")
+                     .style("opacity", "1");
+                 })
+                 .on('mousemove', function () { // mouse moving over canvas
+                   var mouse = d3.mouse(this);
+
+                   d3.selectAll(".mouse-per-line")
+                     .attr("transform", function (d, i) {
+
+                       var xDate = x.invert(mouse[0]),
+                         bisect = d3.bisector(function (d) { return d.Date; }).left;
+                       idx = bisect(d.values, xDate);
+
+                       d3.select(this).select('text')
+                         .text(y.invert(y(d.values[idx].Value)).toFixed(2));
+
+                       d3.select(".mouse-line")
+                         .attr("d", function () {
+                           var data = "M" + x(d.values[idx].Date) + "," + height;
+                           data += " " + x(d.values[idx].Date) + "," + 0;
+                           return data;
+                         });
+                       return "translate(" + x(d.values[idx].Date) + "," + y(d.values[idx].Value) + ")";
+                     });
+                 });
+
                 // var g = svg.selectAll()
                 //         .data(data).enter().append("g");
                 //
