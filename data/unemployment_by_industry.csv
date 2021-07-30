@@ -37,7 +37,7 @@ LNU04032231,Construction,2020,M11,2020-11-01,7.3
 LNU04032231,Construction,2020,M12,2020-12-01,9.6
 LNU04032231,Construction,2021,M01,2021-01-01,9.4
 LNU04032231,Construction,2021,M02,2021-02-01,9.6
-LNU04032231,Construction,2021,M03,2020-03-01,8.6
+LNU04032231,Construction,2021,M03,2021-03-01,8.6
 LNU04032231,Construction,2021,M04,2021-04-01,7.7
 LNU04032231,Construction,2021,M05,2021-05-01,6.7
 LNU04032231,Construction,2021,M06,2021-06-01,7.5
@@ -79,7 +79,7 @@ LNU04032240,Education and Health Services,2020,M11,2020-11-01,3.7
 LNU04032240,Education and Health Services,2020,M12,2020-12-01,4.1
 LNU04032240,Education and Health Services,2021,M01,2021-01-01,4.3
 LNU04032240,Education and Health Services,2021,M02,2021-02-01,3.7
-LNU04032240,Education and Health Services,2021,M03,2020-03-01,3.8
+LNU04032240,Education and Health Services,2021,M03,2021-03-01,3.8
 LNU04032240,Education and Health Services,2021,M04,2021-04-01,3.4
 LNU04032240,Education and Health Services,2021,M05,2021-05-01,3.4
 LNU04032240,Education and Health Services,2021,M06,2021-06-01,4.4
@@ -121,7 +121,7 @@ LNU04032237,Information Industry,2020,M11,2020-11-01,8.2
 LNU04032237,Information Industry,2020,M12,2020-12-01,6.4
 LNU04032237,Information Industry,2021,M01,2021-01-01,7.4
 LNU04032237,Information Industry,2021,M02,2021-02-01,6.2
-LNU04032237,Information Industry,2021,M03,2020-03-01,6.6
+LNU04032237,Information Industry,2021,M03,2021-03-01,6.6
 LNU04032237,Information Industry,2021,M04,2021-04-01,5.9
 LNU04032237,Information Industry,2021,M05,2021-05-01,5.8
 LNU04032237,Information Industry,2021,M06,2021-06-01,6.1
@@ -163,7 +163,7 @@ LNU04032241,Leisure and Hospitality,2020,M11,2020-11-01,15
 LNU04032241,Leisure and Hospitality,2020,M12,2020-12-01,16.7
 LNU04032241,Leisure and Hospitality,2021,M01,2021-01-01,15.9
 LNU04032241,Leisure and Hospitality,2021,M02,2021-02-01,13.5
-LNU04032241,Leisure and Hospitality,2021,M03,2020-03-01,13
+LNU04032241,Leisure and Hospitality,2021,M03,2021-03-01,13
 LNU04032241,Leisure and Hospitality,2021,M04,2021-04-01,10.8
 LNU04032241,Leisure and Hospitality,2021,M05,2021-05-01,10.1
 LNU04032241,Leisure and Hospitality,2021,M06,2021-06-01,10.9
@@ -205,7 +205,7 @@ LNU04032232,Manufacturing,2020,M11,2020-11-01,4.7
 LNU04032232,Manufacturing,2020,M12,2020-12-01,4.3
 LNU04032232,Manufacturing,2021,M01,2021-01-01,4.7
 LNU04032232,Manufacturing,2021,M02,2021-02-01,4.8
-LNU04032232,Manufacturing,2021,M03,2020-03-01,5.2
+LNU04032232,Manufacturing,2021,M03,2021-03-01,5.2
 LNU04032232,Manufacturing,2021,M04,2021-04-01,5.8
 LNU04032232,Manufacturing,2021,M05,2021-05-01,4.8
 LNU04032232,Manufacturing,2021,M06,2021-06-01,5.4
@@ -247,7 +247,7 @@ LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M11,2020-11-01,19.2
 LNU04032230,"Mining, Quarrying, Oil and Gas",2020,M12,2020-12-01,13.1
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M01,2021-01-01,14.2
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M02,2021-02-01,19.3
-LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M03,2020-03-01,15
+LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M03,2021-03-01,15
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M04,2021-04-01,14.3
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M05,2021-05-01,9.6
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M06,2021-06-01,10.3
@@ -289,7 +289,7 @@ LNU04034236,Educational Services,2020,M11,2020-11-01,5
 LNU04034236,Educational Services,2020,M12,2020-12-01,5.8
 LNU04034236,Educational Services,2021,M01,2021-01-01,5.2
 LNU04034236,Educational Services,2021,M02,2021-02-01,4.3
-LNU04034236,Educational Services,2021,M03,2020-03-01,4.1
+LNU04034236,Educational Services,2021,M03,2021-03-01,4.1
 LNU04034236,Educational Services,2021,M04,2021-04-01,3.5
 LNU04034236,Educational Services,2021,M05,2021-05-01,4.6
 LNU04034236,Educational Services,2021,M06,2021-06-01,6.4
@@ -331,7 +331,7 @@ LNU04034211,Real Estate,2020,M11,2020-11-01,6.1
 LNU04034211,Real Estate,2020,M12,2020-12-01,4
 LNU04034211,Real Estate,2021,M01,2021-01-01,4.7
 LNU04034211,Real Estate,2021,M02,2021-02-01,5.1
-LNU04034211,Real Estate,2021,M03,2020-03-01,4.4
+LNU04034211,Real Estate,2021,M03,2021-03-01,4.4
 LNU04034211,Real Estate,2021,M04,2021-04-01,4.6
 LNU04034211,Real Estate,2021,M05,2021-05-01,4.1
 LNU04034211,Real Estate,2021,M06,2021-06-01,4.7
@@ -373,7 +373,7 @@ LNU04032242,Other Services Industry,2020,M11,2020-11-01,8.1
 LNU04032242,Other Services Industry,2020,M12,2020-12-01,7.4
 LNU04032242,Other Services Industry,2021,M01,2021-01-01,8.8
 LNU04032242,Other Services Industry,2021,M02,2021-02-01,7.7
-LNU04032242,Other Services Industry,2021,M03,2020-03-01,6.7
+LNU04032242,Other Services Industry,2021,M03,2021-03-01,6.7
 LNU04032242,Other Services Industry,2021,M04,2021-04-01,6.2
 LNU04032242,Other Services Industry,2021,M05,2021-05-01,5.3
 LNU04032242,Other Services Industry,2021,M06,2021-06-01,5.4
@@ -415,7 +415,7 @@ LNU04032239,Professional and Business Services,2020,M11,2020-11-01,5.9
 LNU04032239,Professional and Business Services,2020,M12,2020-12-01,6.1
 LNU04032239,Professional and Business Services,2021,M01,2021-01-01,6.8
 LNU04032239,Professional and Business Services,2021,M02,2021-02-01,6.8
-LNU04032239,Professional and Business Services,2021,M03,2020-03-01,6.7
+LNU04032239,Professional and Business Services,2021,M03,2021-03-01,6.7
 LNU04032239,Professional and Business Services,2021,M04,2021-04-01,5.9
 LNU04032239,Professional and Business Services,2021,M05,2021-05-01,5.4
 LNU04032239,Professional and Business Services,2021,M06,2021-06-01,5.2
@@ -457,7 +457,7 @@ LNU04032236,Transportation and Utilities Industry,2020,M11,2020-11-01,8
 LNU04032236,Transportation and Utilities Industry,2020,M12,2020-12-01,8.4
 LNU04032236,Transportation and Utilities Industry,2021,M01,2021-01-01,8.2
 LNU04032236,Transportation and Utilities Industry,2021,M02,2021-02-01,8.4
-LNU04032236,Transportation and Utilities Industry,2021,M03,2020-03-01,8.3
+LNU04032236,Transportation and Utilities Industry,2021,M03,2021-03-01,8.3
 LNU04032236,Transportation and Utilities Industry,2021,M04,2021-04-01,6.8
 LNU04032236,Transportation and Utilities Industry,2021,M05,2021-05-01,7.2
 LNU04032236,Transportation and Utilities Industry,2021,M06,2021-06-01,6
@@ -499,7 +499,7 @@ LNU04032235,Wholesale and Retail Trade,2020,M11,2020-11-01,6
 LNU04032235,Wholesale and Retail Trade,2020,M12,2020-12-01,5.5
 LNU04032235,Wholesale and Retail Trade,2021,M01,2021-01-01,6.9
 LNU04032235,Wholesale and Retail Trade,2021,M02,2021-02-01,6.8
-LNU04032235,Wholesale and Retail Trade,2021,M03,2020-03-01,6.7
+LNU04032235,Wholesale and Retail Trade,2021,M03,2021-03-01,6.7
 LNU04032235,Wholesale and Retail Trade,2021,M04,2021-04-01,6.2
 LNU04032235,Wholesale and Retail Trade,2021,M05,2021-05-01,6.6
 LNU04032235,Wholesale and Retail Trade,2021,M06,2021-06-01,6.2
