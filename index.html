@@ -96,24 +96,12 @@
                 . entries(data);
 
               // Add X axis
-              // var x = d3.scaleTime().range([0, width]);
-
-              // Create scale
               var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
                     return d.Date;
                 }))
                 .range([ 0, width ]);
 
-
-              // Scale the range of the data
-              //x.domain(d3.extent(data, function(d) { return new Date(d.date); }));
-              // var x = d3.scaleTime()
-              //   .domain(d3.extent(data, function(d) {
-              //       return new Date(d.Date);
-              //   }))
-              //   .range([ 0, width ]);
-              //
               var xAxis = d3.axisBottom(x)
                 .tickFormat(function(date){
                   if (d3.timeYear(date) < date) {
@@ -155,18 +143,9 @@
 
               var color = d3.scaleOrdinal()
                 .domain(res)
-                .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
+                .range(['#0000ff','#6600cc', '#660066', '#ff0000', '#663300', '#009933', '#ff0066', '#00bfff', '#003366', '#ff99cc', '#006666', '#99cc00'])
+                //.range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#999900', '#999911' ,'#999922'])
 
-                // Add the line
-             // svg.append("path")
-             //   .datum(data)
-             //   .attr("fill", "none")
-             //   .attr("stroke", "steelblue")
-             //   .attr("stroke-width", 1.5)
-             //   .attr("d", d3.line()
-             //     .x(function(d) { return x(d.Date) })
-             //     .y(function(d) { return y(d.Value) })
-             //   )
               // Draw the line
               svg.selectAll(".line")
                   .data(data_by_industry)
@@ -174,7 +153,7 @@
                   .append("path")
                     .attr("fill", "none")
                     .attr("stroke", function(d){
-                      var test = color(d.key)
+                      return color(d.key)
                       console.log(test);
                       return test;
                     })
