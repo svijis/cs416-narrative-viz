@@ -186,11 +186,11 @@
                     y: 365,
                     dy: -61,
                     dx: -124
-                  } 
+                  }
                 ];
 
                 const makeAnnotations = d3.annotation()
-                  .editMode(true)
+                  //.editMode(true)
                   .annotations(annotations);
                 svg.append("g")
                   .call(makeAnnotations)
