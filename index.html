@@ -152,6 +152,7 @@
                   .append("path")
                     .attr("fill", "none")
                     .attr("stroke", function(d){
+                      console.log(d.Series_Name + " :: " + color(d.key));
                       return color(d.key);
                     })
                     .attr("stroke-width", 1.5)
