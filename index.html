@@ -175,22 +175,31 @@
 
                         //circles are selected again to add the mouseover functions
                  g.selectAll("circle")
-        			  .on("mouseover", function(d) {
+        			   .on("mouseover", function(d) {
                     div.transition()
                        .duration(200)
                        .style("opacity", .9);
                     div.html(d.Value + " %" + "<br/>" + d.Date)
                        .style("left", (d3.event.pageX - 20) + "px")
               		     .style("top", (d3.event.pageY + 6) + "px");
-        	          //selects the horizontal dashed line in the group
         			      d3.select(this.nextElementSibling).transition()
                         .duration(200)
                         .style("opacity", .9);
-                    //selects the vertical dashed line in the group
         			      d3.select(this.nextElementSibling.nextElementSibling).transition()
                         .duration(200)
                         .style("opacity", .9);
                     })
+                    .on("mouseout", function(d) {
+                        div.transition()
+                           .duration(500)
+                           .style("opacity", 0);
+            			      d3.select(this.nextElementSibling).transition()
+                            .duration(500)
+                            .style("opacity", 0); 
+            			      d3.select(this.nextElementSibling.nextElementSibling).transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                    });
 
                 const annotations = [
                   {
