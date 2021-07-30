@@ -127,19 +127,6 @@
                         })
                         (d.values)
                     })
-                    .on("mouseclick", function(d) {
-                        console.log(d);
-                        // var key = d.key;
-                        // var func = function(d) {
-                        //     div.transition()
-                        //         .duration(200)
-                        //         .style("opacity", .9);
-                        //     div	.html(d.key + "<br/>" + x(d.Date) + "<br/>" + y(+d.Value))
-                        //         .style("left", (d3.event.pageX) + "px")
-                        //         .style("top", (d3.event.pageY - 28) + "px");
-                        // }
-                        // return func(d.values)
-                    })
 
                     // Add legend
                     // var legend = svg.selectAll()
@@ -175,6 +162,11 @@
                                 .attr('opacity', 0)
                                 .on('mousemove', drawTooltip)
                                 .on('mouseout', removeTooltip);
+                                .on('mouseclick', onMouseClick);
+
+                  function onMouseClick() {
+                      console.log(d);
+                  }
 
                   function removeTooltip() {
                       if (tooltip) tooltip.style('display', 'none');
@@ -198,7 +190,7 @@
 
                     tooltip.html(formatTime(xDate))
                       .style('display', 'block')
-                      .style('left', d3.event.pageX + 20 +  "px")
+                      .style('left', d3.event.pageX + "px")
                       .style('top', d3.event.pageY - 50 +  "px")
                       .selectAll()
                       .data(data_by_industry).enter()
