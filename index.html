@@ -133,32 +133,32 @@
                         (d.values)
                     })
 
-                    // Add legend
-                    // var legend = svg.selectAll()
-                    //    .data(data_by_industry)
-                    //    .enter()
-                    //    .append('g')
-                    //    .attr('class', 'legend');
-                    //
-                    //  legend.append('rect')
-                    //    .attr('x', width - 20)
-                    //    .attr('y', function (d, i) {
-                    //      return i * 20;
-                    //    })
-                    //    .attr('width', 10)
-                    //    .attr('height', 10)
-                    //    .style('fill', function (d) {
-                    //       return color(d.key);
-                    //    });
-                    //
-                    //  legend.append('text')
-                    //    .attr('x', width - 8)
-                    //    .attr('y', function (d, i) {
-                    //       return (i * 20) + 9;
-                    //    })
-                    //    .text(function (d) {
-                    //       return d.key;
-                    //    });
+                    Add legend
+                    var legend = svg.selectAll()
+                       .data(data_by_industry)
+                       .enter()
+                       .append('g')
+                       .attr('class', 'legend');
+
+                     legend.append('rect')
+                       .attr('x', width - 20)
+                       .attr('y', function (d, i) {
+                         return i * 20;
+                       })
+                       .attr('width', 10)
+                       .attr('height', 10)
+                       .style('fill', function (d) {
+                          return color(d.key);
+                       });
+
+                     legend.append('text')
+                       .attr('x', width - 8)
+                       .attr('y', function (d, i) {
+                          return (i * 20) + 9;
+                       })
+                       .text(function (d) {
+                          return d.key;
+                       });
 
                   // Add tooltip
                   // var tipBox = svg.append('rect')
@@ -312,7 +312,7 @@
                 ];
 
                 const makeAnnotations = d3.annotation()
-                  //.editMode(true)
+                  .editMode(true)
                   .annotations(annotations);
                 svg.append("g")
                   .call(makeAnnotations)
