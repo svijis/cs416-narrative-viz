@@ -122,15 +122,15 @@
                         })
                         (d.values)
                     })
-                    .on("mouseover", function(d) {
-                        console.log(d)
-                        div.transition()
-                            .duration(200)
-                            .style("opacity", .9);
-                        div	.html(d.Series_name + "<br/>")
-                            .style("left", (d3.event.pageX) + "px")
-                            .style("top", (d3.event.pageY - 28) + "px");
-                    })
+                    // .on("mouseover", function(d) {
+                    //     console.log(d)
+                    //     div.transition()
+                    //         .duration(200)
+                    //         .style("opacity", .9);
+                    //     div	.html(d.Series_name + "<br/>")
+                    //         .style("left", (d3.event.pageX) + "px")
+                    //         .style("top", (d3.event.pageY - 28) + "px");
+                    // })
 
                 var g = svg.selectAll()
                         .data(data).enter().append("g");
