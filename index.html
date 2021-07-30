@@ -156,16 +156,16 @@
                        .attr('width', 10)
                        .attr('height', 10)
                        .style('fill', function (d) {
-                         return color(d.key);
+                          return color(d.key);
                        });
 
                      legend.append('text')
                        .attr('x', width - 8)
                        .attr('y', function (d, i) {
-                         return (i * 20) + 9;
+                          return (i * 20) + 9;
                        })
                        .text(function (d) {
-                         return d.Series_Name;
+                          return d.key;
                        });
                 // var g = svg.selectAll()
                 //         .data(data).enter().append("g");
