@@ -83,7 +83,7 @@
               var data = [];
               for (var i=0; i < unemployment_data.length; i++) {
                   var d = unemployment_data[i];
-                  d.Date = new Date(d.date);
+                  d.Date = new Date(d.Date);
                   data.push(d)
               }
               plotByIndustry(data);
@@ -93,7 +93,7 @@
 
               var data_by_industry = d3.nest()
                   .key(function(d) { return d.Series_Name;})
-                . entries(data); 
+                . entries(data);
 
               // Add X axis
               // var x = d3.scaleTime().range([0, width]);
@@ -101,7 +101,7 @@
               // Create scale
               var x = d3.scaleTime()
                 .domain(d3.extent(data, function(d) {
-                    return new Date(d.Date);
+                    return d.Date;
                 }))
                 .range([ 0, width ]);
 
