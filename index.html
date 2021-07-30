@@ -9,7 +9,7 @@
 
 <div>
 <h1>Unemployment Rate Trends before and after Covid-19 (2018-2021)</h1>
-<div id="dataviz">
+<svg></svg>
 <div id='tooltip' style='position:absolute;background-color:lightgray;padding:5px;margin-left:100px'></div>
 </div>
 </body>
@@ -28,8 +28,9 @@
           var formatTime = d3.timeFormat('%b %Y');
 
           // append the svg object to the body of the page
-          var svg = d3.select("#dataviz")
-            .append("svg")
+          //var svg = d3.select("#dataviz")
+          //  .append("svg")
+          var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
               .attr("height", height + margin.top + margin.bottom)
             .append("g")
