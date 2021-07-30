@@ -138,7 +138,8 @@
                 // Markers on the line
                 g.append("circle")
                   .attr("r", 2.5)
-                  .style('fill', 'white')
+                  .style("stroke", "black")  
+                  .style("fill", "none")
                   .attr("cx", function(d) { return x(d.Date); })
                   .attr("cy", function(d) { return y(+d.Value); });
 
