@@ -181,8 +181,8 @@
               }
 
               function drawTooltip() {
-                 var xPosition = xAxisScale.invert(d3.mouse(this)[0]);
-                 var monYear = formatTime(xPosition);
+                 var xDate = xAxisScale.invert(d3.mouse(this)[0]);
+                 var monYear = formatTime(xDate);
                  data_by_industry.sort((a, b) => {
                     console.log(a.values.find(h => formatTime(h.Date) == monYear))
                     console.log(b.values.find(h => formatTime(h.Date) == monYear))
@@ -195,21 +195,21 @@
                 //   return b.history.find(h => h.year == year).population - a.history.find(h => h.year == year).population;
                 // })
                 //
-                // tooltipLine.attr('stroke', 'black')
-                //   .attr('x1', x(year))
-                //   .attr('x2', x(year))
-                //   .attr('y1', 0)
-                //   .attr('y2', height);
+                tooltipLine.attr('stroke', 'black')
+                  .attr('x1', x(xDate))
+                  .attr('x2', x(xDate))
+                  .attr('y1', 0)
+                  .attr('y2', height);
                 //
-                // tooltip.html(year)
-                //   .style('display', 'block')
-                //   .style('left', d3.event.pageX + 20)
-                //   .style('top', d3.event.pageY - 20)
-                //   .selectAll()
-                //   .data(states).enter()
-                //   .append('div')
-                //   .style('color', d => d.color)
-                //   .html(d => d.name + ': ' + d.history.find(h => h.year == year).population);
+                tooltip.html(xDate)
+                  .style('display', 'block')
+                  .style('left', d3.event.pageX + 20)
+                  .style('top', d3.event.pageY - 20)
+                  .selectAll()
+                  .data(data_by_industry).enter()
+                  .append('div')
+                  .style('color', d => color(d.Key))
+                  .html(d => d.Key + ': ' + d.Values.find(h => formatTime(h.Date) == monYear).Value);
               }
                //         var mouseG = svg.append("g")
                //            .attr("class", "mouse-over-effects");
