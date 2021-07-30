@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+svg {
+    margin: 20px
+}
+
 /* div.tooltip {
   position: absolute;
   text-align: center;
