@@ -47,7 +47,7 @@
                   d.Date = new Date(d.Date);
                   data.push(d)
               }
-              plotByIndustry(data, handleMouseOver, handleMouseOut, handleMouseClick);
+              plotByIndustry(data);
           }
 
           function plotByIndustry(data) {
@@ -236,7 +236,7 @@
                   .annotations(annotations);
                 svg.append("g")
                   .call(makeAnnotations)
-          } 
+          }
           fetchData();
       }
 
