@@ -106,10 +106,10 @@
 
               var color = d3.scaleOrdinal()
                 .domain(res)
-                .range(['#0000ff','#6600cc', '#d5ab00', '#ff0000', '#663300',
-                '#009933', '#d58000', '#1199ff', '#003366', '#ff99cc', '#006666',
-                '#72b331', '#ff7f00', '#c70e55', '#999911'])
-
+                .range([ '#ff4422','#ee1166' ,'#9911bb' ,'#6633bb' ,'#3344bb' ,'#1199ff','#00aaff',
+                 '#00bbdd','#009988','#44bb44','#88cc44','#ccdd22','#ffee11','#ffcc00','#ff9900','#ff5500',
+                 '#775544','#999999','#828080','#444'])
+                 
               // Draw the line
               svg.selectAll(".line")
                   .data(data_by_industry)
