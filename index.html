@@ -187,7 +187,8 @@
                  data_by_industry.sort((a, b) => {
                     console.log(a)
                     console.log(b)
-                    return b.Values.find(h => h.Date == xPosition).Value - a.Values.find(h => h.Date == xPosition).Value;
+                    const match =  b.values.find(h => h.Date == xPosition).Value - a.values.find(h => h.Date == xPosition).Value;
+                    console.log(match)
                  })
 
 
