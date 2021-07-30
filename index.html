@@ -128,19 +128,69 @@
                         })
                         (d.values)
                     })
-                    .on("mouseover", function(d) {
-                        var key = d.key;
-                        var func = function(d) {
-                            div.transition()
-                                .duration(200)
-                                .style("opacity", .9);
-                            div	.html(d.key + "<br/>" + x(d.Date) + "<br/>" + y(+d.Value))
-                                .style("left", (d3.event.pageX) + "px")
-                                .style("top", (d3.event.pageY - 28) + "px");
-                        }
-                        return func(d.values)
-                    })
+                    // .on("mouseover", function(d) {
+                    //     var key = d.key;
+                    //     var func = function(d) {
+                    //         div.transition()
+                    //             .duration(200)
+                    //             .style("opacity", .9);
+                    //         div	.html(d.key + "<br/>" + x(d.Date) + "<br/>" + y(+d.Value))
+                    //             .style("left", (d3.event.pageX) + "px")
+                    //             .style("top", (d3.event.pageY - 28) + "px");
+                    //     }
+                    //     return func(d.values)
+                    // })
 
+                    var focus = svg.append("g")
+                                .attr("class", "focus")
+                                .style("display", "none");
+
+                    focus.append("circle")
+                        .attr("r", 5);
+
+                    focus.append("rect")
+                        .attr("class", "tooltip")
+                        .attr("width", 100)
+                        .attr("height", 50)
+                        .attr("x", 10)
+                        .attr("y", -22)
+                        .attr("rx", 4)
+                        .attr("ry", 4);
+
+                    focus.append("text")
+                        .attr("class", "tooltip-date")
+                        .attr("x", 18)
+                        .attr("y", -2);
+
+                    focus.append("text")
+                        .attr("x", 18)
+                        .attr("y", 18)
+                        .text("Likes:");
+
+                    focus.append("text")
+                        .attr("class", "tooltip-percent")
+                        .attr("x", 60)
+                        .attr("y", 18);
+
+                    svg.append("rect")
+                        .attr("class", "overlay")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .on("mouseover", function() { focus.style("display", null); })
+                        .on("mouseout", function() { focus.style("display", "none"); })
+                        .on("mousemove", mousemove);
+
+                    function mousemove(d) {
+                        // var x0 = x.invert(d3.mouse(this)[0]),
+                        //     i = bisectDate(data, x0, 1),
+                        //     d0 = data[i - 1],
+                        //     d1 = data[i],
+                        //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+                        console.log(d)
+                        focus.attr("transform", "translate(" + x(d.Date) + "," + y(+d.Value) + ")");
+                        focus.select(".tooltip-date").text(formatTime(d.date));
+                        //focus.select(".tooltip-likes").text(formatValue(d.likes));
+                    }
                 // var g = svg.selectAll()
                 //         .data(data).enter().append("g");
                 //
