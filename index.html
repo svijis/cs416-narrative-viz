@@ -138,10 +138,35 @@
                 // Markers on the line
                 g.append("circle")
                   .attr("r", 2.5)
-                  .style("stroke", "black")  
+                  .style("stroke", "black")
                   .style("fill", "none")
                   .attr("cx", function(d) { return x(d.Date); })
                   .attr("cy", function(d) { return y(+d.Value); });
+
+                  //The horizontal dashed line that appears when a circle marker is moused over
+                	 g.append("line")
+                        .attr("class", "x")
+                        .attr("id", "dashedLine")
+                        .style("stroke", "steelblue")
+                        .style("stroke-dasharray", "3,3")
+                        .style("opacity", 0)
+                        .attr("x1", function(d) { return x(d.Date); })
+                        .attr("y1", function(d) { return y(+d.Value); })
+                		    //d3.min gets the min date from the date x-axis scale
+                		    .attr("x2", function(d) { return x(d3.min(x)); })
+                        .attr("y2", function(d) { return y(d.Value); });
+
+                  //The vertical dashed line that appears when a circle marker is moused over
+                	g.append("line")
+                        .attr("class", "y")
+                        .attr("id", "dashedLine")
+                        .style("stroke", "steelblue")
+                        .style("stroke-dasharray", "3,3")
+                        .style("opacity", 0)
+                        .attr("x1", function(d) { return x(d.Date); })
+                        .attr("y1", function(d) { return y(+d.Value); })
+                		    .attr("x2", function(d) { return x(d.Date); })
+                        .attr("y2", height);
 
                 const annotations = [
                   {
