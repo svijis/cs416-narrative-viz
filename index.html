@@ -209,7 +209,7 @@
                   .data(data_by_industry).enter()
                   .append('div')
                   .style('color', d => color(d.Key))
-                  .html(d => d.Key + ': ' + d.Values.find(h => formatTime(h.Date) == monYear).Value);
+                  .html(d => d.Key + ': ' + d.values.find(h => formatTime(h.Date) == monYear).Value);
               }
                //         var mouseG = svg.append("g")
                //            .attr("class", "mouse-over-effects");
