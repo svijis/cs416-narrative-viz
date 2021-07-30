@@ -24,6 +24,10 @@
               width = 960 - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom;
 
+          var div = d3.select("body").append("div")
+              .attr("class", "tooltip")
+              .style("opacity", 0);
+
           // append the svg object to the body of the page
           var svg = d3.select("#dataviz")
             .append("svg")
