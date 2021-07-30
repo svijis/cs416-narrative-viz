@@ -1,16 +1,4 @@
 Series_ID,Series_Name,Year,Period,Date,Value
-LNU04032231,Construction,2018,M01,2018-01-01,7.3
-LNU04032231,Construction,2018,M02,2018-02-01,7.8
-LNU04032231,Construction,2018,M03,2018-03-01,7.4
-LNU04032231,Construction,2018,M04,2018-04-01,6.5
-LNU04032231,Construction,2018,M05,2018-05-01,4.4
-LNU04032231,Construction,2018,M06,2018-06-01,4.7
-LNU04032231,Construction,2018,M07,2018-07-01,3.4
-LNU04032231,Construction,2018,M08,2018-08-01,3.4
-LNU04032231,Construction,2018,M09,2018-09-01,4.1
-LNU04032231,Construction,2018,M10,2018-10-01,3.6
-LNU04032231,Construction,2018,M11,2018-11-01,3.9
-LNU04032231,Construction,2018,M12,2018-12-01,5.1
 LNU04032231,Construction,2019,M01,2019-01-01,6.4
 LNU04032231,Construction,2019,M02,2019-02-01,6.2
 LNU04032231,Construction,2019,M03,2019-03-01,5.2
@@ -41,18 +29,6 @@ LNU04032231,Construction,2021,M03,2021-03-01,8.6
 LNU04032231,Construction,2021,M04,2021-04-01,7.7
 LNU04032231,Construction,2021,M05,2021-05-01,6.7
 LNU04032231,Construction,2021,M06,2021-06-01,7.5
-LNU04032240,Education and Health Services,2018,M01,2018-01-01,2.7
-LNU04032240,Education and Health Services,2018,M02,2018-02-01,2.5
-LNU04032240,Education and Health Services,2018,M03,2018-03-01,2.6
-LNU04032240,Education and Health Services,2018,M04,2018-04-01,2.3
-LNU04032240,Education and Health Services,2018,M05,2018-05-01,2.3
-LNU04032240,Education and Health Services,2018,M06,2018-06-01,3.2
-LNU04032240,Education and Health Services,2018,M07,2018-07-01,3.2
-LNU04032240,Education and Health Services,2018,M08,2018-08-01,3.1
-LNU04032240,Education and Health Services,2018,M09,2018-09-01,2.8
-LNU04032240,Education and Health Services,2018,M10,2018-10-01,2.7
-LNU04032240,Education and Health Services,2018,M11,2018-11-01,2.3
-LNU04032240,Education and Health Services,2018,M12,2018-12-01,2.1
 LNU04032240,Education and Health Services,2019,M01,2019-01-01,2.6
 LNU04032240,Education and Health Services,2019,M02,2019-02-01,2.5
 LNU04032240,Education and Health Services,2019,M03,2019-03-01,2.3
@@ -83,18 +59,6 @@ LNU04032240,Education and Health Services,2021,M03,2021-03-01,3.8
 LNU04032240,Education and Health Services,2021,M04,2021-04-01,3.4
 LNU04032240,Education and Health Services,2021,M05,2021-05-01,3.4
 LNU04032240,Education and Health Services,2021,M06,2021-06-01,4.4
-LNU04032237,Information Industry,2018,M01,2018-01-01,5.3
-LNU04032237,Information Industry,2018,M02,2018-02-01,3.2
-LNU04032237,Information Industry,2018,M03,2018-03-01,4.1
-LNU04032237,Information Industry,2018,M04,2018-04-01,2.3
-LNU04032237,Information Industry,2018,M05,2018-05-01,3.5
-LNU04032237,Information Industry,2018,M06,2018-06-01,4.6
-LNU04032237,Information Industry,2018,M07,2018-07-01,4.2
-LNU04032237,Information Industry,2018,M08,2018-08-01,3.5
-LNU04032237,Information Industry,2018,M09,2018-09-01,2.3
-LNU04032237,Information Industry,2018,M10,2018-10-01,3.2
-LNU04032237,Information Industry,2018,M11,2018-11-01,3.8
-LNU04032237,Information Industry,2018,M12,2018-12-01,3.9
 LNU04032237,Information Industry,2019,M01,2019-01-01,4.7
 LNU04032237,Information Industry,2019,M02,2019-02-01,4.1
 LNU04032237,Information Industry,2019,M03,2019-03-01,4
@@ -125,18 +89,6 @@ LNU04032237,Information Industry,2021,M03,2021-03-01,6.6
 LNU04032237,Information Industry,2021,M04,2021-04-01,5.9
 LNU04032237,Information Industry,2021,M05,2021-05-01,5.8
 LNU04032237,Information Industry,2021,M06,2021-06-01,6.1
-LNU04032241,Leisure and Hospitality,2018,M01,2018-01-01,6.8
-LNU04032241,Leisure and Hospitality,2018,M02,2018-02-01,6.8
-LNU04032241,Leisure and Hospitality,2018,M03,2018-03-01,5.8
-LNU04032241,Leisure and Hospitality,2018,M04,2018-04-01,5.2
-LNU04032241,Leisure and Hospitality,2018,M05,2018-05-01,4.9
-LNU04032241,Leisure and Hospitality,2018,M06,2018-06-01,5.7
-LNU04032241,Leisure and Hospitality,2018,M07,2018-07-01,5.2
-LNU04032241,Leisure and Hospitality,2018,M08,2018-08-01,5.8
-LNU04032241,Leisure and Hospitality,2018,M09,2018-09-01,5.4
-LNU04032241,Leisure and Hospitality,2018,M10,2018-10-01,5.4
-LNU04032241,Leisure and Hospitality,2018,M11,2018-11-01,5.3
-LNU04032241,Leisure and Hospitality,2018,M12,2018-12-01,6
 LNU04032241,Leisure and Hospitality,2019,M01,2019-01-01,6.4
 LNU04032241,Leisure and Hospitality,2019,M02,2019-02-01,5.8
 LNU04032241,Leisure and Hospitality,2019,M03,2019-03-01,5.8
@@ -167,18 +119,6 @@ LNU04032241,Leisure and Hospitality,2021,M03,2021-03-01,13
 LNU04032241,Leisure and Hospitality,2021,M04,2021-04-01,10.8
 LNU04032241,Leisure and Hospitality,2021,M05,2021-05-01,10.1
 LNU04032241,Leisure and Hospitality,2021,M06,2021-06-01,10.9
-LNU04032232,Manufacturing,2018,M01,2018-01-01,3.4
-LNU04032232,Manufacturing,2018,M02,2018-02-01,3.6
-LNU04032232,Manufacturing,2018,M03,2018-03-01,3.3
-LNU04032232,Manufacturing,2018,M04,2018-04-01,3.3
-LNU04032232,Manufacturing,2018,M05,2018-05-01,3.4
-LNU04032232,Manufacturing,2018,M06,2018-06-01,3.1
-LNU04032232,Manufacturing,2018,M07,2018-07-01,3.8
-LNU04032232,Manufacturing,2018,M08,2018-08-01,3.2
-LNU04032232,Manufacturing,2018,M09,2018-09-01,3.5
-LNU04032232,Manufacturing,2018,M10,2018-10-01,3.2
-LNU04032232,Manufacturing,2018,M11,2018-11-01,2.9
-LNU04032232,Manufacturing,2018,M12,2018-12-01,2.8
 LNU04032232,Manufacturing,2019,M01,2019-01-01,3.3
 LNU04032232,Manufacturing,2019,M02,2019-02-01,2.9
 LNU04032232,Manufacturing,2019,M03,2019-03-01,2.9
@@ -209,18 +149,6 @@ LNU04032232,Manufacturing,2021,M03,2021-03-01,5.2
 LNU04032232,Manufacturing,2021,M04,2021-04-01,5.8
 LNU04032232,Manufacturing,2021,M05,2021-05-01,4.8
 LNU04032232,Manufacturing,2021,M06,2021-06-01,5.4
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M01,2018-01-01,4.1
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M02,2018-02-01,6.6
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M03,2018-03-01,6.9
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M04,2018-04-01,4.7
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M05,2018-05-01,3
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M06,2018-06-01,2.9
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M07,2018-07-01,3.4
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M08,2018-08-01,1.9
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M09,2018-09-01,1.7
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M10,2018-10-01,1.7
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M11,2018-11-01,1.9
-LNU04032230,"Mining, Quarrying, Oil and Gas",2018,M12,2018-12-01,2.6
 LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M01,2019-01-01,5.3
 LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M02,2019-02-01,3.6
 LNU04032230,"Mining, Quarrying, Oil and Gas",2019,M03,2019-03-01,3.6
@@ -251,18 +179,6 @@ LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M03,2021-03-01,15
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M04,2021-04-01,14.3
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M05,2021-05-01,9.6
 LNU04032230,"Mining, Quarrying, Oil and Gas",2021,M06,2021-06-01,10.3
-LNU04034236,Educational Services,2018,M01,2018-01-01,3.4
-LNU04034236,Educational Services,2018,M02,2018-02-01,2.6
-LNU04034236,Educational Services,2018,M03,2018-03-01,2.4
-LNU04034236,Educational Services,2018,M04,2018-04-01,2.6
-LNU04034236,Educational Services,2018,M05,2018-05-01,2.5
-LNU04034236,Educational Services,2018,M06,2018-06-01,5.8
-LNU04034236,Educational Services,2018,M07,2018-07-01,5.9
-LNU04034236,Educational Services,2018,M08,2018-08-01,5.9
-LNU04034236,Educational Services,2018,M09,2018-09-01,3.4
-LNU04034236,Educational Services,2018,M10,2018-10-01,3
-LNU04034236,Educational Services,2018,M11,2018-11-01,2.4
-LNU04034236,Educational Services,2018,M12,2018-12-01,1.9
 LNU04034236,Educational Services,2019,M01,2019-01-01,3.6
 LNU04034236,Educational Services,2019,M02,2019-02-01,3.4
 LNU04034236,Educational Services,2019,M03,2019-03-01,2.8
@@ -293,18 +209,6 @@ LNU04034236,Educational Services,2021,M03,2021-03-01,4.1
 LNU04034236,Educational Services,2021,M04,2021-04-01,3.5
 LNU04034236,Educational Services,2021,M05,2021-05-01,4.6
 LNU04034236,Educational Services,2021,M06,2021-06-01,6.4
-LNU04034211,Real Estate,2018,M01,2018-01-01,2.2
-LNU04034211,Real Estate,2018,M02,2018-02-01,2.1
-LNU04034211,Real Estate,2018,M03,2018-03-01,2.3
-LNU04034211,Real Estate,2018,M04,2018-04-01,2.3
-LNU04034211,Real Estate,2018,M05,2018-05-01,2.1
-LNU04034211,Real Estate,2018,M06,2018-06-01,2.4
-LNU04034211,Real Estate,2018,M07,2018-07-01,2.8
-LNU04034211,Real Estate,2018,M08,2018-08-01,3
-LNU04034211,Real Estate,2018,M09,2018-09-01,2.9
-LNU04034211,Real Estate,2018,M10,2018-10-01,2.2
-LNU04034211,Real Estate,2018,M11,2018-11-01,2.4
-LNU04034211,Real Estate,2018,M12,2018-12-01,3.5
 LNU04034211,Real Estate,2019,M01,2019-01-01,2.9
 LNU04034211,Real Estate,2019,M02,2019-02-01,2.8
 LNU04034211,Real Estate,2019,M03,2019-03-01,2.7
@@ -335,18 +239,6 @@ LNU04034211,Real Estate,2021,M03,2021-03-01,4.4
 LNU04034211,Real Estate,2021,M04,2021-04-01,4.6
 LNU04034211,Real Estate,2021,M05,2021-05-01,4.1
 LNU04034211,Real Estate,2021,M06,2021-06-01,4.7
-LNU04032242,Other Services Industry,2018,M01,2018-01-01,4.4
-LNU04032242,Other Services Industry,2018,M02,2018-02-01,3.4
-LNU04032242,Other Services Industry,2018,M03,2018-03-01,3.6
-LNU04032242,Other Services Industry,2018,M04,2018-04-01,3.1
-LNU04032242,Other Services Industry,2018,M05,2018-05-01,2.5
-LNU04032242,Other Services Industry,2018,M06,2018-06-01,3.9
-LNU04032242,Other Services Industry,2018,M07,2018-07-01,3.5
-LNU04032242,Other Services Industry,2018,M08,2018-08-01,3.2
-LNU04032242,Other Services Industry,2018,M09,2018-09-01,3.3
-LNU04032242,Other Services Industry,2018,M10,2018-10-01,3
-LNU04032242,Other Services Industry,2018,M11,2018-11-01,3.3
-LNU04032242,Other Services Industry,2018,M12,2018-12-01,3
 LNU04032242,Other Services Industry,2019,M01,2019-01-01,3.9
 LNU04032242,Other Services Industry,2019,M02,2019-02-01,3.2
 LNU04032242,Other Services Industry,2019,M03,2019-03-01,3.4
@@ -377,18 +269,6 @@ LNU04032242,Other Services Industry,2021,M03,2021-03-01,6.7
 LNU04032242,Other Services Industry,2021,M04,2021-04-01,6.2
 LNU04032242,Other Services Industry,2021,M05,2021-05-01,5.3
 LNU04032242,Other Services Industry,2021,M06,2021-06-01,5.4
-LNU04032239,Professional and Business Services,2018,M01,2018-01-01,5
-LNU04032239,Professional and Business Services,2018,M02,2018-02-01,4.8
-LNU04032239,Professional and Business Services,2018,M03,2018-03-01,4.2
-LNU04032239,Professional and Business Services,2018,M04,2018-04-01,3.5
-LNU04032239,Professional and Business Services,2018,M05,2018-05-01,4
-LNU04032239,Professional and Business Services,2018,M06,2018-06-01,3.3
-LNU04032239,Professional and Business Services,2018,M07,2018-07-01,3.6
-LNU04032239,Professional and Business Services,2018,M08,2018-08-01,3.5
-LNU04032239,Professional and Business Services,2018,M09,2018-09-01,3.2
-LNU04032239,Professional and Business Services,2018,M10,2018-10-01,4
-LNU04032239,Professional and Business Services,2018,M11,2018-11-01,3.6
-LNU04032239,Professional and Business Services,2018,M12,2018-12-01,4.3
 LNU04032239,Professional and Business Services,2019,M01,2019-01-01,4.9
 LNU04032239,Professional and Business Services,2019,M02,2019-02-01,4.3
 LNU04032239,Professional and Business Services,2019,M03,2019-03-01,3.9
@@ -419,18 +299,6 @@ LNU04032239,Professional and Business Services,2021,M03,2021-03-01,6.7
 LNU04032239,Professional and Business Services,2021,M04,2021-04-01,5.9
 LNU04032239,Professional and Business Services,2021,M05,2021-05-01,5.4
 LNU04032239,Professional and Business Services,2021,M06,2021-06-01,5.2
-LNU04032236,Transportation and Utilities Industry,2018,M01,2018-01-01,3.5
-LNU04032236,Transportation and Utilities Industry,2018,M02,2018-02-01,3.7
-LNU04032236,Transportation and Utilities Industry,2018,M03,2018-03-01,3.6
-LNU04032236,Transportation and Utilities Industry,2018,M04,2018-04-01,3
-LNU04032236,Transportation and Utilities Industry,2018,M05,2018-05-01,3.2
-LNU04032236,Transportation and Utilities Industry,2018,M06,2018-06-01,3.2
-LNU04032236,Transportation and Utilities Industry,2018,M07,2018-07-01,3.6
-LNU04032236,Transportation and Utilities Industry,2018,M08,2018-08-01,3.4
-LNU04032236,Transportation and Utilities Industry,2018,M09,2018-09-01,2.6
-LNU04032236,Transportation and Utilities Industry,2018,M10,2018-10-01,3.1
-LNU04032236,Transportation and Utilities Industry,2018,M11,2018-11-01,3.7
-LNU04032236,Transportation and Utilities Industry,2018,M12,2018-12-01,3.9
 LNU04032236,Transportation and Utilities Industry,2019,M01,2019-01-01,3.6
 LNU04032236,Transportation and Utilities Industry,2019,M02,2019-02-01,4.1
 LNU04032236,Transportation and Utilities Industry,2019,M03,2019-03-01,3.6
@@ -460,19 +328,7 @@ LNU04032236,Transportation and Utilities Industry,2021,M02,2021-02-01,8.4
 LNU04032236,Transportation and Utilities Industry,2021,M03,2021-03-01,8.3
 LNU04032236,Transportation and Utilities Industry,2021,M04,2021-04-01,6.8
 LNU04032236,Transportation and Utilities Industry,2021,M05,2021-05-01,7.2
-LNU04032236,Transportation and Utilities Industry,2021,M06,2021-06-01,6
-LNU04032235,Wholesale and Retail Trade,2018,M01,2018-01-01,5.3
-LNU04032235,Wholesale and Retail Trade,2018,M02,2018-02-01,5.3
-LNU04032235,Wholesale and Retail Trade,2018,M03,2018-03-01,4.8
-LNU04032235,Wholesale and Retail Trade,2018,M04,2018-04-01,4.2
-LNU04032235,Wholesale and Retail Trade,2018,M05,2018-05-01,4.5
-LNU04032235,Wholesale and Retail Trade,2018,M06,2018-06-01,4.2
-LNU04032235,Wholesale and Retail Trade,2018,M07,2018-07-01,4.1
-LNU04032235,Wholesale and Retail Trade,2018,M08,2018-08-01,4.3
-LNU04032235,Wholesale and Retail Trade,2018,M09,2018-09-01,4
-LNU04032235,Wholesale and Retail Trade,2018,M10,2018-10-01,3.9
-LNU04032235,Wholesale and Retail Trade,2018,M11,2018-11-01,3.9
-LNU04032235,Wholesale and Retail Trade,2018,M12,2018-12-01,3.7
+LNU04032236,Transportation and Utilities Industry,2021,M06,2021-06-01,6 
 LNU04032235,Wholesale and Retail Trade,2019,M01,2019-01-01,4.8
 LNU04032235,Wholesale and Retail Trade,2019,M02,2019-02-01,5
 LNU04032235,Wholesale and Retail Trade,2019,M03,2019-03-01,4.7
