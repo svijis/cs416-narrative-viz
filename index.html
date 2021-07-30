@@ -137,14 +137,14 @@
                   .attr("text-anchor", "end")
                   .text("Percent or Rate"));
 
-              // list of group names
+              // list of Industry names
               var res = data.map(d => d.Series_Name)
                         .filter((value, index, self) => self.indexOf(value) === index)
 
               var color = d3.scaleOrdinal()
                 .domain(res)
                 .range(['#0000ff','#6600cc', '#660066', '#ff0000', '#663300', '#009933', '#ff0066', '#00bfff', '#003366', '#ff99cc', '#006666', '#99cc00', '#ff7f00', '#a65628', '#999911'])
-  
+
               // Draw the line
               svg.selectAll(".line")
                   .data(data_by_industry)
@@ -160,7 +160,6 @@
                     .attr("d", function(d){
                       return d3.line()
                         .x(function(d) {
-                            console.log(x(d.Date));
                             return x(d.Date);
                         })
                         .y(function(d) {
@@ -168,6 +167,45 @@
                         })
                         (d.values)
                     })
+
+                    const annotations = [
+                      {
+                        note: {
+                          label: "Just before Shumacher joined, McLaren came this close to overtaking Ferrari",
+                          title: "Ferrari's slowest years"
+                        },
+                        x: 536,
+                        y: 254,
+                        dy: -70,
+                        dx: -100
+                      },
+                      {
+                        note: {
+                          label: "More than 10 wins every year since 2014!",
+                          title: "Mercedes is back"
+                        },
+                        x: 750,
+                        y: 428,
+                        dy: -60,
+                        dx: -40
+                      },
+                      {
+                        note: {
+                          title: "Vettel quits red bull"
+                        },
+                        x: 765,
+                        y: 362,
+                        dy: -120,
+                        dx: -10
+                      }
+                    ];
+
+                    const makeAnnotations = d3.annotation()
+                    // .editMode(true)
+                      .annotations(annotations);
+                    svg
+                      .append("g")
+                      .call(makeAnnotations)
 
           }
 
