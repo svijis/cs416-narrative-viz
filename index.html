@@ -176,7 +176,7 @@
                          })
                          .enter()
                          .append("circle")
-                         .attr("cx", function(d) { return xAxisScale(d.Date); })
+                         .attr("cx", function(d) { return formatTime(xAxisScale(d.Date)); })
                          .attr("cy", function(d) { return yAxisScale(d.Value); })
                          .attr("r", 1)
                          .attr("class","point")
@@ -191,7 +191,7 @@
                      .append("circle")
                      .attr("cx", function(d) {
                        console.log(d)
-                       return xAxisScale(d.Date);
+                       return formatTime(xAxisScale(d.Date));
                      })
                      .attr("cy", function(d) { return yAxisScale(d.Value); })
                      .attr('r', 10)
