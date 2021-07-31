@@ -4,7 +4,7 @@
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
 
-
+<link rel='stylesheet' href="styles.css"/>
 <body>
 
 <div>
@@ -121,7 +121,7 @@
                   .data(data_by_industry)
                   .enter()
                   .append("path")
-                    .attr("class", "actual-line")
+                    .attr("class", "chartLine")
                     .attr("fill", "none")
                     .attr("stroke", function(d){
                       return color(d.key);
@@ -138,7 +138,7 @@
                         (d.values)
                     })
 
-              lines.on("click", onMouseClick);    
+              lines.on("click", onMouseClick);
 
                 //Add legend
                 var legend = svg.selectAll()
