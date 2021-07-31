@@ -67,7 +67,7 @@
                     return d.Date;
               }))
 
-              const xaxis = d3.axisBottom()
+              const xAxis = d3.axisBottom()
                   .ticks(d3.timeDay.every(1))
                   .tickFormat(d3.timeFormat('%b %d'))
                   .scale(xAxisScale);
@@ -121,7 +121,7 @@
                 '#009933', '#d58000', '#1199ff', '#003366', '#ff99cc', '#006666',
                 '#72b331', '#ff7f00', '#c70e55', '#999911'])
 
-              // Draw the line 
+              // Draw the line
               const line = d3.line()
                   .x(function(d) { return xAxisScale(d.date); })
                   .y(function(d) { return yAxisScale(d.Value); });
