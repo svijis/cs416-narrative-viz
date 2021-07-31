@@ -126,6 +126,11 @@
                   .x(function(d) { return xAxisScale(d.date); })
                   .y(function(d) { return yAxisScale(d.Value); });
 
+              let id = 0;
+              const ids = function () {
+                  return "line-"+id++;
+              }
+
               const lines = svg.selectAll("lines")
                     .data(data_by_industry)
                     .enter()
