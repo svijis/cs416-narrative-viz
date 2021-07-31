@@ -191,8 +191,8 @@
                            var x0 = x.invert(d3.mouse(this)[0]);
                            var monYear = formatTime(x0);
 
-                           var xDate = x.invert(mouse[0]),
-                                bisect = d3.bisector(function(d) { return d.Date; }).right;
+                           // var xDate = x.invert(mouse[0]),
+                           var  bisect = d3.bisector(function(d) { return d.Date; }).right;
                                 idx = bisect(d.values, xDate);
 
                            console.log(xDate)
