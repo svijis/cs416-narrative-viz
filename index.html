@@ -18,6 +18,17 @@
 
   window.onload = function(){
 
+      function getParameterByName(name, url = window.location.href) {
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
+      var industry = getParameterByName('i');
+
       function showUnEmploymentTrend() {
 
           // set the dimensions and margins of the graph
@@ -38,16 +49,18 @@
           const tooltipLine = svg.append('line');
 
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
-          var unemployment_data;
+          var unemployment_data, unemployment_gender;
           async function fetchData() {
               var unemployment_data = await d3.csv(csv_root + "/unemployment_by_industry.csv");
-              var data = [];
+              var unemployment_gender = await.d3.csv(csv_root + "/unemployment_industry_gender.csv");
+
+              var u_data = [];
               for (var i=0; i < unemployment_data.length; i++) {
                   var d = unemployment_data[i];
                   d.Date = new Date(d.Date);
-                  data.push(d)
+                  u_data.push(d)
               }
-              plotByIndustry(data);
+              plotByIndustry(u_data);
           }
 
           function plotByIndustry(data) {
@@ -169,13 +182,13 @@
                                .on('mouseout', removeTooltip)
                                .on('click', onMouseClick);
 
-                 function onMouseClick(d,i) {
-                       var xDate = xAxisScale.invert(d3.mouse(this)[0]);
-                       var monYear = formatTime(xDate),
-                           bisect = d3.bisector(function(d) { return d.Date; }).right;
-                           idx = bisect(d.values, xDate);
-
-                 }
+                 // function onMouseClick(d,i) {
+                 //       var xDate = xAxisScale.invert(d3.mouse(this)[0]);
+                 //       var monYear = formatTime(xDate),
+                 //           bisect = d3.bisector(function(d) { return d.Date; }).right;
+                 //           idx = bisect(d.values, xDate);
+                 //
+                 // }
 
                  function removeTooltip() {
                      if (tooltip) tooltip.style('display', 'none');
@@ -326,12 +339,337 @@
                 svg.append("g")
                   .call(makeAnnotations)
 
-                lines.on("click", onMouseClick);
+                //lines.on("click", onMouseClick);
           }
           fetchData();
       }
 
-      showUnEmploymentTrend();
+      if (!industry) {
+        showUnEmploymentTrend();
+      }
+
+      function showUnEmploymentByIndustry() {
+        // set the dimensions and margins of the graph
+        var margin = {top: 10, right: 30, bottom: 30, left: 60},
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        var formatTime = d3.timeFormat('%b %Y');
+
+        var svg = d3.select('svg')
+            .attr("width", 1100 + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+        const tooltip = d3.select('#tooltip');
+        const tooltipLine = svg.append('line');
+
+        //const selectedIndustry = 'Leisure and Hospitability';
+
+        var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
+        var unemployment_gender;
+        async function fetchData() {
+
+            var unemployment_gender = await.d3.csv(csv_root + "/unemployment_industry_gender.csv");
+
+            var g_data = [];
+            for (var i=0; i < unemployment_gender.length; i++) {
+                var d = unemployment_gender[i];
+                if (d.Series_Name === industry) {
+                    d.Date = new Date(d.Date);
+                    g_data.push(d)
+                }
+            }
+            console.log(g_data);
+            plotIndustryByGender(g_data);
+        }
+
+        function plotIndustryByGender(data) {
+
+            var data_by_industry = d3.nest()
+                .key(function(d) { return d.Series_Name;})
+                .entries(data);
+
+            // Add X axis
+            var xAxisScale = d3.scaleTime().range([0, width]);
+            var x = xAxisScale.domain(d3.extent(data, function(d) {
+                  return d.Date;
+            }))
+
+            var xAxis = d3.axisBottom(x)
+              .tickFormat(function(date){
+                if (d3.timeYear(date) < date) {
+                  return d3.timeFormat('%b')(date);
+                } else {
+                  return d3.timeFormat('%Y')(date);
+                }
+              });
+
+            svg.append("g")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
+              .call(g => g.append("text")
+                .attr("x", width / 2)
+                .attr("y", margin.bottom)
+                .attr("fill", "currentColor")
+                .attr("text-anchor", "end")
+                .text("Month and Year"));
+
+            // Add Y axis
+            const yAxisScale = d3.scaleLinear().range([height, 0]);
+            var y = yAxisScale.domain([0, d3.max(data, function(d) {
+              return +d.Value;
+            })])
+            // var y = d3.scaleLinear()
+            //   .domain([0, d3.max(data, function(d) {
+            //     return +d.Value;
+            //   })])
+            //   .range([ height, 0 ]);
+
+            svg.append("g")
+              .call(d3.axisLeft(y))
+              .call(g => g.append("text")
+                .attr("x", -40)
+                .attr("y", height / 2)
+                .attr("fill", "currentColor")
+                .attr("text-anchor", "end")
+                .text("Percent or Rate"));
+
+            // list of Industry names
+            var res = data.map(d => d.Series_Name)
+                      .filter((value, index, self) => self.indexOf(value) === index)
+
+            var color = d3.scaleOrdinal()
+              .domain(res)
+              .range(['#0000ff','#6600cc', '#807d74', '#ff0000', '#663300',
+              '#009933', '#d58000', '#1199ff', '#003366', '#ff99cc', '#006666',
+              '#72b331', '#ff7f00', '#c70e55', '#999911'])
+
+            // Draw the line
+            var lines = svg.selectAll(".line")
+                .data(data_by_industry)
+                .enter()
+                .append("path")
+                  .attr("class", "chartLine")
+                  .attr("fill", "none")
+                  .attr("stroke", function(d){
+                    return color(d.key);
+                  })
+                  .attr("stroke-width", 4)
+                  .attr("d", function(d){
+                    return d3.line()
+                      .x(function(d) {
+                          return x(d.Date);
+                      })
+                      .y(function(d) {
+                          return y(+d.Value);
+                      })
+                      (d.values)
+                  })
+
+              //Add legend
+              var legend = svg.selectAll()
+                 .data(data_by_industry)
+                 .enter()
+                 .append('g')
+                 .attr('class', 'legend');
+
+               legend.append('rect')
+                 .attr('x', width - 20)
+                 .attr('y', function (d, i) {
+                   return i * 20;
+                 })
+                 .attr('width', 10)
+                 .attr('height', 10)
+                 .style('fill', function (d) {
+                    return color(d.key);
+                 });
+
+               legend.append('text')
+                 .attr('x', width - 8)
+                 .attr('y', function (d, i) {
+                    return (i * 20) + 9;
+                 })
+                 .text(function (d) {
+                    return d.key;
+                 });
+
+                 // Add tooltip
+               var tipBox = svg.append('rect')
+                             .attr('width', width)
+                             .attr('height', height)
+                             .attr('opacity', 0)
+                             .on('mousemove', drawTooltip)
+                             .on('mouseout', removeTooltip)
+                             .on('click', onMouseClick);
+
+               // function onMouseClick(d,i) {
+               //       var xDate = xAxisScale.invert(d3.mouse(this)[0]);
+               //       var monYear = formatTime(xDate),
+               //           bisect = d3.bisector(function(d) { return d.Date; }).right;
+               //           idx = bisect(d.values, xDate);
+               //
+               // }
+
+               function removeTooltip() {
+                   if (tooltip) tooltip.style('display', 'none');
+                   if (tooltipLine) tooltipLine.attr('stroke', 'none');
+               }
+
+               function drawTooltip() {
+                  var xDate = xAxisScale.invert(d3.mouse(this)[0]);
+                  var monYear = formatTime(xDate);
+
+                  data_by_industry.sort((a, b) => {
+                     return b.values.find(h => formatTime(h.Date) == monYear).Value -
+                            a.values.find(h => formatTime(h.Date) == monYear).Value;
+                  })
+
+                 tooltipLine.attr('stroke', 'black')
+                   .attr('x1', x(xDate))
+                   .attr('x2', x(xDate))
+                   .attr('y1', 0)
+                   .attr('y2', height);
+
+                 tooltip.html(formatTime(xDate))
+                   .style('display', 'block')
+                   .style('left', d3.event.pageX + 20 +  "px")
+                   .style('top', d3.event.pageY - 50 +  "px")
+                   .selectAll()
+                   .data(data_by_industry).enter()
+                   .append('div')
+                   .style('color', d => color(d.key))
+                   .html(d => d.key + ': ' + d.values.find(h => formatTime(h.Date) == monYear).Value + "%");
+               }
+
+              //   var mouseG = svg.append("g")
+              //       .attr("class", "mouse-over-effects");
+              //
+              //   mouseG.append("path") // this is the black vertical line to follow mouse
+              //     .attr("class", "mouse-line")
+              //     .style("stroke", "black")
+              //     .style("stroke-width", "1px")
+              //     .style("opacity", "0");
+              //
+              //   var lines = document.getElementsByClassName('actual-line');
+              //
+              //   var mousePerLine = mouseG.selectAll('.mouse-per-line')
+              //     .data(data_by_industry)
+              //     .enter()
+              //     .append("g")
+              //     .attr("class", "mouse-per-line");
+              //
+              //   mousePerLine.append("circle")
+              //     .attr("r", 7)
+              //     .style("stroke", function(d) {
+              //       return color(d.key);
+              //     })
+              //     .style("fill", "none")
+              //     .style("stroke-width", "1px")
+              //     .style("opacity", "0");
+              //
+              //   mousePerLine.append("text")
+              //     .attr("transform", "translate(10,3)");
+              //
+              //   mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+              //     .attr('width', width) // can't catch mouse events on a g element
+              //     .attr('height', height)
+              //     .attr('fill', 'none')
+              //     .attr('pointer-events', 'all')
+              //     .on('mouseout', function() { // on mouse out hide line, circles and text
+              //       d3.select(".mouse-line")
+              //         .style("opacity", "0");
+              //       d3.selectAll(".mouse-per-line circle")
+              //         .style("opacity", "0");
+              //       d3.selectAll(".mouse-per-line text")
+              //         .style("opacity", "0");
+              //     })
+              //     .on('mouseover', function() { // on mouse in show line, circles and text
+              //       d3.select(".mouse-line")
+              //         .style("opacity", "1");
+              //       d3.selectAll(".mouse-per-line circle")
+              //         .style("opacity", "1");
+              //       d3.selectAll(".mouse-per-line text")
+              //         .style("opacity", "1");
+              //     })
+              //     .on('mousemove', function() { // mouse moving over canvas
+              //       var mouse = d3.mouse(this);
+              //       d3.select(".mouse-line")
+              //         .attr("d", function() {
+              //           var d = "M" + mouse[0] + "," + height;
+              //           d += " " + mouse[0] + "," + 0;
+              //           return d;
+              //         });
+              //
+              //   d3.selectAll(".mouse-per-line")
+              //     .attr("transform", function(d, i) {
+              //       console.log(width/mouse[0])
+              //       var xDate = x.invert(mouse[0]),
+              //           bisect = d3.bisector(function(d) { return d.Date; }).right;
+              //           idx = bisect(d.values, xDate);
+              //
+              //       var beginning = 0,
+              //           end = lines[i].getTotalLength(),
+              //           target = null;
+              //
+              //       while (true){
+              //         target = Math.floor((beginning + end) / 2);
+              //         pos = lines[i].getPointAtLength(target);
+              //         if ((target === end || target === beginning) && pos.x !== mouse[0]) {
+              //             break;
+              //         }
+              //         if (pos.x > mouse[0])      end = target;
+              //         else if (pos.x < mouse[0]) beginning = target;
+              //         else break; //position found
+              //       }
+              //
+              //       d3.select(this).select('text')
+              //         .text(y.invert(pos.y).toFixed(2));
+              //
+              //       return "translate(" + mouse[0] + "," + pos.y +")";
+              //     });
+              // });
+
+              // Add Annotations
+              const annotations = [
+                {
+                  note: {
+                    label: "Highest Unemployment rate - 39.3%",
+                    title: "Leisure and Hospitality - Apr 2020"
+                  },
+                  x: 434,
+                  y: 186,
+                  dy: -56,
+                  dx: -48
+                },
+                {
+                  note: {
+                    label: "Lowest Unemployment rate - 7.7%",
+                    title: "Real Estate - Apr 2020"
+                  },
+                  x: 451,
+                  y: 369,
+                  dy: -66,
+                  dx: -64
+                }
+              ];
+
+              const makeAnnotations = d3.annotation()
+                //.editMode(true)
+                .annotations(annotations);
+              svg.append("g")
+                .call(makeAnnotations)
+
+              //lines.on("click", onMouseClick);
+        }
+        fetchData();
+      }
+
+      if (industry) {
+          showUnEmploymentByIndustry();
+      }
  }
 </script>
 </html>
