@@ -14,6 +14,11 @@ svg {
     font-size: 150%;
 }
 
+.point {
+  stroke: none;
+  fill: #9c9c9c;
+}
+
 /* div.tooltip {
     position: absolute;
     text-align: center;
