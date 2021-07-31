@@ -7,6 +7,13 @@ svg {
     margin: 20px
 }
 
+/* TOOLTIP */
+.tooltip {
+    fill: #2b2929;
+    font-family: Georgia;
+    font-size: 150%;
+}
+
 /* div.tooltip {
     position: absolute;
     text-align: center;
@@ -26,7 +33,7 @@ svg {
     fill: steelblue;
   }
 
-  .tooltip {
+  /* .tooltip {
       width: 94px;
       padding: 4px 10px;
       border: 1px solid #aaa;
@@ -49,7 +56,7 @@ svg {
 
     .tooltip-date, .tooltip-likes {
         font-weight: bold;
-    }
+    } */
 
 div {
     max-width: 960px;

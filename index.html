@@ -10,7 +10,6 @@
 <div>
 <h1>Unemployment Rate Trends before and after Covid-19</h1>
 <svg></svg>
-<div id='tooltip' style='position:absolute;background-color:#edeaea;padding:5px;margin-left:100px'></div>
 </div>
 </body>
 
@@ -87,11 +86,15 @@
                   .text("Month and Year"));
 
               // Add Y axis
-              var y = d3.scaleLinear()
-                .domain([0, d3.max(data, function(d) {
-                  return +d.Value;
-                })])
-                .range([ height, 0 ]);
+              const yAxisScale = d3.scaleLinear().range([height, 0]);
+              var y = yAxisScale.domain([0, d3.max(data, function(d) {
+                return +d.Value;
+              })])
+              // var y = d3.scaleLinear()
+              //   .domain([0, d3.max(data, function(d) {
+              //     return +d.Value;
+              //   })])
+              //   .range([ height, 0 ]);
 
               svg.append("g")
                 .call(d3.axisLeft(y))
@@ -161,53 +164,21 @@
                           return d.key;
                        });
 
-                       var focus = svg.append("g")
-                           .attr("class", "focus")
-                           .style("display", "none");
+                  const tooltip = d3.select("body").append("div")
+                         .attr("class", "tooltip")
+                         .style("opacity", 0)
+                         .style("position", "absolute");
 
-                       focus.append("circle")
-                           .attr("r", 5);
+                  lines.selectAll("points")
+                         .data(function(d) {return d.values})
+                         .enter()
+                         .append("circle")
+                         .attr("cx", function(d) { return xAxisScale(d.Date); })
+                         .attr("cy", function(d) { return yAxisScale(d.Value); })
+                         .attr("r", 1)
+                         .attr("class","point")
+                         .style("opacity", 1);
 
-                       var tooltipDate = tooltip.append("div")
-                           .attr("class", "tooltip-date");
-
-                       var tooltipLikes = tooltip.append("div");
-                       tooltipLikes.append("span")
-                           .attr("class", "tooltip-title")
-                           .text("Likes: ");
-
-                       var tooltipLikesValue = tooltipLikes.append("span")
-                           .attr("class", "tooltip-likes");
-
-                       svg.append("rect")
-                           .attr("class", "overlay")
-                           .attr("width", width)
-                           .attr("height", height)
-                           .on("mouseover", function() { focus.style("display", null); tooltip.style("display", null);  })
-                           .on("mouseout", function() { focus.style("display", "none"); tooltip.style("display", "none"); })
-                           .on("mousemove", mousemove);
-
-                       function mousemove() {
-                           var x0 = x.invert(d3.mouse(this)[0]);
-                           var monYear = formatTime(x0);
-
-                           // var xDate = x.invert(mouse[0]),
-                           var  bisect = d3.bisector(function(d) { return d.Date; }).right;
-                                idx = bisect(d.values, xDate);
-
-                           console.log(xDate)
-                           console.log(bisect)
-                           console.log(idx)
-
-                           //     i = bisectDate(data, x0, 1),
-                           //     d0 = data[i - 1],
-                           //     d1 = data[i],
-                           //     d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
-                           // focus.attr("transform", "translate(" + x(d.Date) + "," + y(d.Value) + ")");
-                           // tooltip.attr("style", "left:" + (x(d.Date) + 64) + "px;top:" + y(d.Value) + "px;");
-                           // tooltip.select(".tooltip-date").text(dateFormatter(d.date));
-                           // tooltip.select(".tooltip-likes").text(formatValue(d.Value));
-                       }
 
                   // Add tooltip
                   // var tipBox = svg.append('rect')
