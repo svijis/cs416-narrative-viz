@@ -8,7 +8,7 @@
 <body>
 
 <div>
-<h1>Unemployment Rate Trends before and after Covid-19</h1>
+<h1></h1>
 <svg></svg>
 <div id='tooltip' style='position:absolute;background-color:lightgray;padding:5px'></div>
 </div>
@@ -37,6 +37,10 @@
               height = 500 - margin.top - margin.bottom;
 
           var formatTime = d3.timeFormat('%b %Y');
+
+          var title = 'Unemployment Rate Trends before and after Covid-19';
+          var header = document.getElementsByTagName("h1");
+          h1.innerText(title)
 
           var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
@@ -355,6 +359,10 @@
 
         var formatTime = d3.timeFormat('%b %Y');
 
+        var title = 'Unemployment Rate Trends - ';
+        var header = document.getElementsByTagName("h1");
+        h1.innerText(title + industry);
+
         var svg = d3.select('svg')
             .attr("width", 1100 + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
@@ -397,12 +405,10 @@
                 var key = entry.key;
                 var values = entry.values;
                 for (var i=0; i < values.length; i++) {
-                    if (values[i].Value > max_value) {
-                        if (key === 'Men') {
-                            men_max = values[i].Value;
-                        }else {
-                            women_max = values[i].Value;
-                        }
+                    if (key === 'Men' && values[i].Value > men_max) {
+                        men_max = values[i].Value;
+                    }else if (key === 'Women' && values[i].Value > women_max) { {
+                        women_max = values[i].Value;
                     }
                 }
             }
