@@ -371,7 +371,7 @@
         var unemployment_gender;
         async function fetchData() {
 
-            var unemployment_gender = await.d3.csv(csv_root + "/unemployment_industry_gender.csv");
+            var unemployment_gender = await d3.csv(csv_root + "/unemployment_industry_gender.csv");
 
             var g_data = [];
             for (var i=0; i < unemployment_gender.length; i++) {
