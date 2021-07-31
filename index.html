@@ -376,19 +376,18 @@
             var g_data = [];
             for (var i=0; i < unemployment_gender.length; i++) {
                 var d = unemployment_gender[i];
-                if (d.Series_Name === industry) {
+                if (d.Series_Name === industry && d.gender === 'M') {
                     d.Date = new Date(d.Date);
                     g_data.push(d)
                 }
             }
-            console.log(g_data);
             plotIndustryByGender(g_data);
         }
 
         function plotIndustryByGender(data) {
 
-            var data_by_industry = d3.nest()
-                .key(function(d) { return d.Series_Name;})
+            var data_by_gender = d3.nest()
+                .key(function(d) { return d.Gender;})
                 .entries(data);
 
             // Add X axis
@@ -448,7 +447,7 @@
 
             // Draw the line
             var lines = svg.selectAll(".line")
-                .data(data_by_industry)
+                .data(data_by_gender)
                 .enter()
                 .append("path")
                   .attr("class", "chartLine")
@@ -470,7 +469,7 @@
 
               //Add legend
               var legend = svg.selectAll()
-                 .data(data_by_industry)
+                 .data(data_by_gender)
                  .enter()
                  .append('g')
                  .attr('class', 'legend');
@@ -537,7 +536,7 @@
                    .style('left', d3.event.pageX + 20 +  "px")
                    .style('top', d3.event.pageY - 50 +  "px")
                    .selectAll()
-                   .data(data_by_industry).enter()
+                   .data(data_by_gender).enter()
                    .append('div')
                    .style('color', d => color(d.key))
                    .html(d => d.key + ': ' + d.values.find(h => formatTime(h.Date) == monYear).Value + "%");
