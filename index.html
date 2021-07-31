@@ -520,7 +520,7 @@
                   var xDate = xAxisScale.invert(d3.mouse(this)[0]);
                   var monYear = formatTime(xDate);
 
-                  data_by_industry.sort((a, b) => {
+                  data_by_gender.sort((a, b) => {
                      return b.values.find(h => formatTime(h.Date) == monYear).Value -
                             a.values.find(h => formatTime(h.Date) == monYear).Value;
                   })
