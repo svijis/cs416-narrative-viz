@@ -188,15 +188,16 @@
                            .on("mousemove", mousemove);
 
                        function mousemove() {
-                           // var x0 = x.invert(d3.mouse(this)[0]),
+                           var x0 = x.invert(d3.mouse(this)[0]);
+                           console.log(x0);
                            //     i = bisectDate(data, x0, 1),
                            //     d0 = data[i - 1],
                            //     d1 = data[i],
-                           //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-                           // focus.attr("transform", "translate(" + x(d.date) + "," + y(d.likes) + ")");
-                           // tooltip.attr("style", "left:" + (x(d.date) + 64) + "px;top:" + y(d.likes) + "px;");
+                           //     d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
+                           // focus.attr("transform", "translate(" + x(d.Date) + "," + y(d.Value) + ")");
+                           // tooltip.attr("style", "left:" + (x(d.Date) + 64) + "px;top:" + y(d.Value) + "px;");
                            // tooltip.select(".tooltip-date").text(dateFormatter(d.date));
-                           // tooltip.select(".tooltip-likes").text(formatValue(d.likes));
+                           // tooltip.select(".tooltip-likes").text(formatValue(d.Value));
                        }
 
                   // Add tooltip

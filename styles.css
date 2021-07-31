@@ -7,7 +7,7 @@ svg {
     margin: 20px
 }
 
-div.tooltip {
+/* div.tooltip {
     position: absolute;
     text-align: center;
     width: 80px;
@@ -20,8 +20,7 @@ div.tooltip {
     border: 0px;
     border-radius: 4px;
     pointer-events: none;
-}
-
+}  */
 
  .focus circle {
     fill: steelblue;
