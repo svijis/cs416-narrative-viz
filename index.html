@@ -24,7 +24,8 @@
               width = 960 - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom;
 
-          var formatTime = d3.timeFormat('%b %Y');
+          //var formatTime = d3.timeFormat('%b %Y');
+          var formatTime = d3.timeParse("%d-%b-%Y");
 
           var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
