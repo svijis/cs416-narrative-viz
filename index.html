@@ -49,10 +49,9 @@
           const tooltipLine = svg.append('line');
 
           var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
-          var unemployment_data, unemployment_gender;
+          var unemployment_data;
           async function fetchData() {
               var unemployment_data = await d3.csv(csv_root + "/unemployment_by_industry.csv");
-              var unemployment_gender = await.d3.csv(csv_root + "/unemployment_industry_gender.csv");
 
               var u_data = [];
               for (var i=0; i < unemployment_data.length; i++) {
