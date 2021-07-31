@@ -191,7 +191,7 @@
                      .append("circle")
                      .attr("cx", function(d) {
                        console.log(d)
-                       return xAxisScale(d.date);
+                       return xAxisScale(d.Date);
                      })
                      .attr("cy", function(d) { return yAxisScale(d.Value); })
                      .attr('r', 10)
