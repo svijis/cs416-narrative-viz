@@ -170,7 +170,10 @@
                          .style("position", "absolute");
 
                   lines.selectAll("points")
-                         .data(function(d) {return d.values})
+                         .data(function(d) {
+                           console.log(d)
+                           return d.values
+                         })
                          .enter()
                          .append("circle")
                          .attr("cx", function(d) { return xAxisScale(d.Date); })
