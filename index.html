@@ -148,8 +148,8 @@
                             id: d.key,
                             value: d.values[d.values.length - 1]}; })
                     .attr("transform", function(d) {
-                            return "translate(" + (xScale(d.value.date) + 10)
-                            + "," + (yScale(d.value.Value) + 5 )+ ")"; })
+                            return "translate(" + (xAxisScale(d.value.date) + 10)
+                            + "," + (yAxisScale(d.value.Value) + 5 )+ ")"; })
                     .attr("x", 5)
                     .text(function(d) { return ("Serie ") });
 
