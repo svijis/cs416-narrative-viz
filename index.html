@@ -376,7 +376,7 @@
             var g_data = [];
             for (var i=0; i < unemployment_gender.length; i++) {
                 var d = unemployment_gender[i];
-                if (d.Series_Name === industry && d.gender === 'M') {
+                if (d.Series_Name === industry) {
                     d.Date = new Date(d.Date);
                     g_data.push(d)
                 }
