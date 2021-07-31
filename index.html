@@ -172,7 +172,7 @@
                                .attr('opacity', 0)
                                .on('mousemove', drawTooltip)
                                .on('mouseout', removeTooltip)
-                               .on('click', removeTooltip);
+                               .on('click', onMouseClick);
 
                  function removeTooltip() {
                      if (tooltip) tooltip.style('display', 'none');
@@ -204,10 +204,6 @@
                      .style('color', d => color(d.key))
                      .html(d => d.key + ': ' + d.values.find(h => formatTime(h.Date) == monYear).Value + "%");
                  }
-
-
-                 lines.on("click", onMouseClick);
-
 
                 //   var mouseG = svg.append("g")
                 //       .attr("class", "mouse-over-effects");
