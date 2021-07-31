@@ -44,7 +44,7 @@
               var data = [];
               for (var i=0; i < unemployment_data.length; i++) {
                   var d = unemployment_data[i];
-                  d.Date = new Date(d.Date);
+                  d.Date = formatTime(new Date(d.Date));
                   data.push(d)
               }
               plotByIndustry(data, onMouseClick);
@@ -67,14 +67,19 @@
                     return d.Date;
               }))
 
-              var xAxis = d3.axisBottom(x)
-                .tickFormat(function(date){
-                  if (d3.timeYear(date) < date) {
-                    return d3.timeFormat('%b')(date);
-                  } else {
-                    return d3.timeFormat('%Y')(date);
-                  }
-                });
+              const xaxis = d3.axisBottom()
+                  .ticks(d3.timeDay.every(1))
+                  .tickFormat(d3.timeFormat('%b %d'))
+                  .scale(xAxisScale);
+
+              // var xAxis = d3.axisBottom(x)
+              //   .tickFormat(function(date){
+              //     if (d3.timeYear(date) < date) {
+              //       return d3.timeFormat('%b')(date);
+              //     } else {
+              //       return d3.timeFormat('%Y')(date);
+              //     }
+              //   });
 
               svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
@@ -116,27 +121,53 @@
                 '#009933', '#d58000', '#1199ff', '#003366', '#ff99cc', '#006666',
                 '#72b331', '#ff7f00', '#c70e55', '#999911'])
 
-              // Draw the line
-              var lines = svg.selectAll(".line")
-                  .data(data_by_industry)
-                  .enter()
-                  .append("path")
-                    .attr("class", "actual-line")
-                    .attr("fill", "none")
-                    .attr("stroke", function(d){
-                      return color(d.key);
-                    })
-                    .attr("stroke-width", 1.5)
-                    .attr("d", function(d){
-                      return d3.line()
-                        .x(function(d) {
-                            return x(d.Date);
-                        })
-                        .y(function(d) {
-                            return y(+d.Value);
-                        })
-                        (d.values)
-                    })
+              // Draw the line 
+              const line = d3.line()
+                  .x(function(d) { return xAxisScale(d.date); })
+                  .y(function(d) { return yAxisScale(d.Value); });
+
+              const lines = svg.selectAll("lines")
+                    .data(data_by_industry)
+                    .enter()
+                    .append("g");
+
+              lines.append("path")
+                    .attr("class", ids)
+                    .attr("d", function(d) { return line(d.values); });
+
+              lines.append("text")
+                    .attr("class","serie_label")
+                    .datum(function(d) {
+                        console.log(d);
+                        return {
+                            id: d.key,
+                            value: d.values[d.values.length - 1]}; })
+                    .attr("transform", function(d) {
+                            return "translate(" + (xScale(d.value.date) + 10)
+                            + "," + (yScale(d.value.Value) + 5 )+ ")"; })
+                    .attr("x", 5)
+                    .text(function(d) { return ("Serie ") });
+
+              // var lines = svg.selectAll(".line")
+              //     .data(data_by_industry)
+              //     .enter()
+              //     .append("path")
+              //       .attr("class", "actual-line")
+              //       .attr("fill", "none")
+              //       .attr("stroke", function(d){
+              //         return color(d.key);
+              //       })
+              //       .attr("stroke-width", 1.5)
+              //       .attr("d", function(d){
+              //         return d3.line()
+              //           .x(function(d) {
+              //               return x(d.Date);
+              //           })
+              //           .y(function(d) {
+              //               return y(+d.Value);
+              //           })
+              //           (d.values)
+              //       })
 
                     //Add legend
                     var legend = svg.selectAll()
@@ -177,7 +208,7 @@
                          })
                          .enter()
                          .append("circle")
-                         .attr("cx", function(d) { return formatTime(xAxisScale(d.Date)); })
+                         .attr("cx", function(d) { return xAxisScale(d.Date); })
                          .attr("cy", function(d) { return yAxisScale(d.Value); })
                          .attr("r", 1)
                          .attr("class","point")
