@@ -138,8 +138,6 @@
                         (d.values)
                     })
 
-              lines.on("click", onMouseClick);
-
                 //Add legend
                 var legend = svg.selectAll()
                    .data(data_by_industry)
@@ -205,6 +203,10 @@
                      .style('color', d => color(d.key))
                      .html(d => d.key + ': ' + d.values.find(h => formatTime(h.Date) == monYear).Value + "%");
                  }
+
+
+                 lines.on("click", onMouseClick);
+
 
                 //   var mouseG = svg.append("g")
                 //       .attr("class", "mouse-over-effects");
