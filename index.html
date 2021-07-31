@@ -140,18 +140,18 @@
                     .attr("class", ids)
                     .attr("d", function(d) { return line(d.values); });
 
-              lines.append("text")
-                    .attr("class","serie_label")
-                    .datum(function(d) {
-                        console.log(d);
-                        return {
-                            id: d.key,
-                            value: d.values[d.values.length - 1]}; })
-                    .attr("transform", function(d) {
-                            return "translate(" + (xAxisScale(d.value.date) + 10)
-                            + "," + (yAxisScale(d.value.Value) + 5 )+ ")"; })
-                    .attr("x", 5)
-                    .text(function(d) { return ("Serie ") });
+              // lines.append("text")
+              //       .attr("class","serie_label")
+              //       .datum(function(d) {
+              //           console.log(d);
+              //           return {
+              //               id: d.key,
+              //               value: d.values[d.values.length - 1]}; })
+              //       .attr("transform", function(d) {
+              //               return "translate(" + (xAxisScale(d.value.date) + 10)
+              //               + "," + (yAxisScale(d.value.Value) + 5 )+ ")"; })
+              //       .attr("x", 5)
+              //       .text(function(d) { return ("Serie ") });
 
               // var lines = svg.selectAll(".line")
               //     .data(data_by_industry)
