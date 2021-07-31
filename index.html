@@ -51,8 +51,11 @@
           }
 
           function onMouseClick(d,i) {
-              console.log(d);
-              console.log(i);
+              var xDate = xAxisScale.invert(d3.mouse(this)[0]);
+              var monYear = formatTime(xDate),
+                  bisect = d3.bisector(function(d) { return d.Date; }).right;
+                  idx = bisect(d.values, xDate);
+
           }
 
           function plotByIndustry(data, onMouseClick) {
