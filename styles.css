@@ -68,10 +68,10 @@ h2 {
 
 .user {
   font-size: 14px;
-  margin-right: 220px;
+  right: 100px;
   position: absolute;
-  right: 10px;
   top: 55px;
+  color: blue;
 }
 
 .nav {
