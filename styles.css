@@ -16,4 +16,21 @@ svg {
   stroke: #fff;
   stroke-linejoin: round;
 }
- 
+
+
+/* Legend Position Style */
+.map-legend {
+   position:absolute;
+   left:20px;
+   top:30px;
+}
+
+.axis text {
+ font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+ fill: none;
+ stroke: #000;
+ shape-rendering: crispEdges;
+}
