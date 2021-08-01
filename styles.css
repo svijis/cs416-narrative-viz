@@ -46,11 +46,7 @@ p, h1, h2, h3, h4 {
 h2 {
     margin-bottom: 0px;
     margin-top: 0px;
-}
-
-h4 {
-   margin-top: 20px;
-}
+} 
 
 .d3-tip {
     line-height: 1;
@@ -84,7 +80,7 @@ h4 {
 
 #nav-main {
   display: block;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 #nav-industry {
