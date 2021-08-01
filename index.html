@@ -666,7 +666,7 @@
                 .attr("d", path);
 
         // add a legend
-    		var w = 140, h = 300;
+    		var w = 300, h = 140;
 
     		var key = d3.select("body")
     			.append("svg")
@@ -699,18 +699,18 @@
     			.style("fill", "url(#gradient)")
     			.attr("transform", "translate(0,10)");
 
-    		var y = d3.scaleLinear()
+    		var x = d3.scaleLinear()
     			.range([h, 0])
     			.domain([minVal, maxVal]);
 
-    		var yAxis = d3.axisRight(y);
+    		var xAxis = d3.axisBottom(x);
 
     		key.append("g")
-    			.attr("class", "y axis")
+    			.attr("class", "x axis")
     			.attr("transform", "translate(41,10)")
-    			.call(yAxis)
+    			.call(xAxis)
         }
-        
+
         fetchData()
 
       }
