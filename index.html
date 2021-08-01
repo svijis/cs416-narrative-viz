@@ -663,18 +663,17 @@
             plotByState(data_1, data_2);
         }
 
-        function plotByState(data) {
-          console.log("in ready", topojson.feature(us, us.objects.states).features)
-          console.log("statenames", stateNames)
-          console.log("employment", unemployment)
+        function plotByState(data_1, data_2) {
+          console.log("in ready", topojson.feature(data_1, data_1.objects.counties).features);
+
           svg.append("g")
               .attr("class", "counties")
             .selectAll("path")
-            .data(topojson.feature(us, us.objects.states).features)
+            .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
               .attr("fill", function(d) {
                   console.log("d", d)
-                  console.log("unemployment", unemployment)
+                  console.log("unemployment", data_2)
                   var sn = stateNames.get(d.id)
                   console.log("sn",sn)
                   d.rate = unemployment.get(stateNames.get(d.id)) || 0
@@ -695,7 +694,7 @@
                   return d.rate + "%"; });
 
             svg.append("path")
-                .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+                .datum(topojson.mesh(data_1, data_1.objects.states, function(a, b) { return a !== b; }))
                 .attr("class", "states")
                 .attr("d", path);
             }
