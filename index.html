@@ -701,10 +701,10 @@
             .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
             .attr("fill", function(d) {
-                  var sn = stateNames.get(d.id)
-                  d.rate = unemployment.get(stateNames.get(d.id)) || 0
+                  var sn = stateNames.get(parseInt(d.id))
+                  d.rate = unemployment.get(stateNames.get(parseInt(d.id))) || 0
                   console.log("rate", d.rate)
-                  var col =  ramp(d.rate);
+                  var col =  ramp(parseInt(d.rate));
                   console.log("col", col)
                   if (col) {
                     return col
@@ -715,8 +715,8 @@
               .attr("d", path)
               .append("title")
               .text(function(d) {
-                  console.log("title", d)
-                  return d.rate + "%"; });
+                  return d.rate + "%";
+              });
 
             svg.append("path")
                 .datum(topojson.mesh(data_1, data_1.objects.states, function(a, b) { return a !== b; }))
