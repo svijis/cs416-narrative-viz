@@ -711,9 +711,8 @@
               })
               .attr("d", path)
               .append("title")
-              .text(function(d) {
-                  console.log(d)
-                  return stateNames.get(parseInt(d.id)) + "-" + d.rate + "%";
+              .text(function(d) { 
+                  return d.properties.name + "-" + d.rate + "%";
               });
 
             svg.append("path")
