@@ -666,9 +666,9 @@
                 .attr("d", path);
 
         // add a legend
-    		var w = 300, h = 140;
+    		var w = 140, h = 300;
 
-    		var key = d3.select("body")
+    		var key = d3.select("svg")
     			.append("svg")
     			.attr("width", w)
     			.attr("height", h)
@@ -684,13 +684,13 @@
     			.attr("spreadMethod", "pad");
 
     		legend.append("stop")
-    			.attr("offset", "100%")
-    			.attr("stop-color", lowColor)
-    			.attr("stop-opacity", 1);
-
-        legend.append("stop")
     			.attr("offset", "0%")
     			.attr("stop-color", highColor)
+    			.attr("stop-opacity", 1);
+
+    		legend.append("stop")
+    			.attr("offset", "100%")
+    			.attr("stop-color", lowColor)
     			.attr("stop-opacity", 1);
 
     		key.append("rect")
@@ -699,18 +699,17 @@
     			.style("fill", "url(#gradient)")
     			.attr("transform", "translate(0,10)");
 
-    		var x = d3.scaleLinear()
+    		var y = d3.scaleLinear()
     			.range([h, 0])
     			.domain([minVal, maxVal]);
 
-    		var xAxis = d3.axisBottom(x);
+    		var yAxis = d3.axisRight(y);
 
     		key.append("g")
-    			.attr("class", "x axis")
-    			.attr("transform", "translate(10, 41)")
-    			.call(xAxis)
+    			.attr("class", "y axis")
+    			.attr("transform", "translate(41,10)")
+    			.call(yAxis)
         }
-
         fetchData()
 
       }
