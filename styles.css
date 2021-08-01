@@ -52,6 +52,12 @@ h1 {
 }
 
 .map-annotation .annotation-note-label,
-.map-annotation .annotation-note-title {
+.map-annotation .annotation-note-title,
+{
       fill: red;
+}
+
+.map-annotation .note-line,
+.map-annotation .connector {
+      stroke: red;
 }
