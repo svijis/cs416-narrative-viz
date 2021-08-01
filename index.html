@@ -712,6 +712,7 @@
               .attr("d", path)
               .append("title")
               .text(function(d) {
+                  console.log(d)
                   return stateNames.get(parseInt(d.id)) + "-" + d.rate + "%";
               });
 
