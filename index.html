@@ -40,7 +40,7 @@
 
           var title = 'Unemployment Rate Trends before and after Covid-19';
           var header = document.getElementsByTagName("h1");
-          h1.innerHTML(title);
+          header.innerHTML(title);
 
           var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
@@ -361,7 +361,7 @@
 
         var title = 'Unemployment Rate Trends - ';
         var header = document.getElementsByTagName("h1");
-        h1.innerHTML(title + industry);
+        header.innerHTML(title + industry);
 
         var svg = d3.select('svg')
             .attr("width", 1100 + margin.left + margin.right)
