@@ -68,6 +68,7 @@ h1 {
 .user {
   font-size: 14px;
   margin-right: 220px;
+  float: right;
 }
 
 .nav {
@@ -79,7 +80,7 @@ h1 {
 
 #nav-main {
   display: block;
-  float: left;
+  margin-top: 0px;
 }
 
 #nav-industry {
@@ -87,6 +88,6 @@ h1 {
   float: left;
 }
 
-para {
+.para {
     clear: both;
 }
