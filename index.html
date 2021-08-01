@@ -609,18 +609,14 @@
         var unemployment = d3.map();
         var stateNames = d3.map();
 
-        var projection = d3.geoAlbersUsa()
-            .translate([width / 2, height / 2]) // translate to center of screen
-            .scale([1300]);
+        var path = d3.geoPath();
 
-        var path = d3.geoPath()
-                   .projection(projection);
 
-        // var lowColor = '#f7fbff'
-        // var highColor = '#08326e'
+        var lowColor = '#f8fcfd'
+        var highColor = '#020708'
 
-        var lowColor = '#f9f9f9'
-        var highColor = '#bc2a66'
+        // var lowColor = '#f9f9f9'
+        // var highColor = '#bc2a66'
 
         // var x = d3.scaleLinear()
         //     .domain([1, 10])
