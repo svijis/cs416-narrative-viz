@@ -669,8 +669,8 @@
             var data_2 = await d3.csv(csv_root + "/unemployment_states.csv");
 
             for (var i=0; i < data_2.length; i++) {
-                stateNames.set(data_2[i].id, data_2[i].name);
-                unemployment.set(data_2[i].name, data_2[i].highest_unemp_rate);
+                stateNames.set(parseInt(data_2[i].id), data_2[i].name);
+                unemployment.set(data_2[i].name, parseFloat(data_2[i].highest_unemp_rate));
             }
 
             plotByState(data_1);
@@ -699,7 +699,7 @@
             .attr("class", "state")
             .selectAll("path")
             .data(topojson.feature(data_1, data_1.objects.states).features)
-            .enter().append("path") 
+            .enter().append("path")
             .attr("fill", function(d) {
                   var sn = stateNames.get(d.id)
                   d.rate = unemployment.get(stateNames.get(d.id)) || 0
