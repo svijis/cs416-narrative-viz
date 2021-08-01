@@ -568,7 +568,7 @@
                 .attr("d", path);
 
         // add a legend
-    		var w = 140, h = 350;
+    		var w = 140, h = 400;
 
     		var key = d3.select("body")
     			.append("svg")
@@ -597,7 +597,7 @@
 
     		key.append("rect")
     			.attr("width", w - 100)
-    			.attr("height", h)
+    			.attr("height", h - 30)
     			.style("fill", "url(#gradient)")
     			.attr("transform", "translate(0,10)");
 
