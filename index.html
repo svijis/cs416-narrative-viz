@@ -13,10 +13,12 @@
 
 <div>
 <h1 id="header"></h1>
+<p class='user'> Vijayalakshmi Subramanian - vs26@illinois.edu </p>
+
 <div id="nav">
     <h3 id="nav-main">
         By State
-        <a class="nav" onclick="showUnEmploymentTrend()"> By Industry</a>
+        <a class="nav" onclick="showUnEmploymentTrend()"> 》By Industry</a>
     </h3>
     <h3 id="nav-industry">
         <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
@@ -26,8 +28,6 @@
         》By Gender
     </h3>
 </div>
-<p class='user'> Vijayalakshmi Subramanian - vs26@illinois.edu </p>
-<p id="para"></p>
 <svg></svg>
 <div id='tooltip' style='position:absolute;background-color:lightgray;padding:5px'></div>
 </div>
@@ -520,7 +520,7 @@
         var title = 'Highest Unemployment Rate by State in 2020 during Covid-19';
         document.getElementById("header").innerHTML = title;
 
-        document.getElementById("para").innerHTML = "Hover over each state to see its highest unemployment rate";
+        document.getElementById("para").innerHTML = "Nav Tips - Hover over each state to see its highest unemployment rate. Click on the breadcrumbs above for navigation between scenes.";
         document.getElementById('nav-main').display = "block";
 
         var svg = d3.select('svg')
