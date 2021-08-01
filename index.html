@@ -664,7 +664,6 @@
         }
 
         function plotByState(data_1, data_2) {
-          console.log("in ready", topojson.feature(data_1, data_1.objects.counties).features);
 
           svg.append("g")
               .attr("class", "counties")
@@ -672,19 +671,23 @@
             .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
               .attr("fill", function(d) {
-                  console.log("d", d)
-                  console.log("unemployment", data_2)
-                  var sn = stateNames.get(d.id)
-                  console.log("sn",sn)
-                  d.rate = unemployment.get(stateNames.get(d.id)) || 0
-                  console.log("rate", d.rate)
-                  var col =  color(d.rate);
-                  console.log("col", col)
-                  if (col) {
-                    console.log("found col", col, "for d", d)
-                    return col
-                  } else {
-                    return '#ffffff'
+                  if (d.id) {
+                    var id = parseInt(d.id);
+                    console.log('id=====> ' id);
+                    for (var i=0; i < data_2.length; i++) {
+                        var row = data_2[i];
+                        var state_id = parseInt(row.id);
+                        if (state_id === id) {
+                            d.rate = row.highest_unemp_rate || 0;
+                            var col =  color(d.rate);
+                            console.log("col", col)
+                            if (col) {
+                              return col
+                            } else {
+                              return '#ffffff'
+                            }
+                        }
+                    }
                   }
               })
               .attr("d", path)
