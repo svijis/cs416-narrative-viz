@@ -52,5 +52,10 @@ h1 {
 }
 
 .map-annotation {
-    color: blue;
+
+  .annotation-note-label,
+  .annotation-note-label {
+      fill: red;
+  }
+  
 }
