@@ -198,13 +198,17 @@
                    });
 
                  legend.append('text')
+                   .attr('class', 'industry-legend');
                    .attr('x', width - 8)
                    .attr('y', function (d, i) {
                       return (i * 20) + 9;
                    })
                    .text(function (d) {
                       return d.key;
-                   });
+                   })
+                   .on("click", function(d) {
+                      console.log(d);
+                   })
 
                    // Add tooltip
                  var tipBox = svg.append('rect')

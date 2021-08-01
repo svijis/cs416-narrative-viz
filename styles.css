@@ -90,3 +90,7 @@ h2 {
 .para {
     clear: both;
 }
+
+.industry-legend {
+   cursor: pointer;
+}
