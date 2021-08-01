@@ -533,6 +533,7 @@
       window.main = function() {
 
         if (industry) {
+            window.location.href = window.location.href.split('?')[0];
             return;
         }
 
@@ -693,7 +694,9 @@
 
       }
 
-      main();
+      if (!industry) {
+          main();
+      }
 
  }
 </script>
