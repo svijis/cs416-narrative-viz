@@ -51,11 +51,7 @@ h1 {
     border-radius: 2px;
 }
 
-.map-annotation {
-
-  .annotation-note-label,
-  .annotation-note-label {
-      fill: red;
-  }
-  
+.map-annotation > .annotation-note-label,
+.map-annotation .annotation-note-title {
+      fill: red; 
 }
