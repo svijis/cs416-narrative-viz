@@ -25,7 +25,7 @@
 
       var industry = getParameterByName('i');
 
-      function showUnEmploymentTrend() {
+      window.showUnEmploymentTrend = function() {
 
           // set the dimensions and margins of the graph
           var margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -244,9 +244,9 @@
           fetchData();
       }
 
-      // if (!industry) {
-      //   showUnEmploymentTrend();
-      // }
+      if (!industry) {
+        window.showUnEmploymentTrend();
+      }
 
       function showUnEmploymentByIndustry() {
         // set the dimensions and margins of the graph
