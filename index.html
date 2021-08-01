@@ -4,6 +4,7 @@
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://unpkg.com/d3-scale-cluster@1.1.2/dist/d3-scale-cluster.min.js"></script>
 
 
 <link rel='stylesheet' href="styles.css"/>
@@ -610,83 +611,106 @@
         var unemployment = d3.map();
         var stateNames = d3.map();
 
+        var projection = d3.geoAlbersUsa()
+            .translate([width / 2, height / 2]) // translate to center of screen
+            .scale([1000]);
+
         var path = d3.geoPath();
 
-        var x = d3.scaleLinear()
-            .domain([1, 10])
-            .rangeRound([600, 860]);
+        var lowColor = '#f9f9f9'
+        var highColor = '#bc2a66'
 
-        var color = d3.scaleThreshold()
-            .domain(d3.range(0, 30))
-            .range(d3.schemeBlues[30]);
+        // var x = d3.scaleLinear()
+        //     .domain([1, 10])
+        //     .rangeRound([600, 860]);
 
-        var g = svg.append("g")
-            .attr("class", "key")
-            .attr("transform", "translate(0,40)");
+        // var color = d3.scaleThreshold()
+        //     .domain(d3.range(0, 30))
+        //     .range(d3.schemeBlues[30]);
 
-        g.selectAll("rect")
-          .data(color.range().map(function(d) {
-              d = color.invertExtent(d);
-              if (d[0] == null) d[0] = x.domain()[0];
-              if (d[1] == null) d[1] = x.domain()[1];
-              return d;
-            }))
-          .enter().append("rect")
-            .attr("height", 8)
-            .attr("x", function(d) { return x(d[0]); })
-            .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-            .attr("fill", function(d) { return color(d[0]); });
+        //var scale = d3.scaleQuantile().domain([0,99]).range(["steelblue","#aaa","lightgreen"]);
 
-        g.append("text")
-            .attr("class", "caption")
-            .attr("x", x.range()[0])
-            .attr("y", -6)
-            .attr("fill", "#000")
-            .attr("text-anchor", "start")
-            .attr("font-weight", "bold")
-            .text("Unemployment rate");
 
-        g.call(d3.axisBottom(x)
-            .tickSize(13)
-            .tickFormat(function(x, i) { return i ? x : x + "%"; })
-            .tickValues(color.domain()))
-          .select(".domain")
-            .remove();
+        // var g = svg.append("g")
+        //     .attr("class", "key")
+        //     .attr("transform", "translate(0,40)");
+        //
+        // g.selectAll("rect")
+        //   .data(color.range().map(function(d) {
+        //       d = color.invertExtent(d);
+        //       if (d[0] == null) d[0] = x.domain()[0];
+        //       if (d[1] == null) d[1] = x.domain()[1];
+        //       return d;
+        //     }))
+        //   .enter().append("rect")
+        //     .attr("height", 8)
+        //     .attr("x", function(d) { return x(d[0]); })
+        //     .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+        //     .attr("fill", function(d) { return color(d[0]); });
+        //
+        // g.append("text")
+        //     .attr("class", "caption")
+        //     .attr("x", x.range()[0])
+        //     .attr("y", -6)
+        //     .attr("fill", "#000")
+        //     .attr("text-anchor", "start")
+        //     .attr("font-weight", "bold")
+        //     .text("Unemployment rate");
+        //
+        // g.call(d3.axisBottom(x)
+        //     .tickSize(13)
+        //     .tickFormat(function(x, i) { return i ? x : x + "%"; })
+        //     .tickValues(color.domain()))
+        //   .select(".domain")
+        //     .remove();
 
         async function fetchData() {
             var data_1 = await d3.json("https://d3js.org/us-10m.v1.json");
             var data_2 = await d3.csv(csv_root + "/unemployment_states.csv");
 
-            console.log(data_1)
-            console.log(data_2)
+            for (var i=0; i < data_2.length; i++) {
+                stateNames.set(data_2[i].id, data_2[i].name);
+                unemployment.set(data_2[i].name, data_2[i].highest_unemp_rate);
+            }
 
-            plotByState(data_1, data_2);
+            plotByState(data_1);
         }
 
-        function plotByState(data_1, data_2) {
+        function plotByState(data_1) {
+
+          var values = unemployment.values();
+
+          var minVal = d3.min(values)
+        	var maxVal = d3.max(values)
+        	var ramp = d3.scaleLinear().domain([minVal,maxVal]).range([lowColor,highColor])
+
+          console.log(values);
+
+          // svg.selectAll("path")
+          //     .data(json.features)
+          //     .enter()
+          //     .append("path")
+          //     .attr("d", path)
+          //     .style("stroke", "#fff")
+          //     .style("stroke-width", "1")
+          //     .style("fill", function(d) { return ramp(d.properties.value) });
 
           svg.append("g")
-            .attr("class", "counties")
+            .attr("class", "state")
             .selectAll("path")
             .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
+            .attr("class", function(d) { return 'state ' + scale(rateById.get(d.id)); })
             .attr("fill", function(d) {
-                  if (d.id) {
-                    var id = parseInt(d.id);
-                    console.log('id=====> ' ,id);
-                    for (var i=0; i < data_2.length; i++) {
-                        var row = data_2[i];
-                        var state_id = parseInt(row.id);
-                        if (state_id === id) {
-                            d.rate = row.highest_unemp_rate || 0;
-                            var col =  color(d.rate);
-                            if (col) {
-                              return col
-                            } else {
-                              return '#ffffff'
-                            }
-                        }
-                    }
+                  var sn = stateNames.get(d.id)
+                  d.rate = unemployment.get(stateNames.get(d.id)) || 0
+                  console.log("rate", d.rate)
+                  var col =  ramp(d.rate);
+                  console.log("col", col)
+                  if (col) {
+                    return col
+                  } else {
+                    return '#ffffff'
                   }
               })
               .attr("d", path)
@@ -699,57 +723,7 @@
                 .datum(topojson.mesh(data_1, data_1.objects.states, function(a, b) { return a !== b; }))
                 .attr("class", "states")
                 .attr("d", path);
-            }
-
-        // var promises = [
-        //   d3.json("https://d3js.org/us-10m.v1.json"),
-        //   d3.tsv("us-state-names.tsv", function(d) {
-        //     stateNames.set(d.id, d.name)
-        //   }),
-        //   d3.tsv("map.tsv", function(d) {
-        //     console.log("d in map", d);
-        //     unemployment.set(d.name, +d.value);
-        //   })
-        // ]
-        //
-        // Promise.all(promises).then(ready)
-
-        // function ready([us]) {
-        //   console.log("in ready", topojson.feature(us, us.objects.states).features)
-        //   console.log("statenames", stateNames)
-        //   console.log("employment", unemployment)
-        //   svg.append("g")
-        //       .attr("class", "counties")
-        //     .selectAll("path")
-        //     .data(topojson.feature(us, us.objects.states).features)
-        //     .enter().append("path")
-        //       .attr("fill", function(d) {
-        //           console.log("d", d)
-        //           console.log("unemployment", unemployment)
-        //           var sn = stateNames.get(d.id)
-        //           console.log("sn",sn)
-        //           d.rate = unemployment.get(stateNames.get(d.id)) || 0
-        //           console.log("rate", d.rate)
-        //           var col =  color(d.rate);
-        //           console.log("col", col)
-        //           if (col) {
-        //             console.log("found col", col, "for d", d)
-        //             return col
-        //           } else {
-        //             return '#ffffff'
-        //           }
-        //       })
-        //       .attr("d", path)
-        //     .append("title")
-        //       .text(function(d) {
-        //           console.log("title", d)
-        //           return d.rate + "%"; });
-        //
-        //   svg.append("path")
-        //       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-        //       .attr("class", "states")
-        //       .attr("d", path);
-        //   }
+        }
         fetchData()
 
       }

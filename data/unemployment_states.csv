@@ -1,4 +1,4 @@
-id,state,highest_unemp_rate,current_unemp_rate
+id,name,highest_unemp_rate,current_unemp_rate
 1,Alabama,12.7,3.7
 2,Alaska,12.4,6.6
 3,Arkansas,9.7,5
