@@ -1,16 +1,16 @@
 id,name,highest_unemp_rate,current_unemp_rate
 1,Alabama,12.7,3.7
 2,Alaska,12.4,6.6
-3,Arkansas,9.7,5
+3,Arkansas,9.7,5.0
 4,Arizona,14.2,7.3
-5,California,16,8
+5,California,16.0,8.0
 6,Colorado,12.2,6.3
-7,Connecticut,11.6,7
+7,Connecticut,11.6,7.0
 8,Delaware,13.6,5.9
 9,Florida,14.3,5.7
 10,Georgia,12.2,4.4
 11,Hawaii,21.9,7.9
-12,Iowa,11,4.6
+12,Iowa,11.0,4.6
 13,Idaho,11.6,3.2
 14,Illinois,16.3,7.9
 15,Indiana,16.5,4.7
@@ -24,7 +24,7 @@ id,name,highest_unemp_rate,current_unemp_rate
 23,Minnesota,11.1,4.4
 24,Missouri,12.3,5.1
 25,Mississippi,15.4,7.6
-26,Montana,12,4
+26,Montana,12.0,4.0
 27,North Carolina,13.7,4.9
 28,North Dakota,8.9,4.4
 29,Nebraska,7.4,2.5
@@ -34,7 +34,7 @@ id,name,highest_unemp_rate,current_unemp_rate
 33,Nevada,29.5,7.8
 34,New York,16.2,7.3
 35,Ohio,16.4,5.2
-36,Oklahoma,13,3.7
+36,Oklahoma,13.0,3.7
 37,Oregon,13.2,5.6
 38,Pennsylvania,16.2,6.9
 39,Rhode Island,17.5,5.8
