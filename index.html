@@ -616,8 +616,11 @@
         var path = d3.geoPath()
                    // projection(projection);
 
-        var lowColor = '#f7fbff'
-        var highColor = '#08326e'
+        // var lowColor = '#f7fbff'
+        // var highColor = '#08326e'
+
+        var lowColor = '#f9f9f9'
+        var highColor = '#bc2a66'
 
         // var x = d3.scaleLinear()
         //     .domain([1, 10])
@@ -701,10 +704,11 @@
             .enter().append("path")
             .attr("fill", function(d) {
                 //if (parseInt(d.id) <= 50) {
-                  var sn = stateNames.get(parseInt(d.id))
-                  d.rate = parseFloat(unemployment.get(sn)) || 0
-                  console.log("d", d)
-                  var col =  ramp(parseFloat(d.rate));
+                  //var sn = stateNames.get(parseInt(d.id))
+                  var rate = unemployment.get(d.properties.name) || 0
+                  d.rate = parseFloat(rate)
+                  console.log("d", d.id , d.properties.name, d.rate);
+                  var col =  ramp(d.rate);
                   console.log("col", col)
                   return col
                 //}
