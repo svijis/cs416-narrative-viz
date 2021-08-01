@@ -78,6 +78,7 @@ h1 {
   text-decoration: underline;
 }
 
-#nav-main, #nav-industry {
-    display: block;
+#nav-main,
+#nav-industry {
+    display: none;
 }
