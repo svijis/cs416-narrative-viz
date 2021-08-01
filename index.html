@@ -207,7 +207,7 @@
                       return d.key;
                    })
                    .on("click", function(d) {
-                      console.log(d)
+                       window.showUnEmploymentByIndustry()
                    })
 
                    // Add tooltip
@@ -288,7 +288,12 @@
       }
 
 
-      window.showUnEmploymentByIndustry = function() {
+      window.showUnEmploymentByIndustry = function(input) {
+
+        if (input) {
+            window.location.href = window.location.href.split('?')[0] + "?i=" + input;
+            return;
+        }
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
             width = 960 - margin.left - margin.right,
