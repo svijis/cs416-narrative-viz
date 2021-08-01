@@ -18,8 +18,8 @@
 
 <div id="nav">
     <h4 id="nav-main">
-        By State
-        <a class="nav" onclick="showUnEmploymentTrend('all')"> 》By Industry </a>
+        By State 》
+        <a class="nav" onclick="showUnEmploymentTrend('all')"> By Industry </a>
     </h4>
     <h4 id="nav-industry">
         <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
@@ -564,10 +564,10 @@
         var title = 'Highest Unemployment Rate by State in 2020 during Covid-19';
         document.getElementById("header").innerHTML = title;
 
-        document.getElementById("para").innerHTML = "Click on the breadcrumb above to navigate between scenes. Hover over each state to see its highest unemployment rate.";
+        document.getElementById("para").innerHTML = "Click on the links above to navigate. Hover over each state to see its highest unemployment rate.";
         document.getElementById("nav-main").style.display = "block";
         document.getElementById('nav-industry').style.display = "none";
-          document.getElementById('nav-gender').style.display = "none";
+        document.getElementById('nav-gender').style.display = "none";
 
         var svg = d3.select('svg')
             .attr("width", 975)
