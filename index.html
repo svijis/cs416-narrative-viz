@@ -276,6 +276,10 @@
           fetchData();
       }
 
+      if (industry && industry === 'all') {
+          showUnEmploymentByIndustry();
+      }
+
 
       window.showUnEmploymentByIndustry = function() {
         // set the dimensions and margins of the graph
