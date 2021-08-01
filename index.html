@@ -244,11 +244,11 @@
           fetchData();
       }
 
-      if (!industry) {
+      if (industry = 'all') {
         window.showUnEmploymentTrend();
       }
 
-      function showUnEmploymentByIndustry() {
+      window.showUnEmploymentByIndustry() = function() {
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
             width = 960 - margin.left - margin.right,
@@ -487,7 +487,7 @@
           showUnEmploymentByIndustry();
       }
 
-      function main() {
+      window.main = function() {
 
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
