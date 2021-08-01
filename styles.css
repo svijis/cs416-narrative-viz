@@ -21,8 +21,8 @@ svg {
 /* Legend Position Style */
 .map-legend {
    position:absolute;
-   left:20px;
-   top:30px;
+   right:20px;
+   top:50px;
 }
 
 .axis text {
