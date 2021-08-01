@@ -633,13 +633,13 @@
             className: "map-annotation",
             x: 440,
             y: 228,
-            dy: -24,
-            dx: -50
+            dy: -19,
+            dx: -506
           }
         ];
 
           const makeAnnotations = d3.annotation()
-            .editMode(true)
+            //.editMode(true)
             .annotations(annotations);
           svg.append("g")
             .call(makeAnnotations)
