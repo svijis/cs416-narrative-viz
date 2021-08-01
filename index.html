@@ -715,7 +715,7 @@
               .attr("d", path)
               .append("title")
               .text(function(d) {
-                  return d.rate + "%";
+                  return stateNames.get(parseInt(d.id)) + "-" + d.rate + "%";
               });
 
             svg.append("path")
