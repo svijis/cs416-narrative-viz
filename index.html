@@ -700,14 +700,14 @@
             .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
             .attr("fill", function(d) {
-                if (parseInt(d.id) <= 50) {
+                //if (parseInt(d.id) <= 50) {
                   var sn = stateNames.get(parseInt(d.id))
                   d.rate = parseFloat(unemployment.get(sn)) || 0
                   console.log("d", d)
                   var col =  ramp(parseFloat(d.rate));
                   console.log("col", col)
                   return col
-                }
+                //}
               })
               .attr("d", path)
               .append("title")
