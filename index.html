@@ -703,7 +703,7 @@
             .attr("fill", function(d) {
                   var sn = stateNames.get(parseInt(d.id))
                   d.rate = unemployment.get(stateNames.get(parseInt(d.id))) || 0
-                  console.log("sn", sn, "rate", d.rate)
+                  console.log("d", d.id, "sn", sn, "rate", d.rate)
                   var col =  ramp(parseInt(d.rate));
                   console.log("col", col)
                   if (col) {
