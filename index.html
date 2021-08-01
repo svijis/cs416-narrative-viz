@@ -403,9 +403,9 @@
                 var key = entry.key;
                 var values = entry.values;
                 for (var i=0; i < values.length; i++) {
-                    if (key === 'Men' && values[i].Value > men_max) {
+                    if (key === 'Men' && parseFloat(values[i].Value) > men_max) {
                         men_max = values[i].Value;
-                    }else if (key === 'Women' && values[i].Value > women_max) {
+                    }else if (key === 'Women' && parseFloat(values[i].Value) > women_max) {
                         women_max = values[i].Value;
                     }
                 }
