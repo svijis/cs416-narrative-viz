@@ -702,8 +702,8 @@
             .attr("fill", function(d) {
                 if (parseInt(d.id) <= 50) {
                   var sn = stateNames.get(parseInt(d.id))
-                  d.rate = unemployment.get(stateNames.get(parseInt(d.id))) || 0
-                  console.log("d", d.id, "sn", sn, "rate", d.rate)
+                  d.rate = parseFloat(unemployment.get(sn)) || 0
+                  console.log("d", d)
                   var col =  ramp(parseFloat(d.rate));
                   console.log("col", col)
                   return col
@@ -711,7 +711,7 @@
               })
               .attr("d", path)
               .append("title")
-              .text(function(d) { 
+              .text(function(d) {
                   return d.properties.name + "-" + d.rate + "%";
               });
 
