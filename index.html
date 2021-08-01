@@ -696,7 +696,7 @@
                 .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
                 .attr("class", "states")
                 .attr("d", path);
-            } 
+            }
 
         // var promises = [
         //   d3.json("https://d3js.org/us-10m.v1.json"),
@@ -747,6 +747,7 @@
         //       .attr("class", "states")
         //       .attr("d", path);
         //   }
+        fetchData()
 
       }
 
