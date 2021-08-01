@@ -600,8 +600,8 @@
             height = 500 - margin.top - margin.bottom;
 
         var svg = d3.select('svg')
-            .attr("width", 960)
-            .attr("height", 600)
+            .attr("width", 975)
+            .attr("height", 610)
 
         var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
 
@@ -610,7 +610,7 @@
 
         var projection = d3.geoAlbersUsa()
             .translate([width / 2, height / 2]) // translate to center of screen
-            .scale([1000]);
+            .scale([1300]);
 
         var path = d3.geoPath()
                    projection(projection);
@@ -663,7 +663,7 @@
         //     .remove();
 
         async function fetchData() {
-            var data_1 = await d3.json("https://d3js.org/us-10m.v1.json");
+            var data_1 = await d3.json(csv_root + "/states-albers-10m.json";
             var data_2 = await d3.csv(csv_root + "/unemployment_states.csv");
 
             for (var i=0; i < data_2.length; i++) {
