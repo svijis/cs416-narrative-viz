@@ -48,6 +48,10 @@ h2 {
     margin-top: 0px;
 }
 
+h4 {
+   margin-top: 20px;
+}
+
 .d3-tip {
     line-height: 1;
     padding: 12px;
