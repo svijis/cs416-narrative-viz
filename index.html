@@ -28,7 +28,8 @@
 
     <h4 id="nav-gender">
         <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
-        <a id="nav-main-1" class="nav" onclick="showUnEmploymentTrend('all')"> 》All Industries </a>
+        》
+        <a id="nav-main-1" class="nav" onclick="showUnEmploymentTrend('all')"> All Industries </a>
         》Gender
     </h4>
 
@@ -73,8 +74,8 @@
           var title = 'Unemployment Rate Trends before and after Covid-19';
           document.getElementById("header").innerHTML = title;
 
-          var text = "Click on the breadcrumb above to navigate between scenes. Hover over chart to see unemployment trend, before and after covid, across different industries."
-                     + "  Click on the legend to see unemployment trends by gender.";
+          var text = "Click on the links above to navigate. Hover over chart to see unemployment trend across different industries."
+                     + "  Click on the industry name (legend) to see unemployment trends by gender.";
           document.getElementById("para").innerHTML = text;
           document.getElementById("nav-main").style.display = "none";
           document.getElementById('nav-industry').style.display = "block";
@@ -312,7 +313,7 @@
         var title = 'Unemployment Rate Trends - ' + industry;
         document.getElementById("header").innerHTML = title;
 
-        var text = "Click on the breadcrumb above to navigate between scenes. Hover over chart to see unemployment trend of men and women in this industry before and after covid";
+        var text = "Click on the links above to navigate. Hover over chart to see unemployment trend of men and women in this industry, before and after covid";
 
         document.getElementById("para").innerHTML = text;
         document.getElementById("nav-main").style.display = "none";
