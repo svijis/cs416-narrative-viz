@@ -14,17 +14,24 @@
 
 <div>
 <h2 id="header"></h2>
-<!--<p class='user'> Vijayalakshmi Subramanian - vs26@illinois.edu </p>-->
+<p class='user'> Vijayalakshmi Subramanian - vs26@illinois.edu </p>
 
 <div id="nav">
     <h4 id="nav-main">
         By State
-        <a class="nav" onclick="showUnEmploymentTrend('all')"> 》By Industry</a>
+        <a class="nav" onclick="showUnEmploymentTrend('all')"> 》By Industry </a>
     </h4>
     <h4 id="nav-industry">
         <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
         》All Industries
     </h4>
+
+    <h4 id="nav-gender">
+        <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
+        <a id="nav-main-1" class="nav" onclick="showUnEmploymentTrend('all')"> By Industry </a>
+        》Gender
+    </h4>
+
 </div>
 
 <p id="para"></p>
@@ -71,6 +78,7 @@
           document.getElementById("para").innerHTML = text;
           document.getElementById("nav-main").style.display = "none";
           document.getElementById('nav-industry').style.display = "block";
+          document.getElementById('nav-gender').style.display = "none";
 
           var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
@@ -304,11 +312,12 @@
         var title = 'Unemployment Rate Trends - ' + industry;
         document.getElementById("header").innerHTML = title;
 
-        var text = "Nav Tips - Click on the breadcrumb above to navigate between scenes. Hover over chart to see unemployment trend of men and women in this industry.";
+        var text = "Nav Tips - Click on the breadcrumb above to navigate between scenes. Hover over chart to see unemployment trend of men and women in this industry before and after covid";
 
         document.getElementById("para").innerHTML = text;
         document.getElementById("nav-main").style.display = "none";
-        document.getElementById('nav-industry').style.display = "block";
+        document.getElementById('nav-industry').style.display = "none";
+        document.getElementById('nav-gender').style.display = "block";
 
 
         var svg = d3.select('svg')
@@ -557,6 +566,7 @@
         document.getElementById("para").innerHTML = "Nav Tips - Click on the breadcrumb above to navigate between scenes. Hover over each state to see its highest unemployment rate.";
         document.getElementById("nav-main").style.display = "block";
         document.getElementById('nav-industry').style.display = "none";
+          document.getElementById('nav-gender').style.display = "none";
 
         var svg = d3.select('svg')
             .attr("width", 975)
