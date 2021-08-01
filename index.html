@@ -699,8 +699,7 @@
             .attr("class", "state")
             .selectAll("path")
             .data(topojson.feature(data_1, data_1.objects.states).features)
-            .enter().append("path")
-            .attr("class", function(d) { return 'state ' + scale(rateById.get(d.id)); })
+            .enter().append("path") 
             .attr("fill", function(d) {
                   var sn = stateNames.get(d.id)
                   d.rate = unemployment.get(stateNames.get(d.id)) || 0
