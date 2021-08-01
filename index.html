@@ -615,7 +615,8 @@
             .translate([width / 2, height / 2]) // translate to center of screen
             .scale([1000]);
 
-        var path = d3.geoPath();
+        var path = d3.geoPath()
+                  .projection(projection);
 
         var lowColor = '#f7fbff'
         var highColor = '#08326e'
@@ -707,7 +708,7 @@
                   console.log("d", d.id, "sn", sn, "rate", d.rate)
                   var col =  ramp(parseFloat(d.rate));
                   console.log("col", col)
-                  return col 
+                  return col
                 }
               })
               .attr("d", path)
