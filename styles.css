@@ -51,6 +51,11 @@ h1 {
     border-radius: 2px;
 }
 
+.map-annotation .note-line,
+.map-annotation .connector {
+      stroke: red;
+}
+
 .map-annotation .annotation-note-label,
 .map-annotation .annotation-note-title {
       fill: red;
