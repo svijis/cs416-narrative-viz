@@ -682,7 +682,8 @@
 
           var minVal = d3.min(values)
         	var maxVal = d3.max(values)
-        	var ramp = d3.scaleLinear().domain([minVal,maxVal]).range([lowColor,highColor])
+          var range = d3.range(9).map(function(i) { return "q" + i + "-9"; });
+        	var ramp = d3.scaleLinear().domain([minVal,maxVal]).range(range)
 
           console.log(values);
 
