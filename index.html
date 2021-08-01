@@ -600,6 +600,9 @@
             width = 960 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
+        var title = 'Highest Unemployment Rate by State in 2020 during Covid-19';
+        document.getElementById("header").innerHTML = title;
+
         var svg = d3.select('svg')
             .attr("width", 975)
             .attr("height", 610)
