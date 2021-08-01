@@ -600,11 +600,8 @@
             height = 500 - margin.top - margin.bottom;
 
         var svg = d3.select('svg')
-            .attr("width", 1100 + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
+            .attr("width", 960)
+            .attr("height", )600
 
         var csv_root = "https://svijis.github.io/cs416-narrative-viz/data/";
 
@@ -616,7 +613,7 @@
             .scale([1000]);
 
         var path = d3.geoPath()
-                  //projection(projection);
+                   projection(projection);
 
         var lowColor = '#f7fbff'
         var highColor = '#08326e'
