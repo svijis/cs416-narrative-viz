@@ -617,8 +617,8 @@
 
         var path = d3.geoPath();
 
-        var lowColor = '#f9f9f9'
-        var highColor = '#bc2a66'
+        var lowColor = '#f2f3f7'
+        var highColor = '#1e4dba'
 
         // var x = d3.scaleLinear()
         //     .domain([1, 10])
@@ -682,8 +682,7 @@
 
           var minVal = d3.min(values)
         	var maxVal = d3.max(values)
-          var range = d3.range(9).map(function(i) { return "q" + i + "-9"; });
-        	var ramp = d3.scaleLinear().domain([minVal,maxVal]).range(range)
+          var ramp = d3.scaleLinear().domain([minVal,maxVal]).range([lowColor,highColor])
 
           console.log(values);
 
