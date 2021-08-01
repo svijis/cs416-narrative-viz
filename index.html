@@ -617,8 +617,8 @@
             .rangeRound([600, 860]);
 
         var color = d3.scaleThreshold()
-            .domain(d3.range(0, 10))
-            .range(d3.schemeBlues[9]);
+            .domain(d3.range(0, 30))
+            .range(d3.schemeBlues[30]);
 
         var g = svg.append("g")
             .attr("class", "key")
@@ -680,7 +680,6 @@
                         if (state_id === id) {
                             d.rate = row.highest_unemp_rate || 0;
                             var col =  color(d.rate);
-                            console.log("col", col)
                             if (col) {
                               return col
                             } else {
