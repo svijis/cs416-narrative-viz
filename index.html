@@ -666,14 +666,14 @@
         function plotByState(data_1, data_2) {
 
           svg.append("g")
-              .attr("class", "counties")
+            .attr("class", "counties")
             .selectAll("path")
             .data(topojson.feature(data_1, data_1.objects.states).features)
             .enter().append("path")
-              .attr("fill", function(d) {
+            .attr("fill", function(d) {
                   if (d.id) {
                     var id = parseInt(d.id);
-                    console.log('id=====> ' id);
+                    console.log('id=====> ' ,id);
                     for (var i=0; i < data_2.length; i++) {
                         var row = data_2[i];
                         var state_id = parseInt(row.id);
@@ -691,7 +691,7 @@
                   }
               })
               .attr("d", path)
-            .append("title")
+              .append("title")
               .text(function(d) {
                   console.log("title", d)
                   return d.rate + "%"; });
