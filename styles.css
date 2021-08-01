@@ -7,6 +7,17 @@ svg {
     margin: 20px
 }
 
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+
 
 /* div.tooltip {
     position: absolute;
