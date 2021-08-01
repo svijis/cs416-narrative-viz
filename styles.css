@@ -50,3 +50,7 @@ h1 {
     color: #fff;
     border-radius: 2px;
 }
+
+.map-annotation {
+    color: blue;
+}

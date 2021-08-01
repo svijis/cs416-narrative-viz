@@ -612,35 +612,38 @@
     			.attr("transform", "translate(41,10)")
     			.call(yAxis)
 
-          const annotations = [
-            {
-              note: {
-                label: "Highest Unemployment rate - 39.3%",
-                title: "Leisure and Hospitality - Apr 2020"
-              },
-              x: 434,
-              y: 186,
-              dy: -56,
-              dx: -48
+        // Add Annotations
+        const annotations = [
+          {
+            note: {
+              label: "Highest Unemployment rate - 39.3%",
+              title: "Leisure and Hospitality - Apr 2020"
             },
-            {
-              note: {
-                label: "Lowest Unemployment rate - 7.7%",
-                title: "Real Estate - Apr 2020"
-              },
-              x: 451,
-              y: 369,
-              dy: -66,
-              dx: -64
-            }
-          ];
+            className: "map-annotation",
+            x: 434,
+            y: 186,
+            dy: -56,
+            dx: -48
+          },
+          {
+            note: {
+              label: "Lowest Unemployment rate - 7.7%",
+              title: "Real Estate - Apr 2020"
+            },
+            className: "map-annotation",
+            x: 451,
+            y: 369,
+            dy: -66,
+            dx: -64
+          }
+        ];
 
           const makeAnnotations = d3.annotation()
             .editMode(true)
             .annotations(annotations);
           svg.append("g")
             .call(makeAnnotations)
-            
+
         }
 
         fetchData()
