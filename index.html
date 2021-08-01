@@ -684,13 +684,13 @@
     			.attr("spreadMethod", "pad");
 
     		legend.append("stop")
-    			.attr("offset", "0%")
-    			.attr("stop-color", highColor)
-    			.attr("stop-opacity", 1);
-
-    		legend.append("stop")
     			.attr("offset", "100%")
     			.attr("stop-color", lowColor)
+    			.attr("stop-opacity", 1);
+
+        legend.append("stop")
+    			.attr("offset", "0%")
+    			.attr("stop-color", highColor)
     			.attr("stop-opacity", 1);
 
     		key.append("rect")
@@ -707,7 +707,7 @@
 
     		key.append("g")
     			.attr("class", "x axis")
-    			.attr("transform", "translate(41,10)")
+    			.attr("transform", "translate(10, 41)")
     			.call(xAxis)
         }
 
