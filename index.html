@@ -19,7 +19,7 @@
 <div id="nav">
     <h4 id="nav-main">
         By State
-        <a class="nav" onclick="showUnEmploymentTrend()"> 》By Industry</a>
+        <a class="nav" onclick="showUnEmploymentTrend('all')"> 》By Industry</a>
     </h4>
     <h4 id="nav-industry">
         <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
@@ -49,9 +49,9 @@
 
       var industry = getParameterByName('i');
 
-      window.showUnEmploymentTrend = function() {
+      window.showUnEmploymentTrend = function(input) {
 
-          if (industry !== 'all') {
+          if (input == 'all') {
               window.location.href = window.location.href.split('?')[0] + "?i=all";
               return;
           }
@@ -533,7 +533,7 @@
 
         if (industry) {
             return;
-        } 
+        }
 
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
