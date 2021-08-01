@@ -459,7 +459,7 @@
 
             var color = d3.scaleOrdinal()
               .domain(res)
-              .range(['blue','pink'])
+              .range(['blue','red'])
 
             // Draw the line
             var lines = svg.selectAll(".line")
@@ -554,7 +554,7 @@
               const annotations = [
                 {
                   note: {
-                    label: '',
+                    label: 'Men',
                     title: men_max_date + " - " + men_max
                   },
                   x: 434,
@@ -564,13 +564,13 @@
                 },
                 {
                   note: {
-                    label: '',
+                    label: 'Women',
                     title: women_max_date + " - " + women_max
                   },
-                  x: 451,
-                  y: 369,
-                  dy: -66,
-                  dx: -64
+                  x: 419,
+                  y: 354,
+                  dy: -34,
+                  dx: -56
                 }
               ];
 
