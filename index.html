@@ -39,7 +39,7 @@
           var formatTime = d3.timeFormat('%b %Y');
 
           var title = 'Unemployment Rate Trends before and after Covid-19';
-          document.getElementById("header").innerHTML(title);
+          document.getElementById("header").innerHTML = title;
 
           var svg = d3.select('svg')
               .attr("width", 1100 + margin.left + margin.right)
@@ -359,7 +359,7 @@
         var formatTime = d3.timeFormat('%b %Y');
 
         var title = 'Unemployment Rate Trends - ' + industry;
-        document.getElementById("header").innerHTML(title); 
+        document.getElementById("header").innerHTML = title;
 
         var svg = d3.select('svg')
             .attr("width", 1100 + margin.left + margin.right)
