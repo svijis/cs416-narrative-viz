@@ -396,8 +396,8 @@
                 .key(function(d) { return d.Gender;})
                 .entries(data);
 
-            var men_max = 0,
-                women_max = 0;
+            var men_max = 0, men_max_date,
+                women_max = 0, women_max_date;
             for (var j=0; j < data_by_gender.length; j++) {
                 var entry = data_by_gender[j];
                 var key = entry.key;
@@ -405,14 +405,13 @@
                 for (var i=0; i < values.length; i++) {
                     if (key === 'Men' && parseFloat(values[i].Value) > men_max) {
                         men_max = values[i].Value;
+                        men_max_date = formatTime(values[i].Date);
                     }else if (key === 'Women' && parseFloat(values[i].Value) > women_max) {
                         women_max = values[i].Value;
+                        women_max_date = formatTime(values[i].Date);
                     }
                 }
             }
-
-            console.log(men_max)
-            console.log(women_max)
 
             // Add X axis
             var xAxisScale = d3.scaleTime().range([0, width]);
@@ -460,9 +459,7 @@
 
             var color = d3.scaleOrdinal()
               .domain(res)
-              .range(['#0000ff','#6600cc', '#807d74', '#ff0000', '#663300',
-              '#009933', '#d58000', '#1199ff', '#003366', '#ff99cc', '#006666',
-              '#72b331', '#ff7f00', '#c70e55', '#999911'])
+              .range(['blue','pink'])
 
             // Draw the line
             var lines = svg.selectAll(".line")
@@ -520,15 +517,7 @@
                              .attr('opacity', 0)
                              .on('mousemove', drawTooltip)
                              .on('mouseout', removeTooltip)
-                            // .on('click', onMouseClick);
 
-               // function onMouseClick(d,i) {
-               //       var xDate = xAxisScale.invert(d3.mouse(this)[0]);
-               //       var monYear = formatTime(xDate),
-               //           bisect = d3.bisector(function(d) { return d.Date; }).right;
-               //           idx = bisect(d.values, xDate);
-               //
-               // }
 
                function removeTooltip() {
                    if (tooltip) tooltip.style('display', 'none');
@@ -565,8 +554,8 @@
               const annotations = [
                 {
                   note: {
-                    label: "Highest Unemployment rate - 39.3%",
-                    title: "Leisure and Hospitality - Apr 2020"
+                    label: '',
+                    title: men_max_date + " - " + men_max
                   },
                   x: 434,
                   y: 186,
@@ -575,8 +564,8 @@
                 },
                 {
                   note: {
-                    label: "Lowest Unemployment rate - 7.7%",
-                    title: "Real Estate - Apr 2020"
+                    label: '',
+                    title: women_max_date + " - " + women_max
                   },
                   x: 451,
                   y: 369,
