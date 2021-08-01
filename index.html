@@ -14,13 +14,13 @@
 <div>
 <h1 id="header"></h1>
 <div id="nav">
-    <h3 id="nav-industry">
-        <a class="nav" onclick="main()"> By State</a>
-        》By Industry
+    <h3 id="nav-main">
+        By State
+        <a class="nav" onclick="showUnEmploymentTrend()"> By Industry</a>
     </h3>
-    <h3 id="nav-gender">
-        <a id="nav-main" class="nav" onclick="main()"> By State </a>
-        <a id="nav-main" class="nav" onclick="showUnEmploymentTrend">
+    <h3 id="nav-industry">
+        <a id="nav-main-1" class="nav" onclick="main()"> By State </a>
+        <a id="nav-industry-1" class="nav" onclick="showUnEmploymentTrend">
             <span> </span>
         </a>
         》By Gender
@@ -521,6 +521,7 @@
         document.getElementById("header").innerHTML = title;
 
         document.getElementById("para").innerHTML = "Hover over each state to see its highest unemployment rate";
+        document.getElementById('main').display = "block"
 
         var svg = d3.select('svg')
             .attr("width", 975)
