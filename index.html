@@ -511,9 +511,84 @@
                }
 
               var pos = {
-                  "default_men" : { "dx" : -56, "dy" : -48},
-                  "default_women" : { "dx" : -34, "dy" : -56}
+                  "default_men" : { "x" : 434, "y" : 186, "dx" : -56, "dy" : -48},
+                  "default_women" : { "x": 419, "y": 354, "dx" : -34, "dy" : -56}
               }
+              if(industry === 'Education and Health Services') {
+                  pos.default_women.x = 406;
+                  pos.default_women.y = 333;
+                  pos.default_women.dx = -51;
+                  pos.default_women.dy = -77;
+              }else if (industry === 'Information Industry') {
+                  pos.default_women.x = 424;
+                  pos.default_women.y = 316;
+                  pos.default_women.dx = -39;
+                  pos.default_women.dy = -63;
+              }else if (industry === 'Manufacturing') {
+                  pos.default_women.x = 422;
+                  pos.default_women.y = 287;
+                  pos.default_women.dx = -40;
+                  pos.default_women.dy = -42;
+              }else if (industry === 'Mining, Quarrying, Oil and Gas') {
+                  pos.default_men.x = 446;
+                  pos.default_men.y = 212;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+              }else if (industry === 'Educational Services') {
+                  pos.default_women.x = 424;
+                  pos.default_women.y = 290;
+                  pos.default_women.dx = -56;
+                  pos.default_women.dy = -34;
+              }else if (industry === 'Real Estate') {
+                  pos.default_men.x = 461;
+                  pos.default_men.y = 160;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+                  pos.default_men.x = 416;
+                  pos.default_men.y = 271;
+                  pos.default_men.dx = -49;
+                  pos.default_men.dy = -70;
+              }else if (industry === 'Other Services Industry') {
+                  pos.default_men.x = 446;
+                  pos.default_men.y = 192;
+              }else if (industry === 'Professional and Business Services') {
+                  pos.default_men.x = 439;
+                  pos.default_men.y = 181;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+                  pos.default_men.x = 391;
+                  pos.default_men.y = 305;
+                  pos.default_men.dx = -39;
+                  pos.default_men.dy = -68;
+              }else if (industry === 'Professional and Business Services') {
+                  pos.default_men.x = 439;
+                  pos.default_men.y = 181;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+                  pos.default_men.x = 391;
+                  pos.default_men.y = 305;
+                  pos.default_men.dx = -39;
+                  pos.default_men.dy = -68;
+              }else if (industry === 'Transportation and Utilities Industry') {
+                  pos.default_men.x = 462;
+                  pos.default_men.y = 207;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+                  pos.default_men.x = 419;
+                  pos.default_men.y = 354;
+                  pos.default_men.dx = -56;
+                  pos.default_men.dy = -34;
+              }else if (industry === 'Wholesale and Retail Trade') {
+                  pos.default_men.x = 443;
+                  pos.default_men.y = 190;
+                  pos.default_men.dx = -48;
+                  pos.default_men.dy = -56;
+                  pos.default_men.x = 405;
+                  pos.default_men.y = 343;
+                  pos.default_men.dx = -56;
+                  pos.default_men.dy = -34;
+              }
+
               // Add Annotations
               const annotations = [
                 {
@@ -521,8 +596,8 @@
                     title: 'Men' + " - " + men_max + "%",
                     label: men_max_date
                   },
-                  x: 434,
-                  y: 186,
+                  x: pos.default_men.x,
+                  y: pos.default_men.y,
                   dy: pos.default_men.dx,
                   dx: pos.default_men.dy
                 },
@@ -531,8 +606,8 @@
                     title: 'Women' + " - " + women_max + "%",
                     label: women_max_date
                   },
-                  x: 419,
-                  y: 354,
+                  x: pos.default_women.x,
+                  y: pos.default_women.y,
                   dy: pos.default_women.dx,
                   dx: pos.default_women.dy
                 }
